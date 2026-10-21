@@ -1,0 +1,119 @@
+{
+  "serviceName": "apim-lab-classic-example",
+  "traceId": "4d798e6d-130c-5b77-b9b5-f7b5cec2dfe0",
+  "traceEntries": {
+    "inbound": [
+      {
+        "source": "api-inspector",
+        "timestamp": "2026-10-21T01:13:55.9664358Z",
+        "elapsed": "00:00:00.0133116",
+        "data": {
+          "request": {
+            "scheme": {
+              "received": "https",
+              "original": "https"
+            },
+            "method": "POST",
+            "url": "https://apim-lab-classic-example.azure-api.net/lab-project/chat/completions",
+            "headers": [
+              {
+                "name": "Connection",
+                "value": "close"
+              },
+              {
+                "name": "Host",
+                "value": "apim-lab-classic-example.azure-api.net"
+              },
+              {
+                "name": "User-Agent",
+                "value": "Python-urllib/3.14"
+              },
+              {
+                "name": "Accept-Encoding",
+                "value": "identity"
+              },
+              {
+                "name": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "name": "Content-Length",
+                "value": "330"
+              },
+              {
+                "name": "X-Ms-Client-Request-Id",
+                "value": "e8e909c6-0012-595b-adc4-2501762c6fe6"
+              },
+              {
+                "name": "Ocp-Apim-Subscription-Key",
+                "value": "[REDACTED]"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "source": "api-inspector",
+        "timestamp": "2026-10-21T01:13:55.9677032Z",
+        "elapsed": "00:00:00.0144993",
+        "data": {
+          "configuration": {
+            "api": {
+              "from": "/lab-project",
+              "to": {
+                "scheme": "https",
+                "host": "ai-token-lab-example.services.ai.azure.com",
+                "port": 443,
+                "path": "/api/projects/project-token-lab/openai/v1",
+                "queryString": "",
+                "query": {},
+                "isDefaultPort": true
+              },
+              "version": null,
+              "revision": "1"
+            },
+            "operation": {
+              "method": "POST",
+              "uriTemplate": "/chat/completions"
+            },
+            "user": "-",
+            "product": "-"
+          }
+        }
+      },
+      {
+        "source": "graphql-configuration-setup",
+        "timestamp": "2026-10-21T01:13:55.9677717Z",
+        "elapsed": "00:00:00.0145668",
+        "data": "Skipping GraphQL creation for non-GraphQL API request"
+      },
+      {
+        "source": "cors",
+        "timestamp": "2026-10-21T01:13:55.967818Z",
+        "elapsed": "00:00:00.0146129",
+        "data": "Origin header was missing or empty and the request was classified as not cross-domain. CORS policy was not applied."
+      },
+      {
+        "source": "validate-azure-ad-token",
+        "timestamp": "2026-10-21T01:13:55.9681202Z",
+        "elapsed": "00:00:00.0149161",
+        "data": {
+          "message": "Azure AD JWT Validation Failed",
+          "validationMessages": [
+            "Azure AD JWT not present"
+          ]
+        }
+      }
+    ],
+    "outbound": [
+      {
+        "source": "transfer-response",
+        "timestamp": "2026-10-21T01:13:55.9783163Z",
+        "elapsed": "00:00:00.0251131",
+        "data": {
+          "message": "Response has been sent to the caller in full"
+        }
+      }
+    ]
+  }
+}

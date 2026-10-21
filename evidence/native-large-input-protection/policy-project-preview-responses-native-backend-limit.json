@@ -1,0 +1,5 @@
+{
+  "resource": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-apim-token-lab/providers/Microsoft.ApiManagement/service/apim-lab-v2-example/apis/lab-project-preview/operations/responses/policies/policy",
+  "phase": "native-backend-limit",
+  "xml": "<policies><inbound><base /><choose><when condition=\"@(context.Request.Headers.GetValueOrDefault(&quot;x-lab-probe&quot;, &quot;&quot;) == &quot;true&quot;)\"><return-response><set-status code=\"204\" reason=\"Policy ready\" /><set-header name=\"x-lab-phase\" exists-action=\"override\"><value>native-backend-limit</value></set-header></return-response></when></choose><rate-limit-by-key counter-key=\"@(&quot;native-large-input-protection:native-backend-limit:&quot; + context.Api.Id + &quot;:&quot; + context.Operation.Id + &quot;:&quot; + context.Subscription.Id)\" calls=\"1000\" renewal-period=\"60\" remaining-calls-header-name=\"x-lab-calls\" /></inbound><backend><base /></backend><outbound><base /><set-header name=\"x-lab-phase\" exists-action=\"override\"><value>native-backend-limit</value></set-header></outbound><on-error><base /></on-error></policies>"
+}

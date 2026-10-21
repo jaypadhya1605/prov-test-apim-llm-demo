@@ -1,0 +1,177 @@
+{
+  "serviceName": "apim-lab-classic-example",
+  "traceId": "4176fd4f-6720-5aee-a475-f99ebcbceb3b",
+  "traceEntries": {
+    "inbound": [
+      {
+        "source": "api-inspector",
+        "timestamp": "2026-10-21T01:16:08.3696803Z",
+        "elapsed": "00:00:00.0010688",
+        "data": {
+          "request": {
+            "scheme": {
+              "received": "https",
+              "original": "https"
+            },
+            "method": "POST",
+            "url": "https://apim-lab-classic-example.azure-api.net/lab-project/chat/completions",
+            "headers": [
+              {
+                "name": "Connection",
+                "value": "close"
+              },
+              {
+                "name": "Host",
+                "value": "apim-lab-classic-example.azure-api.net"
+              },
+              {
+                "name": "User-Agent",
+                "value": "Python-urllib/3.14"
+              },
+              {
+                "name": "Accept-Encoding",
+                "value": "identity"
+              },
+              {
+                "name": "Authorization",
+                "value": "[REDACTED]"
+              },
+              {
+                "name": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "name": "Content-Length",
+                "value": "330"
+              },
+              {
+                "name": "X-Ms-Client-Request-Id",
+                "value": "68d28f5a-0579-57b7-9ada-e2f00c6e7090"
+              },
+              {
+                "name": "Ocp-Apim-Subscription-Key",
+                "value": "[REDACTED]"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "source": "api-inspector",
+        "timestamp": "2026-10-21T01:16:08.3697557Z",
+        "elapsed": "00:00:00.0011437",
+        "data": {
+          "configuration": {
+            "api": {
+              "from": "/lab-project",
+              "to": {
+                "scheme": "https",
+                "host": "ai-token-lab-example.services.ai.azure.com",
+                "port": 443,
+                "path": "/api/projects/project-token-lab/openai/v1",
+                "queryString": "",
+                "query": {},
+                "isDefaultPort": true
+              },
+              "version": null,
+              "revision": "1"
+            },
+            "operation": {
+              "method": "POST",
+              "uriTemplate": "/chat/completions"
+            },
+            "user": "-",
+            "product": "-"
+          }
+        }
+      },
+      {
+        "source": "graphql-configuration-setup",
+        "timestamp": "2026-10-21T01:16:08.3698622Z",
+        "elapsed": "00:00:00.0012503",
+        "data": "Skipping GraphQL creation for non-GraphQL API request"
+      },
+      {
+        "source": "cors",
+        "timestamp": "2026-10-21T01:16:08.3699001Z",
+        "elapsed": "00:00:00.0012879",
+        "data": "Origin header was missing or empty and the request was classified as not cross-domain. CORS policy was not applied."
+      },
+      {
+        "source": "validate-azure-ad-token",
+        "timestamp": "2026-10-21T01:16:08.3710335Z",
+        "elapsed": "00:00:00.0024214",
+        "data": {
+          "message": "Azure AD JWT validation succeeded"
+        }
+      },
+      {
+        "source": "authentication-managed-identity",
+        "timestamp": "2026-10-21T01:16:08.3713713Z",
+        "elapsed": "00:00:00.0027592",
+        "data": {
+          "message": "Obtaining managed identity token using clientId:24146b2b-79d2-5391-932d-556314241ed9 AAD Authority:https://login.windows.net/00000000-0000-0000-0000-000000000002 for https://ai.azure.com audience succeeded.",
+          "errorResponse": null
+        }
+      },
+      {
+        "source": "authentication-managed-identity",
+        "timestamp": "2026-10-21T01:16:08.3713756Z",
+        "elapsed": "00:00:00.0027632",
+        "data": {
+          "message": "Managed identity token (authentication provider: built-in, client ID: systemAssigned) is added to Authorization header."
+        }
+      },
+      {
+        "source": "choose",
+        "timestamp": "2026-10-21T01:16:08.3714142Z",
+        "elapsed": "00:00:00.0028019",
+        "data": {
+          "message": "Expression was successfully evaluated.",
+          "expression": "context.Request.Headers.GetValueOrDefault(\"x-lab-probe\", \"\") == \"true\"",
+          "value": false
+        }
+      },
+      {
+        "source": "llm-token-limit",
+        "timestamp": "2026-10-21T01:16:08.3714451Z",
+        "elapsed": "00:00:00.0028328",
+        "data": {
+          "message": "Expression was successfully evaluated.",
+          "expression": "\"v1-classic-measured:quota:\" + context.Api.Id + \":\" + context.Operation.Id + \":\" + context.Subscription.Id",
+          "value": "v1-classic-measured:quota:lab-project:chat:repro"
+        }
+      },
+      {
+        "source": "llm-token-limit",
+        "timestamp": "2026-10-21T01:16:08.3714578Z",
+        "elapsed": "00:00:00.0028454",
+        "data": {
+          "message": "Expression was successfully evaluated.",
+          "expression": "\"v1-classic-measured:quota:\" + context.Api.Id + \":\" + context.Operation.Id + \":\" + context.Subscription.Id",
+          "value": "v1-classic-measured:quota:lab-project:chat:repro"
+        }
+      }
+    ],
+    "on-error": [
+      {
+        "source": "llm-token-limit",
+        "timestamp": "2026-10-21T01:16:08.372983Z",
+        "elapsed": "00:00:00.0043710",
+        "data": {
+          "message": "OpenAITokenLimit counter by key 3489580131216307959 is already exceeded. Current count is 334 which exceeds token volume 220. Try again in 2632 seconds"
+        }
+      }
+    ],
+    "outbound": [
+      {
+        "source": "transfer-response",
+        "timestamp": "2026-10-21T01:16:08.3739924Z",
+        "elapsed": "00:00:00.0053805",
+        "data": {
+          "message": "Response has been sent to the caller in full"
+        }
+      }
+    ]
+  }
+}

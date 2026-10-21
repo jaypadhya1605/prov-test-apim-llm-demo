@@ -1,0 +1,212 @@
+{
+  "utc": "2026-10-21T01:13:01.786811+00:00",
+  "elapsedSeconds": 2.976,
+  "api": "project",
+  "operation": "responses",
+  "phase": "direct",
+  "direct": true,
+  "requestId": "eebfa0b0-54ae-5484-83b9-d7bdf5e8e956",
+  "url": "https://ai-token-lab-example.services.ai.azure.com/api/projects/project-token-lab/openai/v1/responses",
+  "requestBody": {
+    "model": "lab-model",
+    "stream": false,
+    "input": "For a synthetic gateway test, write a numbered list of thirty ordinary household objects, each followed by a short sentence about its everyday use. Do not discuss private information.",
+    "max_output_tokens": 128,
+    "store": false,
+    "reasoning": {
+      "effort": "minimal"
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "content-length": "5211",
+      "connection": "close",
+      "content-type": "application/json",
+      "date": "Wed, 21 Oct 2026 01:13:01 GMT",
+      "server": "istio-envoy",
+      "access-control-expose-headers": "Operation-Location,Location,Apim-Request-Id,x-agent-session-id,x-agent-invocation-id",
+      "vary": "Origin,Accept-Encoding",
+      "request-context": "appId=",
+      "x-ms-response-type": "standard",
+      "x-request-id": "8b839f40-4e3f-52ca-8024-76716f8242a3",
+      "x-ms-aoai-configured-data-retention-days": "30",
+      "skip-error-remapping": "true",
+      "openai-client-partition-id": "45d6d7624cc1d31e4ee9fd215fc82d76b9ec660f-e502-4c15-85e7-97752be68bb2",
+      "azureml-internal-forward-count": "1",
+      "x-ms-is-spilled-over": "false",
+      "x-ratelimit-key": "lab-model",
+      "x-ratelimit-remaining-requests": "99",
+      "x-ratelimit-reset-requests": "0",
+      "x-ratelimit-limit-requests": "100",
+      "x-ratelimit-renewalperiod-requests": "60",
+      "x-ratelimit-abusepenalty-active": "False",
+      "x-ratelimit-remaining-tokens": "99955",
+      "x-ratelimit-reset-tokens": "0",
+      "x-ratelimit-limit-tokens": "100000",
+      "x-ratelimit-renewalperiod-tokens": "60",
+      "azureai-fe-is-streaming": "False",
+      "azureai-fe-offer-type": "paygo",
+      "x-ms-served-model": "gpt-5-mini-2025-08-07",
+      "openai-version": "2020-10-01",
+      "openai-organization": "bbdc9d156d453699d861b3b3afbfd981",
+      "openai-project": "d2b722b2-1410-508b-b0ce-46e743a21ecb",
+      "openai-processing-ms": "1505",
+      "azureml-served-by-cluster": "hyena-eastus2-01,hyena-eastus2-01",
+      "api-supported-versions": "1.0,2025-05-15-preview,2025-11-15-preview",
+      "x-http2-stream-id": "147",
+      "apim-request-id": "2c02bf67-8256-5796-a864-f3f0c86f4280",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "x-content-type-options": "nosniff",
+      "x-ms-region": "East US 2"
+    },
+    "body": {
+      "metadata": {},
+      "top_logprobs": 0,
+      "temperature": 1,
+      "top_p": 1,
+      "service_tier": "default",
+      "prompt_cache_retention": "in_memory",
+      "model": "lab-model",
+      "reasoning": {
+        "effort": "minimal",
+        "context": "current_turn",
+        "mode": "standard"
+      },
+      "background": false,
+      "max_output_tokens": 128,
+      "text": {
+        "format": {
+          "type": "text"
+        },
+        "verbosity": "medium"
+      },
+      "tools": [],
+      "tool_choice": "auto",
+      "truncation": "disabled",
+      "id": "resp_example-8824ada0a57be4c44072ffc1",
+      "object": "response",
+      "status": "incomplete",
+      "created_at": 1792545181,
+      "error": null,
+      "incomplete_details": {
+        "reason": "max_output_tokens"
+      },
+      "output": [
+        {
+          "type": "reasoning",
+          "id": "rs_example-1b4f0e65280750a3b7e5ea5f",
+          "response_id": "resp_example-8824ada0a57be4c44072ffc1",
+          "encrypted_content": "gAAAAABq2BGft5ZAOF5X-R_5OLSg6uH8VQuyQJ2MAgJijiEHeMVq_KXJeQ8GWdFR6uf1Wy64mBLMd9ws-CNwJQ80lWd5KBup2rShTmhEmcxiRE70k69JqsiE2as6VSnCwn79Yu336FnGzMghQSPVWtgxiPf9hHMA8YcaBdGgx6R_7sqc3Wh3KZGyGRHupBwVKNPKdNPjv8ERUaEO1_z6g3ho171fhfogX2n9xTQP71g5MGwE7CgBtxe6FPxt918KJ2oE3BYL6s7zxP3na-ozU6NhnW3kSGaBzD4YGnvm4JeSfNJijHqOzR4oYTsuXy--q8ygSkKKQvMJKrZQsC8EU6DYkZgihx6NqirWWHYuxeEFMguU-cp9zF-w33ApV-8v57gnN15AISya61mmrSFP6ZLTrk0Clh62gQlaUN5QU1GG-jyoeZ1EvCZ2gbfzJLoL00tWv_CNkG8b_rP8Jb860BT_sO9PeiSQpbhJhXSCu7fpgzCEeTEM2wJ-9Ex9wjE9RzLIQJn7njNlCHgIOd8mbIxqRqkKf4JW3r55Dkap8wlrD4COYIHN6w-NP8O_wIBMqZwrCnFU_XX5OsMeowhcjXKvv0WmjfxMO-cRwTl3Rt_h6ETxgMQaugqJP4agOwVLMLTT1FJmnvbsZbOIZ61KGHYzMZOM6obIXQh8wf4wvLzPDdMGYo841Hm3sSmu-E9HoJdv4CZ24wJwMT1f7wqBH5Qe1w_cjWzSFqE2nI2T6YRE_gc3v33hg1NH4JS-5EGv896lmNa4WpE7yxY7lxOwIyHQP-_vPKIqa93Ynmt5jwkaQqoWq1Y-Fa2HtZu-zgMhfHjhr_WIknaWfonHSXdVWra9sZFRXPwMvpwp-Sopjxk4RxPojM_OHL61eiY2XWBklqGiBMpmJDucR3dZAGnMLOt3x4SuE8X84S3cj4MMnvw5_cvjaiFMnHHww4De3Y3ts9cNSbnUbLr6lJGmXVSB5u5Xv_YPKFfOGgFIKYtDaKTOJ49SpZqygLVJg8EShAcz-D0mneawW1C1vB-I8HhPlkYqgWRv4Zgpv-Uur2DVcLXGT8idpJ_hSPeLP8gKGvgYn7AyfpQN7B27jPJfmk_CSOIzH0dgg_vaQCvODjyPMr-c-bR9rlCRs9tJAgcrQ3la5fvgm9-dAX7NrU12GNWGnVDokZYb_tJBofZigQr4Z6Dcdqn2qmSj9XxFYPLbB9x3FO0NYoh6UQ7mvIHSh2valHbTIUprSqZ81A==",
+          "summary": [],
+          "content": []
+        },
+        {
+          "type": "message",
+          "id": "msg_example-b53393fb9faba7e8bcecc9c0",
+          "response_id": "resp_example-8824ada0a57be4c44072ffc1",
+          "role": "assistant",
+          "content": [
+            {
+              "type": "output_text",
+              "text": "1. Spoon \u2014 Used for stirring coffee, eating soup, or serving sauces.  \n2. Chair \u2014 Provides a place to sit while dining, working, or relaxing.  \n3. Mug \u2014 Holds hot beverages like tea or coffee.  \n4. Plate \u2014 Used to serve and eat meals.  \n5. Fork \u2014 Helps pick up and eat solid foods.  \n6. Knife \u2014 Used for cutting food items during meal prep and dining.  \n7. Glass \u2014 Holds cold drinks such as water, juice, or soda.  \n8. Cutting board \u2014",
+              "annotations": [],
+              "logprobs": []
+            }
+          ],
+          "status": "incomplete"
+        }
+      ],
+      "instructions": null,
+      "usage": {
+        "input_tokens": 39,
+        "input_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0
+        },
+        "output_tokens": 128,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 167
+      },
+      "parallel_tool_calls": true,
+      "agent_reference": null,
+      "content_filters": [
+        {
+          "blocked": false,
+          "source_type": "prompt",
+          "content_filter_results": {
+            "sexual": {
+              "filtered": false,
+              "severity": "safe"
+            },
+            "hate": {
+              "filtered": false,
+              "severity": "safe"
+            },
+            "violence": {
+              "filtered": false,
+              "severity": "safe"
+            },
+            "self_harm": {
+              "filtered": false,
+              "severity": "safe"
+            },
+            "defender_for_ai": {
+              "detected": false,
+              "filtered": false,
+              "details": {
+                "evaluation": "unavailable",
+                "evaluationReason": "missing_or_unknown_provider_evaluation_status"
+              }
+            }
+          },
+          "content_filter_raw": [],
+          "content_filter_offsets": {
+            "start_offset": 0,
+            "end_offset": 1315,
+            "check_offset": 0
+          }
+        },
+        {
+          "blocked": false,
+          "source_type": "completion",
+          "content_filter_results": {
+            "sexual": {
+              "filtered": false,
+              "severity": "safe"
+            },
+            "hate": {
+              "filtered": false,
+              "severity": "safe"
+            },
+            "violence": {
+              "filtered": false,
+              "severity": "safe"
+            },
+            "self_harm": {
+              "filtered": false,
+              "severity": "safe"
+            },
+            "defender_for_ai": {
+              "detected": false,
+              "filtered": false,
+              "details": {
+                "evaluation": "unavailable",
+                "evaluationReason": "missing_or_unknown_provider_evaluation_status"
+              }
+            }
+          },
+          "content_filter_raw": [],
+          "content_filter_offsets": {
+            "start_offset": 0,
+            "end_offset": 472,
+            "check_offset": 0
+          }
+        }
+      ]
+    }
+  },
+  "actualTotalTokens": 167
+}

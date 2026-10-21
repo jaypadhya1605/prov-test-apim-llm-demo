@@ -1,0 +1,167 @@
+{
+  "gateway": {
+    "etag": "AAAAAP3nMDw=",
+    "properties": {
+      "publisherEmail": "lab-owner@example.com",
+      "publisherName": "Synthetic token policy reproduction lab",
+      "notificationSenderEmail": "lab-owner@example.com",
+      "provisioningState": "Succeeded",
+      "targetProvisioningState": "",
+      "createdAtUtc": "2026-10-20T16:34:40.3069296Z",
+      "gatewayUrl": "https://apim-lab-v2-example.azure-api.net",
+      "gatewayRegionalUrl": null,
+      "portalUrl": null,
+      "developerPortalUrl": null,
+      "dataApiUrl": null,
+      "managementApiUrl": "https://smapi.api-bn1-prod-scaleunit-006.platform-host.example.invalid/",
+      "scmUrl": null,
+      "hostnameConfigurations": [
+        {
+          "type": "Proxy",
+          "hostName": "apim-lab-v2-example.azure-api.net",
+          "encodedCertificate": null,
+          "keyVaultId": null,
+          "certificatePassword": null,
+          "negotiateClientCertificate": false,
+          "certificate": null,
+          "defaultSslBinding": true,
+          "identityClientId": null,
+          "certificateSource": "BuiltIn",
+          "certificateStatus": null
+        }
+      ],
+      "publicIPAddresses": null,
+      "privateIPAddresses": null,
+      "additionalLocations": null,
+      "virtualNetworkConfiguration": null,
+      "customProperties": {
+        "Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls10": "False",
+        "Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls11": "False",
+        "Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls10": "False",
+        "Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls11": "False",
+        "Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Ssl30": "False",
+        "Microsoft.WindowsAzure.ApiManagement.Gateway.Protocols.Server.Http2": "False"
+      },
+      "virtualNetworkType": "None",
+      "certificates": null,
+      "natGatewayState": "Enabled",
+      "outboundPublicIPAddresses": null,
+      "apiVersionConstraint": {
+        "minApiVersion": null
+      },
+      "publicIpAddressId": null,
+      "publicNetworkAccess": "Enabled",
+      "privateEndpointConnections": null,
+      "platformVersion": "undetermined",
+      "configurationApi": null,
+      "legacyPortalStatus": "Disabled",
+      "developerPortalStatus": "Disabled"
+    },
+    "sku": {
+      "name": "BasicV2",
+      "capacity": 1
+    },
+    "identity": {
+      "type": "SystemAssigned",
+      "principalId": "0f42615f-538f-59d2-a2d3-5547f5f9aff9",
+      "tenantId": "00000000-0000-0000-0000-000000000002"
+    },
+    "zones": null,
+    "systemData": null,
+    "location": "East US 2",
+    "tags": {
+      "purpose": "synthetic-apim-token-repro",
+      "case": "SUPPORT-CASE-REDACTED",
+      "environment": "lab",
+      "owner": "lab-owner"
+    },
+    "id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-apim-token-lab/providers/Microsoft.ApiManagement/service/apim-lab-v2-example",
+    "name": "apim-lab-v2-example",
+    "type": "Microsoft.ApiManagement/service"
+  },
+  "model": {
+    "id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-apim-token-lab/providers/Microsoft.CognitiveServices/accounts/ai-token-lab-example/deployments/lab-model",
+    "type": "Microsoft.CognitiveServices/accounts/deployments",
+    "name": "lab-model",
+    "sku": {
+      "name": "GlobalStandard",
+      "capacity": 100
+    },
+    "properties": {
+      "model": {
+        "format": "OpenAI",
+        "name": "gpt-5-mini",
+        "version": "2025-08-07"
+      },
+      "versionUpgradeOption": "NoAutoUpgrade",
+      "currentCapacity": 100,
+      "capabilities": {
+        "area": "US",
+        "chatCompletion": "true",
+        "responses": "true",
+        "agentsV2": "true",
+        "assistants": "true"
+      },
+      "raiPolicyName": "Microsoft.Default",
+      "provisioningState": "Succeeded",
+      "rateLimits": [
+        {
+          "key": "request",
+          "renewalPeriod": 60,
+          "count": 100
+        },
+        {
+          "key": "token",
+          "renewalPeriod": 60,
+          "count": 100000
+        }
+      ]
+    },
+    "systemData": {
+      "createdBy": "lab-owner@example.com",
+      "createdByType": "User",
+      "createdAt": "2026-10-21T00:08:35.3029534Z",
+      "lastModifiedBy": "lab-owner@example.com",
+      "lastModifiedByType": "User",
+      "lastModifiedAt": "2026-10-21T00:30:11.1949811Z"
+    },
+    "etag": "\"0332fcdb-492d-5cf8-9075-e318173721b4\""
+  },
+  "project": {
+    "id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-apim-token-lab/providers/Microsoft.CognitiveServices/accounts/ai-token-lab-example/projects/project-token-lab",
+    "name": "ai-token-lab-example/project-token-lab",
+    "type": "Microsoft.CognitiveServices/accounts/projects",
+    "etag": "\"343958ee-084f-5cbd-a124-c0c323c4e792\"",
+    "location": "eastus2",
+    "kind": "AIServices",
+    "tags": {
+      "purpose": "synthetic-apim-token-repro",
+      "case": "SUPPORT-CASE-REDACTED",
+      "environment": "lab",
+      "owner": "lab-owner"
+    },
+    "properties": {
+      "endpoints": {
+        "AI Foundry API": "https://ai-token-lab-example.services.ai.azure.com/api/projects/project-token-lab"
+      },
+      "description": "Synthetic-data experiment for support case SUPPORT-CASE-REDACTED.",
+      "displayName": "Synthetic token accounting reproduction",
+      "isDefault": true,
+      "internalId": "9cac71e3c686f99f46da9e4e43639210",
+      "provisioningState": "Succeeded"
+    },
+    "identity": {
+      "principalId": "83afa620-aa02-529e-b474-3935427eaf1b",
+      "tenantId": "00000000-0000-0000-0000-000000000002",
+      "type": "SystemAssigned"
+    },
+    "systemData": {
+      "createdBy": "lab-owner@example.com",
+      "createdByType": "User",
+      "createdAt": "2026-10-21T00:19:12.5602313Z",
+      "lastModifiedBy": "lab-owner@example.com",
+      "lastModifiedByType": "User",
+      "lastModifiedAt": "2026-10-21T00:19:12.5602313Z"
+    }
+  }
+}

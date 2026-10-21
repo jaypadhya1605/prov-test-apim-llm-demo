@@ -1,0 +1,54 @@
+{
+  "utc": "2026-10-21T00:49:32.498610+00:00",
+  "elapsedSeconds": 1.066,
+  "api": "account",
+  "operation": "chat",
+  "phase": "tpm",
+  "direct": false,
+  "requestId": "75f7407d-ae07-5143-9ab0-be3a9b2c1d11",
+  "url": "https://apim-lab-classic-example.azure-api.net/lab-account/chat/completions",
+  "requestBody": {
+    "model": "lab-model",
+    "stream": false,
+    "messages": [
+      {
+        "role": "user",
+        "content": "For a synthetic gateway test, write a numbered list of thirty ordinary household objects, each followed by a short sentence about its everyday use. Do not discuss private information."
+      }
+    ],
+    "max_completion_tokens": 128,
+    "reasoning_effort": "minimal"
+  },
+  "response": {
+    "status": 429,
+    "headers": {
+      "content-length": "85",
+      "connection": "close",
+      "content-type": "application/json",
+      "date": "Wed, 21 Oct 2026 00:49:31 GMT",
+      "retry-after": "55",
+      "x-lab-tpm": "0",
+      "apim-trace-id": "b8057f5b0cd5c136016660780c6a89e2",
+      "ocp-apim-apiid": "lab-account",
+      "ocp-apim-operationid": "chat",
+      "ocp-apim-subscriptionid": "repro"
+    },
+    "body": {
+      "statusCode": 429,
+      "message": "Token limit is exceeded. Try again in 55 seconds."
+    }
+  },
+  "actualTotalTokens": null,
+  "backendStatuses": [],
+  "traceSources": [
+    "api-inspector",
+    "authentication-managed-identity",
+    "choose",
+    "cors",
+    "graphql-configuration-setup",
+    "llm-token-limit",
+    "rate-limit",
+    "transfer-response",
+    "validate-azure-ad-token"
+  ]
+}

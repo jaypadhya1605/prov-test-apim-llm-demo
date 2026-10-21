@@ -1,0 +1,5 @@
+{
+  "resource": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-apim-token-lab/providers/Microsoft.ApiManagement/service/apim-lab-v2-example/apis/lab-account/operations/chat/policies/policy",
+  "phase": "tpm",
+  "xml": "<policies><inbound><base /><choose><when condition=\"@(context.Request.Headers.GetValueOrDefault(&quot;x-lab-probe&quot;, &quot;&quot;) == &quot;true&quot;)\"><return-response><set-status code=\"204\" reason=\"Policy ready\" /><set-header name=\"x-lab-phase\" exists-action=\"override\"><value>tpm</value></set-header></return-response></when></choose><llm-token-limit counter-key=\"@(&quot;v2-enforcement-mitigation:tpm:&quot; + context.Api.Id + &quot;:&quot; + context.Operation.Id + &quot;:&quot; + context.Subscription.Id)\" estimate-prompt-tokens=\"true\" tokens-consumed-header-name=\"x-lab-consumed\" tokens-per-minute=\"300\" remaining-tokens-header-name=\"x-lab-tpm\" /></inbound><backend><base /></backend><outbound><base /><set-header name=\"x-lab-phase\" exists-action=\"override\"><value>tpm</value></set-header></outbound><on-error><base /></on-error></policies>"
+}

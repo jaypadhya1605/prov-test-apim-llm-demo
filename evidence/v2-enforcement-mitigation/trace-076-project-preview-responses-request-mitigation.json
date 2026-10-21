@@ -1,0 +1,235 @@
+{
+  "serviceName": "apim-lab-v2-example",
+  "traceId": "c9ebdce1-a6fa-5d90-9f91-b5e2378da4e0",
+  "traceEntries": {
+    "inbound": [
+      {
+        "source": "api-inspector",
+        "timestamp": "2026-10-21T00:44:27.6794056Z",
+        "elapsed": "00:00:00.0004391",
+        "data": {
+          "request": {
+            "scheme": {
+              "received": "https",
+              "original": "https"
+            },
+            "method": "POST",
+            "url": "https://apim-lab-v2-example.azure-api.net/lab-project-preview/responses",
+            "headers": [
+              {
+                "name": "Accept-Encoding",
+                "value": "identity"
+              },
+              {
+                "name": "Authorization",
+                "value": "[REDACTED]"
+              },
+              {
+                "name": "Content-Length",
+                "value": "313"
+              },
+              {
+                "name": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "name": "Host",
+                "value": "apim-lab-v2-example.azure-api.net"
+              },
+              {
+                "name": "Max-Forwards",
+                "value": "10"
+              },
+              {
+                "name": "User-Agent",
+                "value": "Python-urllib/3.14"
+              },
+              {
+                "name": "X-Ms-Client-Request-Id",
+                "value": "63c64c3c-f9d9-53a7-8fc1-ad109e22a6f2"
+              },
+              {
+                "name": "Ocp-Apim-Subscription-Key",
+                "value": "[REDACTED]"
+              },
+              {
+                "name": "X-ARR-LOG-ID",
+                "value": "63c64c3c-f9d9-53a7-8fc1-ad109e22a6f2"
+              },
+              {
+                "name": "CLIENT-IP",
+                "value": "192.0.2.17:2139"
+              },
+              {
+                "name": "DISGUISED-HOST",
+                "value": "apim-lab-v2-example.azure-api.net"
+              },
+              {
+                "name": "X-SITE-DEPLOYMENT-ID",
+                "value": "[REDACTED]"
+              },
+              {
+                "name": "WAS-DEFAULT-HOSTNAME",
+                "value": "[REDACTED]"
+              },
+              {
+                "name": "X-Forwarded-Proto",
+                "value": "https"
+              },
+              {
+                "name": "X-AppService-Proto",
+                "value": "https"
+              },
+              {
+                "name": "X-ARR-SSL",
+                "value": "[REDACTED]"
+              },
+              {
+                "name": "X-Forwarded-TlsVersion",
+                "value": "1.3"
+              },
+              {
+                "name": "X-Forwarded-For",
+                "value": "192.0.2.17:2139"
+              },
+              {
+                "name": "X-Original-URL",
+                "value": "/lab-project-preview/responses"
+              },
+              {
+                "name": "X-WAWS-Unencoded-URL",
+                "value": "/lab-project-preview/responses"
+              },
+              {
+                "name": "X-Azure-JA4-Fingerprint",
+                "value": "t13d1713h1_ab0a1bf427ad_89ab6efea773"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "source": "api-inspector",
+        "timestamp": "2026-10-21T00:44:27.6794132Z",
+        "elapsed": "00:00:00.0004460",
+        "data": {
+          "configuration": {
+            "api": {
+              "from": "/lab-project-preview",
+              "to": {
+                "scheme": "https",
+                "host": "ai-token-lab-example.services.ai.azure.com",
+                "port": 443,
+                "path": "/api/projects/project-token-lab/openai",
+                "queryString": "",
+                "query": {},
+                "isDefaultPort": true
+              },
+              "version": null,
+              "revision": "1"
+            },
+            "operation": {
+              "method": "POST",
+              "uriTemplate": "/responses"
+            },
+            "user": "-",
+            "product": "-"
+          }
+        }
+      },
+      {
+        "source": "graphql-configuration-setup",
+        "timestamp": "2026-10-21T00:44:27.6794479Z",
+        "elapsed": "00:00:00.0004808",
+        "data": "Skipping GraphQL creation for non-GraphQL API request"
+      },
+      {
+        "source": "cors",
+        "timestamp": "2026-10-21T00:44:27.6794885Z",
+        "elapsed": "00:00:00.0005213",
+        "data": "Origin header was missing or empty and the request was classified as not cross-domain. CORS policy was not applied."
+      },
+      {
+        "source": "validate-azure-ad-token",
+        "timestamp": "2026-10-21T00:44:27.68023Z",
+        "elapsed": "00:00:00.0012633",
+        "data": {
+          "message": "Azure AD JWT validation succeeded"
+        }
+      },
+      {
+        "source": "authentication-managed-identity",
+        "timestamp": "2026-10-21T00:44:27.6805091Z",
+        "elapsed": "00:00:00.0015422",
+        "data": {
+          "message": "Obtaining managed identity token using clientId:28cbcf94-3245-53ef-88dd-c06763c3b53e AAD Authority:https://login.windows.net/00000000-0000-0000-0000-000000000002 for https://ai.azure.com audience succeeded.",
+          "errorResponse": null
+        }
+      },
+      {
+        "source": "authentication-managed-identity",
+        "timestamp": "2026-10-21T00:44:27.6805131Z",
+        "elapsed": "00:00:00.0015459",
+        "data": {
+          "message": "Managed identity token is added to Authorization header."
+        }
+      },
+      {
+        "source": "set-query-parameter",
+        "timestamp": "2026-10-21T00:44:27.6805234Z",
+        "elapsed": "00:00:00.0015563",
+        "data": {
+          "message": "Request URL was updated with the query value.",
+          "request": {
+            "url": "https://ai-token-lab-example.services.ai.azure.com/api/projects/project-token-lab/openai/responses?api-version=2025-11-15-preview"
+          }
+        }
+      },
+      {
+        "source": "choose",
+        "timestamp": "2026-10-21T00:44:27.6805448Z",
+        "elapsed": "00:00:00.0015777",
+        "data": {
+          "message": "Expression was successfully evaluated.",
+          "expression": "context.Request.Headers.GetValueOrDefault(\"x-lab-probe\", \"\") == \"true\"",
+          "value": false
+        }
+      },
+      {
+        "source": "rate-limit-by-key",
+        "timestamp": "2026-10-21T00:44:27.6805585Z",
+        "elapsed": "00:00:00.0015914",
+        "data": {
+          "message": "Expression was successfully evaluated.",
+          "expression": "\"v2-enforcement-mitigation:request-mitigation:\" + context.Api.Id + \":\" + context.Operation.Id + \":\" + context.Subscription.Id",
+          "value": "v2-enforcement-mitigation:request-mitigation:lab-project-preview:responses:repro"
+        }
+      },
+      {
+        "source": "rate-limit",
+        "timestamp": "2026-10-21T00:44:27.680616Z",
+        "elapsed": "00:00:00.0016490",
+        "data": {
+          "message": "Rate limit was exceeded.",
+          "retryAfter": "00:00:02.8704250",
+          "rateLimit": {
+            "counterKey": 2326415854907185323,
+            "period": "00:01:00",
+            "callLimit": 3,
+            "count": 3
+          }
+        }
+      }
+    ],
+    "outbound": [
+      {
+        "source": "transfer-response",
+        "timestamp": "2026-10-21T00:44:27.6818765Z",
+        "elapsed": "00:00:00.0029103",
+        "data": {
+          "message": "Response has been sent to the caller in full"
+        }
+      }
+    ]
+  }
+}

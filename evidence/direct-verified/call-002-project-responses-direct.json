@@ -1,0 +1,39 @@
+{
+  "utc": "2026-10-21T00:19:53.442485+00:00",
+  "elapsedSeconds": 1.031,
+  "api": "project",
+  "operation": "responses",
+  "phase": "direct",
+  "direct": true,
+  "requestId": "30c61365-7168-5675-8c6f-827824af98c4",
+  "url": "https://ai-token-lab-example.services.ai.azure.com/api/projects/project-token-lab/openai/v1/responses",
+  "requestBody": {
+    "model": "lab-model",
+    "stream": false,
+    "input": "For a synthetic gateway test, write a numbered list of thirty ordinary household objects, each followed by a short sentence about its everyday use. Do not discuss private information.",
+    "max_output_tokens": 128,
+    "store": false,
+    "reasoning": {
+      "effort": "minimal"
+    }
+  },
+  "response": {
+    "status": 404,
+    "headers": {
+      "content-length": "78",
+      "connection": "close",
+      "content-type": "application/json",
+      "date": "Wed, 21 Oct 2026 00:19:52 GMT",
+      "apim-request-id": "d87c9e32-ab02-53ae-a553-6d0562049bc6",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "x-content-type-options": "nosniff"
+    },
+    "body": {
+      "error": {
+        "code": "ResourceNotFound",
+        "message": "The project does not exist."
+      }
+    }
+  },
+  "actualTotalTokens": null
+}

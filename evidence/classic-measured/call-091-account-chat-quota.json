@@ -1,0 +1,145 @@
+{
+  "utc": "2026-10-21T00:45:46.715739+00:00",
+  "elapsedSeconds": 2.65,
+  "api": "account",
+  "operation": "chat",
+  "phase": "quota",
+  "direct": false,
+  "requestId": "32bbafc4-16a7-50d9-9e71-e5c0bdd2246e",
+  "url": "https://apim-lab-classic-example.azure-api.net/lab-account/chat/completions",
+  "requestBody": {
+    "model": "lab-model",
+    "stream": false,
+    "messages": [
+      {
+        "role": "user",
+        "content": "For a synthetic gateway test, write a numbered list of thirty ordinary household objects, each followed by a short sentence about its everyday use. Do not discuss private information."
+      }
+    ],
+    "max_completion_tokens": 128,
+    "reasoning_effort": "minimal"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "content-length": "1219",
+      "connection": "close",
+      "content-type": "application/json",
+      "date": "Wed, 21 Oct 2026 00:45:45 GMT",
+      "server": "istio-envoy",
+      "vary": "Origin",
+      "azureai-fe-is-streaming": "False",
+      "azureai-fe-offer-type": "paygo",
+      "azureml-model-session": "d20261005131252-2d93733f",
+      "skip-error-remapping": "true",
+      "x-accel-buffering": "no",
+      "x-ms-is-spilled-over": "false",
+      "x-ms-rai-invoked": "true",
+      "x-ms-served-model": "gpt-5-mini-2025-08-07",
+      "x-ratelimit-abusepenalty-active": "False",
+      "x-ratelimit-key": "lab-model",
+      "x-ratelimit-limit-requests": "100",
+      "x-ratelimit-limit-tokens": "100000",
+      "x-ratelimit-remaining-requests": "99",
+      "x-ratelimit-remaining-tokens": "99961",
+      "x-ratelimit-renewalperiod-requests": "60",
+      "x-ratelimit-renewalperiod-tokens": "60",
+      "x-ratelimit-reset-requests": "0",
+      "x-ratelimit-reset-tokens": "0",
+      "x-request-id": "264a6bdb-8166-59de-a316-518cf77203e4",
+      "apim-request-id": "8903a895-b028-5ad2-ae9e-58b770f80ea3",
+      "x-http2-stream-id": "593",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "x-ms-client-request-id": "32bbafc4-16a7-50d9-9e71-e5c0bdd2246e",
+      "x-content-type-options": "nosniff",
+      "x-ms-region": "East US 2",
+      "x-lab-phase": "quota",
+      "x-lab-tpm": "9833",
+      "x-lab-quota": "53",
+      "x-lab-consumed": "167",
+      "apim-trace-id": "b45d00222d55eca6720270e1ea5a633c",
+      "ocp-apim-apiid": "lab-account",
+      "ocp-apim-operationid": "chat",
+      "ocp-apim-subscriptionid": "repro"
+    },
+    "body": {
+      "choices": [
+        {
+          "content_filter_results": {},
+          "finish_reason": "length",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "annotations": [],
+            "content": "",
+            "refusal": null,
+            "role": "assistant"
+          }
+        }
+      ],
+      "created": 1792543545,
+      "id": "chatcmpl-example-c0dfbb2bec6f4d5ed7df0ab1",
+      "model": "gpt-5-mini-2025-08-07",
+      "object": "chat.completion",
+      "prompt_filter_results": [
+        {
+          "prompt_index": 0,
+          "content_filter_results": {
+            "defender_for_ai": {
+              "detected": false,
+              "filtered": false,
+              "details": {}
+            },
+            "hate": {
+              "filtered": false,
+              "severity": "safe"
+            },
+            "self_harm": {
+              "filtered": false,
+              "severity": "safe"
+            },
+            "sexual": {
+              "filtered": false,
+              "severity": "safe"
+            },
+            "violence": {
+              "filtered": false,
+              "severity": "safe"
+            }
+          }
+        }
+      ],
+      "routing": {
+        "serving_pipereplica": "d20261005131252-2d93733f-default-r2-dp0-default"
+      },
+      "service_tier": "default",
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 128,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 128,
+          "rejected_prediction_tokens": 0
+        },
+        "latency_checkpoint": {
+          "engine_tbt_ms": 8,
+          "engine_ttft_ms": 25,
+          "engine_ttlt_ms": 1067,
+          "pre_inference_ms": 92,
+          "service_tbt_ms": 8,
+          "service_ttft_ms": 478,
+          "service_ttlt_ms": 1514,
+          "user_visible_ttft_ms": 386
+        },
+        "prompt_tokens": 39,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 0
+        },
+        "total_tokens": 167
+      }
+    }
+  },
+  "actualTotalTokens": 167
+}

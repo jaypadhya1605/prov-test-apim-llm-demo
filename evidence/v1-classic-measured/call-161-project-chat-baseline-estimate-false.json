@@ -1,0 +1,172 @@
+{
+  "utc": "2026-10-21T01:15:15.930914+00:00",
+  "elapsedSeconds": 2.291,
+  "api": "project",
+  "operation": "chat",
+  "phase": "baseline-estimate-false",
+  "direct": false,
+  "requestId": "80083cb8-6ed5-5390-bbc1-71754e5227fe",
+  "url": "https://apim-lab-classic-example.azure-api.net/lab-project/chat/completions",
+  "requestBody": {
+    "model": "lab-model",
+    "stream": false,
+    "messages": [
+      {
+        "role": "user",
+        "content": "For a synthetic gateway test, write a numbered list of thirty ordinary household objects, each followed by a short sentence about its everyday use. Do not discuss private information."
+      }
+    ],
+    "max_completion_tokens": 128,
+    "reasoning_effort": "minimal"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "content-length": "1311",
+      "connection": "close",
+      "content-type": "application/json",
+      "date": "Wed, 21 Oct 2026 01:15:14 GMT",
+      "server": "istio-envoy",
+      "access-control-expose-headers": "Operation-Location,Location,Apim-Request-Id,x-agent-session-id,x-agent-invocation-id",
+      "vary": "Origin",
+      "azureai-fe-is-streaming": "False",
+      "azureai-fe-offer-type": "paygo",
+      "azureml-model-session": "d20261006123742-c4b23712",
+      "skip-error-remapping": "true",
+      "x-accel-buffering": "no",
+      "x-ms-is-spilled-over": "false",
+      "x-ms-rai-invoked": "true",
+      "x-ms-served-model": "gpt-5-mini-2025-08-07",
+      "x-ratelimit-abusepenalty-active": "False",
+      "x-ratelimit-key": "lab-model",
+      "x-ratelimit-limit-requests": "100",
+      "x-ratelimit-limit-tokens": "100000",
+      "x-ratelimit-remaining-requests": "99",
+      "x-ratelimit-remaining-tokens": "99961",
+      "x-ratelimit-renewalperiod-requests": "60",
+      "x-ratelimit-renewalperiod-tokens": "60",
+      "x-ratelimit-reset-requests": "0",
+      "x-ratelimit-reset-tokens": "0",
+      "x-request-id": "728f7080-f6c4-510f-92f6-741fece0f7ad",
+      "apim-request-id": "947e2403-7511-56f5-8a2c-cd37b668e199",
+      "x-http2-stream-id": "1019",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "x-ms-client-request-id": "80083cb8-6ed5-5390-bbc1-71754e5227fe",
+      "x-content-type-options": "nosniff",
+      "x-ms-region": "East US 2",
+      "x-lab-phase": "baseline-estimate-false",
+      "x-lab-tpm": "9833",
+      "x-lab-quota": "9833",
+      "x-lab-consumed": "167",
+      "apim-trace-id": "3ae9daa7a56139a22a5221202389b0a9",
+      "ocp-apim-apiid": "lab-project",
+      "ocp-apim-operationid": "chat",
+      "ocp-apim-subscriptionid": "repro"
+    },
+    "body": {
+      "choices": [
+        {
+          "content_filter_results": {},
+          "finish_reason": "length",
+          "index": 0,
+          "logprobs": null,
+          "message": {
+            "annotations": [],
+            "content": "",
+            "refusal": null,
+            "role": "assistant"
+          }
+        }
+      ],
+      "created": 1792545315,
+      "id": "chatcmpl-example-7ecc9a79784d293726907b32",
+      "model": "gpt-5-mini-2025-08-07",
+      "object": "chat.completion",
+      "prompt_filter_results": [
+        {
+          "prompt_index": 0,
+          "content_filter_results": {
+            "defender_for_ai": {
+              "detected": false,
+              "filtered": false,
+              "details": {
+                "evaluation": "unavailable",
+                "evaluationReason": "missing_or_unknown_provider_evaluation_status"
+              }
+            },
+            "hate": {
+              "filtered": false,
+              "severity": "safe"
+            },
+            "self_harm": {
+              "filtered": false,
+              "severity": "safe"
+            },
+            "sexual": {
+              "filtered": false,
+              "severity": "safe"
+            },
+            "violence": {
+              "filtered": false,
+              "severity": "safe"
+            }
+          }
+        }
+      ],
+      "routing": {
+        "serving_pipereplica": "d20261006123742-c4b23712-default-r0-dp0-default"
+      },
+      "service_tier": "default",
+      "system_fingerprint": null,
+      "usage": {
+        "completion_tokens": 128,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 128,
+          "rejected_prediction_tokens": 0
+        },
+        "latency_checkpoint": {
+          "engine_tbt_ms": 7,
+          "engine_ttft_ms": 29,
+          "engine_ttlt_ms": 882,
+          "pre_inference_ms": 96,
+          "service_tbt_ms": 7,
+          "service_ttft_ms": 463,
+          "service_ttlt_ms": 1290,
+          "user_visible_ttft_ms": 367
+        },
+        "prompt_tokens": 39,
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 0
+        },
+        "total_tokens": 167
+      }
+    }
+  },
+  "actualTotalTokens": 167,
+  "backendStatuses": [
+    200
+  ],
+  "traceSources": [
+    "api-inspector",
+    "authentication-managed-identity",
+    "cache-model-process-response-handler",
+    "choose",
+    "cors",
+    "forward-request",
+    "graphql-configuration-setup",
+    "lab-backend-body",
+    "language-model-response-handler",
+    "llm-token-limit",
+    "request-forwarder",
+    "request-payload-handler",
+    "response-payload-handler",
+    "set-header",
+    "token-limit-process-response-handler",
+    "trace",
+    "transfer-response",
+    "validate-azure-ad-token"
+  ]
+}

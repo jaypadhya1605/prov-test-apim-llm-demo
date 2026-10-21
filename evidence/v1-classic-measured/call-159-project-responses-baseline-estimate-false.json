@@ -1,0 +1,237 @@
+{
+  "utc": "2026-10-21T01:15:12.078991+00:00",
+  "elapsedSeconds": 2.687,
+  "api": "project",
+  "operation": "responses",
+  "phase": "baseline-estimate-false",
+  "direct": false,
+  "requestId": "5010d8fa-ed12-5944-843e-797d300231b7",
+  "url": "https://apim-lab-classic-example.azure-api.net/lab-project/responses",
+  "requestBody": {
+    "model": "lab-model",
+    "stream": false,
+    "input": "For a synthetic gateway test, write a numbered list of thirty ordinary household objects, each followed by a short sentence about its everyday use. Do not discuss private information.",
+    "max_output_tokens": 128,
+    "store": false,
+    "reasoning": {
+      "effort": "minimal"
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "content-length": "4978",
+      "connection": "close",
+      "content-type": "application/json",
+      "date": "Wed, 21 Oct 2026 01:15:10 GMT",
+      "server": "istio-envoy",
+      "access-control-expose-headers": "Operation-Location,Location,Apim-Request-Id,x-agent-session-id,x-agent-invocation-id",
+      "vary": "Origin,Accept-Encoding",
+      "request-context": "appId=",
+      "x-ms-response-type": "standard",
+      "x-request-id": "c35c3fe1-1f10-5256-9814-5c1cc0e150df",
+      "x-ms-aoai-configured-data-retention-days": "30",
+      "skip-error-remapping": "true",
+      "openai-client-partition-id": "6984426f25268176a3fb6debd604cc47ca553000-ce51-49a9-ae08-55ae040eee3f",
+      "azureml-internal-forward-count": "1",
+      "x-ms-is-spilled-over": "false",
+      "x-ratelimit-key": "lab-model",
+      "x-ratelimit-remaining-requests": "99",
+      "x-ratelimit-reset-requests": "0",
+      "x-ratelimit-limit-requests": "100",
+      "x-ratelimit-renewalperiod-requests": "60",
+      "x-ratelimit-abusepenalty-active": "False",
+      "x-ratelimit-remaining-tokens": "99955",
+      "x-ratelimit-reset-tokens": "0",
+      "x-ratelimit-limit-tokens": "100000",
+      "x-ratelimit-renewalperiod-tokens": "60",
+      "azureai-fe-is-streaming": "False",
+      "azureai-fe-offer-type": "paygo",
+      "x-ms-served-model": "gpt-5-mini-2025-08-07",
+      "openai-version": "2020-10-01",
+      "openai-organization": "bbdc9d156d453699d861b3b3afbfd981",
+      "openai-project": "d2b722b2-1410-508b-b0ce-46e743a21ecb",
+      "openai-processing-ms": "1679",
+      "azureml-served-by-cluster": "hyena-eastus2-02,hyena-eastus2-02",
+      "api-supported-versions": "1.0,2025-05-15-preview,2025-11-15-preview",
+      "x-http2-stream-id": "361",
+      "apim-request-id": "124b2a98-7e12-56e1-974e-d0e3a6fbddd3",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "x-content-type-options": "nosniff",
+      "x-ms-region": "East US 2",
+      "x-lab-phase": "baseline-estimate-false",
+      "x-lab-tpm": "9499",
+      "x-lab-quota": "9499",
+      "x-lab-consumed": "167",
+      "apim-trace-id": "7c5c04d5e7206324e54ee21d1c445b14",
+      "ocp-apim-apiid": "lab-project",
+      "ocp-apim-operationid": "responses",
+      "ocp-apim-subscriptionid": "repro"
+    },
+    "body": {
+      "metadata": {},
+      "top_logprobs": 0,
+      "temperature": 1,
+      "top_p": 1,
+      "service_tier": "default",
+      "prompt_cache_retention": "in_memory",
+      "model": "lab-model",
+      "reasoning": {
+        "effort": "minimal",
+        "context": "current_turn",
+        "mode": "standard"
+      },
+      "background": false,
+      "max_output_tokens": 128,
+      "text": {
+        "format": {
+          "type": "text"
+        },
+        "verbosity": "medium"
+      },
+      "tools": [],
+      "tool_choice": "auto",
+      "truncation": "disabled",
+      "id": "resp_example-95ac5bc925eaae4f92ec28ea",
+      "object": "response",
+      "status": "incomplete",
+      "created_at": 1792545311,
+      "error": null,
+      "incomplete_details": {
+        "reason": "max_output_tokens"
+      },
+      "output": [
+        {
+          "type": "reasoning",
+          "id": "rs_example-61d1aca51412cabfbc578e11",
+          "response_id": "resp_example-95ac5bc925eaae4f92ec28ea",
+          "encrypted_content": "gAAAAABq2BIhOv8zj4EVox7s2ZnXo-u17tnwzg2HBxvrvsfkfpgb_bW0nk9ISx9ooUyAem82FRVjMi6k2QOvm_bQEdDwBxMTqOAERphT2rkUQqFZ6GDsrMCMPni9balM8Tr79yXXBGpSoY-YKQcd5bvMJ9h2Wt-hImxTFc63TmNZ8FvBccYNjSBUGCPxxoL98vlfyQmM_w0nCaDWh2xUt6XtXQr-4pHvOLdBP8lIu9poiifv0SLjENc2JCf0ryKNSCR92XRFgs5mTGy22EKtFTcDs5qGIpsemEdOiRxbXWCubVPIzinGqITFZBz_bkBKs5YPx3zhnaQKZgeMUCKlHeymKvworhVqF4q9QWzizoozrdX7P7cpNwWno7TJaNs5Dg9uxhU8BePPDKrQSbkp56RHZ-bqJ9Jzw9MVGg5av39OCA8Fj91OiAz0mI4nUJPbPBNZfRK7hyIrHtBq3n6xUCuUSk-5l8L8Q1Djq9AQvfUnBLhuc4JzfXAs9HudNO2QLFo43F4E7HJXmGjbwmQAAssfyCkUr6Iy6W5l91EtzB7QJFTAkY2Ah6KGCnrkGEE-3GlUKvra4ZZmIRC_upN_7Auv4LmQYG-b3-gAhDqgwAZF4Pr_1cM3nS-xdvRR_41EW0jMmm9dIgZz6QxPe_Xg8T18Ak_USwd-n5AX7PFc_f6sBgu1ScmsJN-wzIyMOGI-M7rUiPyF0zDKo9zQj1QKysVvELMfZawlu0fIM87F9-hx7oXTLNrTr37xDXFPzU1CCX1j9cdnCqjjcmlNDi0OfQOl5jHaqVBvjLrJ-epFJwyK0l_TYb2rsw5GXHk7kq6q04JJlGuJfeSPnIYeF1MjWUOGM1n7jduafNKJJH2sgVcFgVlkJTDJ5aJgSosAj-43bA8v2woNqNrcjS84_rQleJ9ZI0_HlRM0LpZOmbrKBO94ArKMpGFvDJ-K79Vzmf2VIBws7hjW-7siC4a08XW7UJeo413sNKp5J5zULUQ0iuagBl7Amrw6ueljfL_92mWhv5IdKSgHhoGOSwJzpeMwGG6Q3UQoyIcc7sQBsKJR9SiE0w67E6YmpLtbHHL4MgZQsMU1T58uBDDbXcMrr2I4Tfs31nyXuu6XgnknQEi8b37khadLk39VduxNny1NPjRf9uNPX0YhgE4ynQZLPGAPsBjrit1jdT_Vt34-iPezCVvuXeNGumT-U9WfKucQOFsBST1vfi8gMAtQZ3C5kXuknbB5SIPULQzNxw==",
+          "summary": [],
+          "content": []
+        },
+        {
+          "type": "message",
+          "id": "msg_example-36e9ec230205131645dc4876",
+          "response_id": "resp_example-95ac5bc925eaae4f92ec28ea",
+          "role": "assistant",
+          "content": [
+            {
+              "type": "output_text",
+              "text": "1. Toothbrush \u2014 used to clean teeth and maintain oral hygiene.\n2. Bath towel \u2014 used to dry off after bathing or showering.\n3. Coffee mug \u2014 used to hold and drink hot beverages like coffee or tea.\n4. Refrigerator \u2014 used to keep food and drinks cold and slow spoilage.\n5. Microwave oven \u2014 used to heat or reheat food quickly.\n6. Dining chair \u2014 used to sit at a table while eating or working.\n7. Pillow \u2014 used to support the head while sleeping.\n8. Bed sheet \u2014 used to",
+              "annotations": [],
+              "logprobs": []
+            }
+          ],
+          "status": "incomplete"
+        }
+      ],
+      "instructions": null,
+      "usage": {
+        "input_tokens": 39,
+        "input_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0
+        },
+        "output_tokens": 128,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 167
+      },
+      "parallel_tool_calls": true,
+      "agent_reference": null,
+      "content_filters": [
+        {
+          "blocked": false,
+          "source_type": "prompt",
+          "content_filter_results": {
+            "sexual": {
+              "filtered": false,
+              "severity": "safe"
+            },
+            "hate": {
+              "filtered": false,
+              "severity": "safe"
+            },
+            "violence": {
+              "filtered": false,
+              "severity": "safe"
+            },
+            "self_harm": {
+              "filtered": false,
+              "severity": "safe"
+            },
+            "defender_for_ai": {
+              "detected": false,
+              "filtered": false,
+              "details": {}
+            }
+          },
+          "content_filter_raw": [],
+          "content_filter_offsets": {
+            "start_offset": 0,
+            "end_offset": 1315,
+            "check_offset": 0
+          }
+        },
+        {
+          "blocked": false,
+          "source_type": "completion",
+          "content_filter_results": {
+            "sexual": {
+              "filtered": false,
+              "severity": "safe"
+            },
+            "hate": {
+              "filtered": false,
+              "severity": "safe"
+            },
+            "violence": {
+              "filtered": false,
+              "severity": "safe"
+            },
+            "self_harm": {
+              "filtered": false,
+              "severity": "safe"
+            },
+            "defender_for_ai": {
+              "detected": false,
+              "filtered": false,
+              "details": {}
+            }
+          },
+          "content_filter_raw": [],
+          "content_filter_offsets": {
+            "start_offset": 0,
+            "end_offset": 507,
+            "check_offset": 0
+          }
+        }
+      ]
+    }
+  },
+  "actualTotalTokens": 167,
+  "backendStatuses": [
+    200
+  ],
+  "traceSources": [
+    "api-inspector",
+    "authentication-managed-identity",
+    "cache-model-process-response-handler",
+    "choose",
+    "cors",
+    "forward-request",
+    "graphql-configuration-setup",
+    "lab-backend-body",
+    "language-model-response-handler",
+    "llm-token-limit",
+    "request-forwarder",
+    "request-payload-handler",
+    "response-payload-handler",
+    "set-header",
+    "token-limit-process-response-handler",
+    "trace",
+    "transfer-response",
+    "validate-azure-ad-token"
+  ]
+}

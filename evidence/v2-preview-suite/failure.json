@@ -1,0 +1,4 @@
+{
+  "utc": "2026-10-21T00:27:48.640443+00:00",
+  "error": "Model request failed: {'status': 403, 'headers': {'content-length': '45', 'connection': 'close', 'content-type': 'application/json', 'date': 'Wed, 21 Oct 2026 00:27:40 GMT', 'apim-trace-id': 'a7e6df791e22ad40736391a3a811ee7a', 'ocp-apim-apiid': 'lab-project-preview', 'ocp-apim-operationid': 'responses', 'ocp-apim-subscriptionid': 'repro'}, 'body': {'statusCode': 403, 'message': 'Forbidden'}}"
+}

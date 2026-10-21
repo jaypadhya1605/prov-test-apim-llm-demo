@@ -1,0 +1,48 @@
+{
+  "utc": "2026-10-21T00:48:34.413432+00:00",
+  "elapsedSeconds": 0.887,
+  "api": "account",
+  "operation": "chat",
+  "phase": "unauthenticated",
+  "direct": false,
+  "requestId": "3de90c52-b029-5b74-a84f-f921eaa42edb",
+  "url": "https://apim-lab-classic-example.azure-api.net/lab-account/chat/completions",
+  "requestBody": {
+    "model": "lab-model",
+    "stream": false,
+    "messages": [
+      {
+        "role": "user",
+        "content": "For a synthetic gateway test, write a numbered list of thirty ordinary household objects, each followed by a short sentence about its everyday use. Do not discuss private information."
+      }
+    ],
+    "max_completion_tokens": 128,
+    "reasoning_effort": "minimal"
+  },
+  "response": {
+    "status": 401,
+    "headers": {
+      "content-length": "60",
+      "connection": "close",
+      "content-type": "application/json",
+      "date": "Wed, 21 Oct 2026 00:48:33 GMT",
+      "apim-trace-id": "fc0a437dcfd4079584718c973db47ec6",
+      "ocp-apim-apiid": "lab-account",
+      "ocp-apim-operationid": "chat",
+      "ocp-apim-subscriptionid": "repro"
+    },
+    "body": {
+      "statusCode": 401,
+      "message": "Azure AD JWT not present"
+    }
+  },
+  "actualTotalTokens": null,
+  "backendStatuses": [],
+  "traceSources": [
+    "api-inspector",
+    "cors",
+    "graphql-configuration-setup",
+    "transfer-response",
+    "validate-azure-ad-token"
+  ]
+}

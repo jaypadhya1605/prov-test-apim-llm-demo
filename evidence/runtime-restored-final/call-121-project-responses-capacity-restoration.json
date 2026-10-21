@@ -1,0 +1,197 @@
+{
+  "utc": "2026-10-21T01:07:49.210541+00:00",
+  "elapsedSeconds": 2.464,
+  "api": "project",
+  "operation": "responses",
+  "phase": "capacity-restoration",
+  "direct": true,
+  "requestId": "73eeca53-6c16-541b-9f23-2740b9444d19",
+  "url": "https://ai-token-lab-example.services.ai.azure.com/api/projects/project-token-lab/openai/v1/responses",
+  "requestBody": {
+    "model": "lab-model",
+    "stream": false,
+    "input": "Reply OK.",
+    "max_output_tokens": 16,
+    "store": false,
+    "reasoning": {
+      "effort": "minimal"
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "content-length": "4323",
+      "connection": "close",
+      "content-type": "application/json",
+      "date": "Wed, 21 Oct 2026 01:07:48 GMT",
+      "server": "istio-envoy",
+      "access-control-expose-headers": "Operation-Location,Location,Apim-Request-Id,x-agent-session-id,x-agent-invocation-id",
+      "vary": "Origin,Accept-Encoding",
+      "request-context": "appId=",
+      "x-ms-response-type": "standard",
+      "x-request-id": "cbb912db-d3bc-5743-a0d4-94fc7e47e27d",
+      "x-ms-aoai-configured-data-retention-days": "30",
+      "skip-error-remapping": "true",
+      "openai-client-partition-id": "dd9c6fa6710bbf4407ace5583b473b77046a798e-d396-4c34-a732-5b813825d5e9",
+      "azureml-internal-forward-count": "1",
+      "x-ms-is-spilled-over": "false",
+      "x-ratelimit-key": "lab-model",
+      "x-ratelimit-remaining-requests": "-1",
+      "x-ratelimit-reset-requests": "114",
+      "x-ratelimit-limit-requests": "1",
+      "x-ratelimit-renewalperiod-requests": "60",
+      "x-ratelimit-abusepenalty-active": "False",
+      "x-ratelimit-remaining-tokens": "998",
+      "x-ratelimit-reset-tokens": "0",
+      "x-ratelimit-limit-tokens": "1000",
+      "x-ratelimit-renewalperiod-tokens": "60",
+      "azureai-fe-is-streaming": "False",
+      "azureai-fe-offer-type": "paygo",
+      "x-ms-served-model": "gpt-5-mini-2025-08-07",
+      "openai-version": "2020-10-01",
+      "openai-organization": "bbdc9d156d453699d861b3b3afbfd981",
+      "openai-project": "d2b722b2-1410-508b-b0ce-46e743a21ecb",
+      "openai-processing-ms": "981",
+      "azureml-served-by-cluster": "hyena-eastus2-01,hyena-eastus2-01",
+      "api-supported-versions": "1.0,2025-05-15-preview,2025-11-15-preview",
+      "x-http2-stream-id": "951",
+      "apim-request-id": "1ee58b33-b10c-5d07-9cc2-bbfa46828325",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "x-content-type-options": "nosniff",
+      "x-ms-region": "East US 2"
+    },
+    "body": {
+      "metadata": {},
+      "top_logprobs": 0,
+      "temperature": 1,
+      "top_p": 1,
+      "service_tier": "default",
+      "prompt_cache_retention": "in_memory",
+      "model": "lab-model",
+      "reasoning": {
+        "effort": "minimal",
+        "context": "current_turn",
+        "mode": "standard"
+      },
+      "background": false,
+      "max_output_tokens": 16,
+      "text": {
+        "format": {
+          "type": "text"
+        },
+        "verbosity": "medium"
+      },
+      "tools": [],
+      "tool_choice": "auto",
+      "truncation": "disabled",
+      "id": "resp_example-23ee45987be9fcb5a24c1ed6",
+      "object": "response",
+      "status": "incomplete",
+      "created_at": 1792544869,
+      "error": null,
+      "incomplete_details": {
+        "reason": "max_output_tokens"
+      },
+      "output": [
+        {
+          "type": "reasoning",
+          "id": "rs_example-44316688578eb48c87fd65b1",
+          "response_id": "resp_example-23ee45987be9fcb5a24c1ed6",
+          "encrypted_content": "gAAAAABq2BBlGL4NnX_tXel0Up9Y4NndPHdrLLWMzZosiqMvS-pWglzNKBz0mlDvxtpCKS_-aALsg2vVg_kCb3S6jjFs1u6G7Gd3wnC9dKxbuZNAnVYTWl6t3FcPTjfc2uH8gNwLw5wJmgHs77315Bietn7iHpgBB7ZKfKtqYjXwixStTMRkR6VNerlLDPjnygGJpxObvUlVgoPQeQJRvx8QBloLkhr_1qfiqR00NJrtfEM9gYrW6T6hWn0USSX1ABRgHz2sfqyM4PiZ3ArYTJkb8ThokSWfAejRmv4uvn-lT6-SBL6C8bPLCClulanij7OEdz7BmOS9JOv7Ez7ODUfJhLDr75EOKvQgUkp_DRjA7bSYnjH5vXNMoeov_Ai_dS_01pke4rME3nVUbmOfenoJklPdtAxAGbIUQT94Ufgr2lcnCEtyd4qGAnFYkAK9H9_0GrxYW1BaVK0-tql2rN5mbJO7SiAfYrYrY7AFC2MdtmJjhM4jNBGf_0TjO6-w3hN_-AyvbALFl-fc-otIByTBOw7IusE0JeQA-JnheMPUXvIP4BLNjbTMpRWsPs4lL8KK2Yt3_5sLoeb5QD5yFbNpagM2wSO2apV7v7hW_6vfg63jcNW3ciAhtBqJitLJNlVXWMIRLjlXCKLLKWGHW22YOebJcvm7bTOto_Oa3w-dQPrcC0WIzu8_qv7mVPJk_s_Nw5Ey7q9gO_-SE1aebxBlrksd1gQdMKdlHB2psxEgMqDmr2uLUyEj-uWYSSKFVJ8nfl1U-g1Yghc_6YiUdUzUQDBO2GIiXSSgQn63BNqsckeoZAFqHSDallJR6MhTJvkv141mpurJ6lKpt7JJDCCpw8SsoYzjRKJiH89q-motVBGfgNwe-l2klwLoa6BWnLRUNpEvtA0HxhUZiVSL12ekqHLkbccep5lLvSYf4h5elSQOO9pSMD_SeP2mWfgXUj3edbdBWtEC0R7QEp_mn5LTvsiu2ePetqz2Q3SVVota3-qzUUJSVz3AeEy-YsAIxKxh4bHZb3kK1DaLI05OOMkhwbutqRuFBux5qyPc9MG1lPpnlvohNo7eeTgEodg2QcxByUrb81yaguHkD81tD0lDdBZ73YV8d40ou9GETqzQ4ljNCBJfmQCZytmiirSPFHk5bo_ZjvpPLTMhFVqyHgY3MuCdNS34WFb-L60o__BHUbDxxfUIE5VEwfko8GvUIiHDrA3ejcBu",
+          "summary": [],
+          "content": []
+        }
+      ],
+      "instructions": null,
+      "usage": {
+        "input_tokens": 9,
+        "input_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0
+        },
+        "output_tokens": 4,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 13
+      },
+      "parallel_tool_calls": true,
+      "agent_reference": null,
+      "content_filters": [
+        {
+          "blocked": false,
+          "source_type": "prompt",
+          "content_filter_results": {
+            "sexual": {
+              "filtered": false,
+              "severity": "safe"
+            },
+            "hate": {
+              "filtered": false,
+              "severity": "safe"
+            },
+            "violence": {
+              "filtered": false,
+              "severity": "safe"
+            },
+            "self_harm": {
+              "filtered": false,
+              "severity": "safe"
+            },
+            "defender_for_ai": {
+              "detected": false,
+              "filtered": false,
+              "details": {
+                "evaluation": "unavailable",
+                "evaluationReason": "missing_or_unknown_provider_evaluation_status"
+              }
+            }
+          },
+          "content_filter_raw": [],
+          "content_filter_offsets": {
+            "start_offset": 0,
+            "end_offset": 1141,
+            "check_offset": 0
+          }
+        },
+        {
+          "blocked": false,
+          "source_type": "completion",
+          "content_filter_results": {
+            "sexual": {
+              "filtered": false,
+              "severity": "safe"
+            },
+            "hate": {
+              "filtered": false,
+              "severity": "safe"
+            },
+            "violence": {
+              "filtered": false,
+              "severity": "safe"
+            },
+            "self_harm": {
+              "filtered": false,
+              "severity": "safe"
+            },
+            "defender_for_ai": {
+              "detected": false,
+              "filtered": false,
+              "details": {
+                "evaluation": "unavailable",
+                "evaluationReason": "missing_or_unknown_provider_evaluation_status"
+              }
+            }
+          },
+          "content_filter_raw": [],
+          "content_filter_offsets": {
+            "start_offset": 0,
+            "end_offset": 28,
+            "check_offset": 0
+          }
+        }
+      ]
+    }
+  },
+  "actualTotalTokens": 13
+}

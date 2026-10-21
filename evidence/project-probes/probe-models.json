@@ -1,0 +1,19 @@
+{
+  "status": 404,
+  "headers": {
+    "content-length": "0",
+    "connection": "close",
+    "date": "Wed, 21 Oct 2026 00:21:26 GMT",
+    "server": "istio-envoy",
+    "access-control-expose-headers": "Operation-Location,Location,Apim-Request-Id,x-agent-session-id,x-agent-invocation-id",
+    "request-context": "appId=",
+    "x-ms-response-type": "standard",
+    "azureml-served-by-cluster": "hyena-eastus2-02",
+    "x-http2-stream-id": "357",
+    "apim-request-id": "41768758-5375-5ca1-b455-560e09906c69",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "x-content-type-options": "nosniff",
+    "x-ms-region": "East US 2"
+  },
+  "body": ""
+}

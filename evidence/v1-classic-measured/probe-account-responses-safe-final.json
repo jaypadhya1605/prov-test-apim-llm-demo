@@ -1,0 +1,38 @@
+[
+  {
+    "utc": "2026-10-21T01:17:12.052837+00:00",
+    "response": {
+      "status": 204,
+      "headers": {
+        "connection": "close",
+        "date": "Wed, 21 Oct 2026 01:17:10 GMT",
+        "x-lab-phase": "baseline-estimate-false"
+      },
+      "body": ""
+    }
+  },
+  {
+    "utc": "2026-10-21T01:17:15.832976+00:00",
+    "response": {
+      "status": 204,
+      "headers": {
+        "connection": "close",
+        "date": "Wed, 21 Oct 2026 01:17:13 GMT",
+        "x-lab-phase": "baseline-estimate-false"
+      },
+      "body": ""
+    }
+  },
+  {
+    "utc": "2026-10-21T01:17:19.668307+00:00",
+    "response": {
+      "status": 204,
+      "headers": {
+        "connection": "close",
+        "date": "Wed, 21 Oct 2026 01:17:17 GMT",
+        "x-lab-phase": "safe-final"
+      },
+      "body": ""
+    }
+  }
+]

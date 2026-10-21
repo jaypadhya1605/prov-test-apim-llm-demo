@@ -1,0 +1,5 @@
+{
+  "resource": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-apim-token-lab/providers/Microsoft.ApiManagement/service/apim-lab-v2-example/apis/lab-account/operations/chat/policies/policy",
+  "phase": "safe",
+  "xml": "<policies><inbound><base /><llm-token-limit counter-key=\"@(&quot;v2-preview-suite:safe:&quot; + context.Api.Id + &quot;:&quot; + context.Operation.Id + &quot;:&quot; + context.Subscription.Id)\" estimate-prompt-tokens=\"true\" tokens-consumed-header-name=\"x-lab-consumed\" remaining-tokens-header-name=\"x-lab-tpm\" remaining-quota-tokens-header-name=\"x-lab-quota\" tokens-per-minute=\"10000\" token-quota=\"10000\" token-quota-period=\"Hourly\" /></inbound><backend><base /></backend><outbound><base /><set-header name=\"x-lab-phase\" exists-action=\"override\"><value>safe</value></set-header></outbound><on-error><base /></on-error></policies>"
+}

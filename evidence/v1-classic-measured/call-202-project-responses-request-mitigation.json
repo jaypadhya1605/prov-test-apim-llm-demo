@@ -1,0 +1,51 @@
+{
+  "utc": "2026-10-21T01:17:00.340669+00:00",
+  "elapsedSeconds": 0.986,
+  "api": "project",
+  "operation": "responses",
+  "phase": "request-mitigation",
+  "direct": false,
+  "requestId": "2173a58b-3688-5a88-87eb-f68996b964ee",
+  "url": "https://apim-lab-classic-example.azure-api.net/lab-project/responses",
+  "requestBody": {
+    "model": "lab-model",
+    "stream": false,
+    "input": "For a synthetic gateway test, write a numbered list of thirty ordinary household objects, each followed by a short sentence about its everyday use. Do not discuss private information.",
+    "max_output_tokens": 128,
+    "store": false,
+    "reasoning": {
+      "effort": "minimal"
+    }
+  },
+  "response": {
+    "status": 429,
+    "headers": {
+      "content-length": "84",
+      "connection": "close",
+      "content-type": "application/json",
+      "date": "Wed, 21 Oct 2026 01:16:59 GMT",
+      "retry-after": "49",
+      "apim-trace-id": "fa68be44ed8a5243762b1d55912c897c",
+      "ocp-apim-apiid": "lab-project",
+      "ocp-apim-operationid": "responses",
+      "ocp-apim-subscriptionid": "repro"
+    },
+    "body": {
+      "statusCode": 429,
+      "message": "Rate limit is exceeded. Try again in 49 seconds."
+    }
+  },
+  "actualTotalTokens": null,
+  "backendStatuses": [],
+  "traceSources": [
+    "api-inspector",
+    "authentication-managed-identity",
+    "choose",
+    "cors",
+    "graphql-configuration-setup",
+    "rate-limit",
+    "rate-limit-by-key",
+    "transfer-response",
+    "validate-azure-ad-token"
+  ]
+}

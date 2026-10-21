@@ -1,0 +1,26 @@
+[
+  {
+    "utc": "2026-10-21T00:38:38.345858+00:00",
+    "response": {
+      "status": 204,
+      "headers": {
+        "connection": "close",
+        "date": "Wed, 21 Oct 2026 00:38:36 GMT",
+        "x-lab-phase": "baseline-estimate-false"
+      },
+      "body": ""
+    }
+  },
+  {
+    "utc": "2026-10-21T00:38:42.013439+00:00",
+    "response": {
+      "status": 204,
+      "headers": {
+        "connection": "close",
+        "date": "Wed, 21 Oct 2026 00:38:39 GMT",
+        "x-lab-phase": "quota"
+      },
+      "body": ""
+    }
+  }
+]

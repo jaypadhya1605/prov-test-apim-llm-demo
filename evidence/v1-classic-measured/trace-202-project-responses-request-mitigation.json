@@ -1,0 +1,172 @@
+{
+  "serviceName": "apim-lab-classic-example",
+  "traceId": "ae5e408e-2411-52ab-9aa0-404545f221a7",
+  "traceEntries": {
+    "inbound": [
+      {
+        "source": "api-inspector",
+        "timestamp": "2026-10-21T01:16:59.5738971Z",
+        "elapsed": "00:00:00.0002799",
+        "data": {
+          "request": {
+            "scheme": {
+              "received": "https",
+              "original": "https"
+            },
+            "method": "POST",
+            "url": "https://apim-lab-classic-example.azure-api.net/lab-project/responses",
+            "headers": [
+              {
+                "name": "Connection",
+                "value": "close"
+              },
+              {
+                "name": "Host",
+                "value": "apim-lab-classic-example.azure-api.net"
+              },
+              {
+                "name": "User-Agent",
+                "value": "Python-urllib/3.14"
+              },
+              {
+                "name": "Accept-Encoding",
+                "value": "identity"
+              },
+              {
+                "name": "Authorization",
+                "value": "[REDACTED]"
+              },
+              {
+                "name": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "name": "Content-Length",
+                "value": "313"
+              },
+              {
+                "name": "X-Ms-Client-Request-Id",
+                "value": "2173a58b-3688-5a88-87eb-f68996b964ee"
+              },
+              {
+                "name": "Ocp-Apim-Subscription-Key",
+                "value": "[REDACTED]"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "source": "api-inspector",
+        "timestamp": "2026-10-21T01:16:59.5739027Z",
+        "elapsed": "00:00:00.0002849",
+        "data": {
+          "configuration": {
+            "api": {
+              "from": "/lab-project",
+              "to": {
+                "scheme": "https",
+                "host": "ai-token-lab-example.services.ai.azure.com",
+                "port": 443,
+                "path": "/api/projects/project-token-lab/openai/v1",
+                "queryString": "",
+                "query": {},
+                "isDefaultPort": true
+              },
+              "version": null,
+              "revision": "1"
+            },
+            "operation": {
+              "method": "POST",
+              "uriTemplate": "/responses"
+            },
+            "user": "-",
+            "product": "-"
+          }
+        }
+      },
+      {
+        "source": "graphql-configuration-setup",
+        "timestamp": "2026-10-21T01:16:59.5739236Z",
+        "elapsed": "00:00:00.0003059",
+        "data": "Skipping GraphQL creation for non-GraphQL API request"
+      },
+      {
+        "source": "cors",
+        "timestamp": "2026-10-21T01:16:59.5739485Z",
+        "elapsed": "00:00:00.0003308",
+        "data": "Origin header was missing or empty and the request was classified as not cross-domain. CORS policy was not applied."
+      },
+      {
+        "source": "validate-azure-ad-token",
+        "timestamp": "2026-10-21T01:16:59.5744698Z",
+        "elapsed": "00:00:00.0008523",
+        "data": {
+          "message": "Azure AD JWT validation succeeded"
+        }
+      },
+      {
+        "source": "authentication-managed-identity",
+        "timestamp": "2026-10-21T01:16:59.574696Z",
+        "elapsed": "00:00:00.0010785",
+        "data": {
+          "message": "Obtaining managed identity token using clientId:24146b2b-79d2-5391-932d-556314241ed9 AAD Authority:https://login.windows.net/00000000-0000-0000-0000-000000000002 for https://ai.azure.com audience succeeded.",
+          "errorResponse": null
+        }
+      },
+      {
+        "source": "authentication-managed-identity",
+        "timestamp": "2026-10-21T01:16:59.5747013Z",
+        "elapsed": "00:00:00.0010836",
+        "data": {
+          "message": "Managed identity token (authentication provider: built-in, client ID: systemAssigned) is added to Authorization header."
+        }
+      },
+      {
+        "source": "choose",
+        "timestamp": "2026-10-21T01:16:59.5747147Z",
+        "elapsed": "00:00:00.0010970",
+        "data": {
+          "message": "Expression was successfully evaluated.",
+          "expression": "context.Request.Headers.GetValueOrDefault(\"x-lab-probe\", \"\") == \"true\"",
+          "value": false
+        }
+      },
+      {
+        "source": "rate-limit-by-key",
+        "timestamp": "2026-10-21T01:16:59.5747242Z",
+        "elapsed": "00:00:00.0011065",
+        "data": {
+          "message": "Expression was successfully evaluated.",
+          "expression": "\"v1-classic-measured:request-mitigation:\" + context.Api.Id + \":\" + context.Operation.Id + \":\" + context.Subscription.Id",
+          "value": "v1-classic-measured:request-mitigation:lab-project:responses:repro"
+        }
+      },
+      {
+        "source": "rate-limit",
+        "timestamp": "2026-10-21T01:16:59.5747418Z",
+        "elapsed": "00:00:00.0011241",
+        "data": {
+          "message": "Rate limit was exceeded.",
+          "retryAfter": "00:00:48.4254961",
+          "rateLimit": {
+            "counterKey": 4807592003038376742,
+            "period": "00:01:00",
+            "callLimit": 3,
+            "count": 3
+          }
+        }
+      }
+    ],
+    "outbound": [
+      {
+        "source": "transfer-response",
+        "timestamp": "2026-10-21T01:16:59.575505Z",
+        "elapsed": "00:00:00.0018878",
+        "data": {
+          "message": "Response has been sent to the caller in full"
+        }
+      }
+    ]
+  }
+}

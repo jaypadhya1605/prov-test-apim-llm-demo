@@ -1,0 +1,29 @@
+{
+  "status": 200,
+  "headers": {
+    "connection": "close",
+    "content-type": "application/json; charset=utf-8",
+    "date": "Wed, 21 Oct 2026 00:21:29 GMT",
+    "server": "istio-envoy",
+    "access-control-expose-headers": "Operation-Location,Location,Apim-Request-Id,x-agent-session-id,x-agent-invocation-id",
+    "transfer-encoding": "chunked",
+    "vary": "Accept-Encoding",
+    "request-context": "appId=",
+    "x-ms-response-type": "standard",
+    "x-request-id": "0d8b6f81dd621428bf43eca761210d41",
+    "api-supported-versions": "1.0,2025-05-15-preview,2025-11-15-preview",
+    "azureml-served-by-cluster": "hyena-eastus2-02",
+    "x-http2-stream-id": "267",
+    "apim-request-id": "0cd3b8ed-e558-5174-a3eb-e9c3607f715a",
+    "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+    "x-content-type-options": "nosniff",
+    "x-ms-region": "East US 2"
+  },
+  "body": {
+    "data": [],
+    "first_id": "",
+    "last_id": "",
+    "has_more": false,
+    "object": "list"
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "utc": "2026-10-21T00:46:05.732259+00:00",
+  "error": "ARM POST /subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-apim-token-lab/providers/Microsoft.ApiManagement/service/apim-lab-classic-example/gateways/managed/listTrace: 404 "
+}

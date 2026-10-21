@@ -1,0 +1,3853 @@
+{
+  "gateway": "apim-lab-v2-example",
+  "runId": "v2-preview-verified",
+  "projectApi": "project-preview",
+  "results": {},
+  "calls": [
+    {
+      "utc": "2026-10-21T00:30:48.761522+00:00",
+      "elapsedSeconds": 0.536,
+      "api": "account",
+      "operation": "chat",
+      "phase": "unauthenticated",
+      "direct": false,
+      "requestId": "8b7bea11-d77f-5f4b-b10d-d92d94ae907a",
+      "url": "https://apim-lab-v2-example.azure-api.net/lab-account/chat/completions",
+      "requestBody": {
+        "model": "lab-model",
+        "stream": false,
+        "messages": [
+          {
+            "role": "user",
+            "content": "For a synthetic gateway test, write a numbered list of thirty ordinary household objects, each followed by a short sentence about its everyday use. Do not discuss private information."
+          }
+        ],
+        "max_completion_tokens": 128,
+        "reasoning_effort": "minimal"
+      },
+      "response": {
+        "status": 401,
+        "headers": {
+          "content-length": "60",
+          "connection": "close",
+          "content-type": "application/json",
+          "date": "Wed, 21 Oct 2026 00:30:47 GMT",
+          "apim-trace-id": "27542e466e9d3661413755269f020fc6",
+          "ocp-apim-apiid": "lab-account",
+          "ocp-apim-operationid": "chat",
+          "ocp-apim-subscriptionid": "repro"
+        },
+        "body": {
+          "statusCode": 401,
+          "message": "Azure AD JWT not present"
+        }
+      },
+      "actualTotalTokens": null
+    },
+    {
+      "utc": "2026-10-21T00:30:59.534798+00:00",
+      "elapsedSeconds": 6.383,
+      "api": "project-preview",
+      "operation": "responses",
+      "phase": "baseline-estimate-true",
+      "direct": false,
+      "requestId": "83d53cb4-469f-56dc-8328-4f5ec7ced51a",
+      "url": "https://apim-lab-v2-example.azure-api.net/lab-project-preview/responses",
+      "requestBody": {
+        "model": "lab-model",
+        "stream": false,
+        "input": "For a synthetic gateway test, write a numbered list of thirty ordinary household objects, each followed by a short sentence about its everyday use. Do not discuss private information.",
+        "max_output_tokens": 128,
+        "store": false,
+        "reasoning": {
+          "effort": "minimal"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-length": "5192",
+          "connection": "close",
+          "content-type": "application/json",
+          "date": "Wed, 21 Oct 2026 00:31:03 GMT",
+          "access-control-expose-headers": "Operation-Location,Location,Apim-Request-Id,x-agent-session-id,x-agent-invocation-id",
+          "vary": "Origin,Accept-Encoding",
+          "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+          "request-context": "appId=",
+          "x-ms-response-type": "standard",
+          "x-request-id": "57ad4c7f-2f72-5b0d-8344-426f5fe3a139",
+          "x-ms-aoai-configured-data-retention-days": "30",
+          "skip-error-remapping": "true",
+          "openai-client-partition-id": "bbdc9d156d453699d861b3b3afbfd981",
+          "azureml-internal-forward-count": "1",
+          "x-ms-is-spilled-over": "false",
+          "x-ratelimit-key": "lab-model",
+          "x-ratelimit-remaining-requests": "9",
+          "x-ratelimit-reset-requests": "6",
+          "x-ratelimit-limit-requests": "10",
+          "x-ratelimit-renewalperiod-requests": "60",
+          "x-ratelimit-abusepenalty-active": "False",
+          "x-ratelimit-remaining-tokens": "9955",
+          "x-ratelimit-reset-tokens": "0",
+          "x-ratelimit-limit-tokens": "10000",
+          "x-ratelimit-renewalperiod-tokens": "60",
+          "azureai-fe-is-streaming": "False",
+          "azureai-fe-offer-type": "paygo",
+          "x-ms-served-model": "gpt-5-mini-2025-08-07",
+          "openai-version": "2020-10-01",
+          "openai-organization": "bbdc9d156d453699d861b3b3afbfd981",
+          "openai-project": "d2b722b2-1410-508b-b0ce-46e743a21ecb",
+          "openai-processing-ms": "1703",
+          "azureml-served-by-cluster": "hyena-eastus2-02,hyena-eastus2-02",
+          "api-supported-versions": "1.0,2025-05-15-preview,2025-11-15-preview",
+          "x-http2-stream-id": "143",
+          "apim-request-id": "9b6360bc-592e-59d1-bd09-69043732e495",
+          "x-content-type-options": "nosniff",
+          "x-ms-region": "East US 2",
+          "x-lab-phase": "baseline-estimate-true",
+          "x-lab-tpm": "9833",
+          "x-lab-quota": "9833",
+          "x-lab-consumed": "167",
+          "apim-trace-id": "4444bc96d26c8b0b851ffb74547a48ce",
+          "ocp-apim-apiid": "lab-project-preview",
+          "ocp-apim-operationid": "responses",
+          "ocp-apim-subscriptionid": "repro"
+        },
+        "body": {
+          "metadata": {},
+          "top_logprobs": 0,
+          "temperature": 1,
+          "top_p": 1,
+          "service_tier": "default",
+          "prompt_cache_retention": "in_memory",
+          "model": "lab-model",
+          "reasoning": {
+            "effort": "minimal",
+            "context": "current_turn",
+            "mode": "standard"
+          },
+          "background": false,
+          "max_output_tokens": 128,
+          "text": {
+            "format": {
+              "type": "text"
+            },
+            "verbosity": "medium"
+          },
+          "tools": [],
+          "tool_choice": "auto",
+          "truncation": "disabled",
+          "id": "resp_example-f543664c1893ec2a7e168f46",
+          "object": "response",
+          "status": "incomplete",
+          "created_at": 1792542662,
+          "error": null,
+          "incomplete_details": {
+            "reason": "max_output_tokens"
+          },
+          "output": [
+            {
+              "type": "reasoning",
+              "id": "rs_example-4d28c7bd0b7100901c343c47",
+              "created_by": {
+                "response_id": "resp_example-f543664c1893ec2a7e168f46"
+              },
+              "response_id": "resp_example-f543664c1893ec2a7e168f46",
+              "encrypted_content": "gAAAAABq2AfHI8Wq36M5Qwz9j847TqSnp3eLr2gpJcxVttmHs3QLzBL7UFnuETTH8r6L5HDzynsbo-DBfyPZD2mg25z8Y-Ts9M6W5Y2n5NU6GpJ81SZbO8RS3ydzVCbZTRZePSt56clw06TVtYthXhP-jiJSJ-c3FWoF84mIxUTUGGJQ0bPaaxYT9jgOX7b4O-CH_WxbnzIG-nbLoqvSadGreKrNwh791o6Pu4AZizzDCrvXQjuauFUCeNTsxU2yRap6TjF8eJ4kgFt3z8xyZnGzTITDFdtVZVqWdT0FcijzppPGt3yPFUAgk2YJmYk8hMXCisU3azFcKIhFZjiZKK7wotUCgd8Trru05eLvWHRCcH_QeDrZYMLyhfUWaGRZKD-xy0OSFqTLlMXoHVWeYUEHoFTSKhXBrb9VljhpaFkEz8SWTnTfUhNB-KVYsB4rY94BJOMUN72zi3PUqi6I1mi2SS0xHPQ-Zfh_DH7M6aaMbzwQ3G1wageWI-z-0go2mncucmroe2WL8tm_5jGWY4TZcWHm3dLQdOPNflinAQVnlwszbs6v1eAVmOrd4GE3Zrdjjo0uYtYQUhVQf0ffvC5UxQq8oq6R_hrePLp3wj0-bcSyELM8lKWujM64kB0Mjk-i7CBnhRXmHHWHq2iQYUSd_tkf69pu9EnmPm_YeDjx1x_DQnpaShEi2wMLUpLLvag-UT_WK4mcbQRESh2jRxIYbNGNjyNcGSCx5dWK_kIy2skFf_gFRdw7xU3VrSIWXqRqbTzoKmpo1HHtfY3PAZDYwLLukjySihtwg_0UAac0AzPoFLHZg40J3UwsEGp8eNDB26ajjfB8q2fOi_FeWMrfO1sWlMSGyvPml2OzXtBQmbakF8CUVNGz2xica9tjAi7DpcsLshoWA0X8ipl9J5KqDkUaBEIfHcLQKC-L8hYgSG4z3mkKubeAItFWnwgpZVAnaE-N3dpunUY_8FQC2RNfVUqCkZa0G5Ytr9V0_nbyEYpEgG81EvgtXLnrlpeLUJXJ0J3cz6--Z6F-0Tti87DMGXFavxI7KhydXZnzIlAw46pO3I0dqSKTmvZ3QrjtNcYPmThvv--sCNmw5AiRDE4ed-8IkIRJNWm4ZsdL5ZRgaGqG_hDpnG3NUxhCAiO7B4sbMLcIx2sCdqv9Bi_zX1ipMatADgtFuaCxs_H568o-ywCvOkh-Ljegi8pcUO3HAkKzn8f4lSo9pZMipKZHpEkaKPKupJ63rQ==",
+              "summary": [],
+              "content": []
+            },
+            {
+              "type": "message",
+              "id": "msg_example-e5521f68bd5a7d8e2d21d653",
+              "created_by": {
+                "response_id": "resp_example-f543664c1893ec2a7e168f46"
+              },
+              "response_id": "resp_example-f543664c1893ec2a7e168f46",
+              "role": "assistant",
+              "content": [
+                {
+                  "type": "output_text",
+                  "text": "1. Toothbrush \u2014 used to clean teeth and maintain oral hygiene.  \n2. Toothpaste \u2014 applied to a toothbrush to help remove plaque and freshen breath.  \n3. Hand soap \u2014 used to wash hands and remove dirt and germs.  \n4. Bath towel \u2014 used to dry the body after bathing or showering.  \n5. Hairbrush \u2014 used to detangle and style hair.  \n6. Shampoo \u2014 used to clean hair and scalp.  \n7. Conditioner \u2014 applied after shampoo to soften and manage hair.  \n8. Toilet paper",
+                  "annotations": [],
+                  "logprobs": []
+                }
+              ],
+              "status": "incomplete"
+            }
+          ],
+          "instructions": null,
+          "usage": {
+            "input_tokens": 39,
+            "input_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0
+            },
+            "output_tokens": 128,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 167
+          },
+          "parallel_tool_calls": true,
+          "agent_reference": null,
+          "content_filters": [
+            {
+              "blocked": false,
+              "source_type": "prompt",
+              "content_filter_results": {
+                "sexual": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "hate": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "violence": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "self_harm": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "defender_for_ai": {
+                  "detected": false,
+                  "filtered": false,
+                  "details": {}
+                }
+              },
+              "content_filter_raw": [],
+              "content_filter_offsets": {
+                "start_offset": 0,
+                "end_offset": 1315,
+                "check_offset": 0
+              }
+            },
+            {
+              "blocked": false,
+              "source_type": "completion",
+              "content_filter_results": {
+                "sexual": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "hate": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "violence": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "self_harm": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "defender_for_ai": {
+                  "detected": false,
+                  "filtered": false,
+                  "details": {}
+                }
+              },
+              "content_filter_raw": [],
+              "content_filter_offsets": {
+                "start_offset": 0,
+                "end_offset": 502,
+                "check_offset": 0
+              }
+            }
+          ]
+        }
+      },
+      "actualTotalTokens": 167
+    },
+    {
+      "utc": "2026-10-21T00:31:09.142644+00:00",
+      "elapsedSeconds": 9.808,
+      "api": "project-preview",
+      "operation": "responses",
+      "phase": "baseline-estimate-true",
+      "direct": false,
+      "requestId": "107a2a49-9dce-5879-9471-63962ab2895c",
+      "url": "https://apim-lab-v2-example.azure-api.net/lab-project-preview/responses",
+      "requestBody": {
+        "model": "lab-model",
+        "stream": false,
+        "input": "For a synthetic gateway test, write a numbered list of thirty ordinary household objects, each followed by a short sentence about its everyday use. Do not discuss private information.",
+        "max_output_tokens": 128,
+        "store": false,
+        "reasoning": {
+          "effort": "minimal"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-length": "5214",
+          "connection": "close",
+          "content-type": "application/json",
+          "date": "Wed, 21 Oct 2026 00:31:16 GMT",
+          "access-control-expose-headers": "Operation-Location,Location,Apim-Request-Id,x-agent-session-id,x-agent-invocation-id",
+          "vary": "Origin,Accept-Encoding",
+          "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+          "request-context": "appId=",
+          "x-ms-response-type": "standard",
+          "x-request-id": "4d1ae56f-bc83-5d69-96e0-849427122b34",
+          "x-ms-aoai-configured-data-retention-days": "30",
+          "skip-error-remapping": "true",
+          "openai-client-partition-id": "bbdc9d156d453699d861b3b3afbfd981",
+          "azureml-internal-forward-count": "1",
+          "x-ms-is-spilled-over": "false",
+          "x-ratelimit-key": "lab-model",
+          "x-ratelimit-remaining-requests": "9",
+          "x-ratelimit-reset-requests": "6",
+          "x-ratelimit-limit-requests": "10",
+          "x-ratelimit-renewalperiod-requests": "60",
+          "x-ratelimit-abusepenalty-active": "False",
+          "x-ratelimit-remaining-tokens": "9955",
+          "x-ratelimit-reset-tokens": "0",
+          "x-ratelimit-limit-tokens": "10000",
+          "x-ratelimit-renewalperiod-tokens": "60",
+          "azureai-fe-is-streaming": "False",
+          "azureai-fe-offer-type": "paygo",
+          "x-ms-served-model": "gpt-5-mini-2025-08-07",
+          "openai-version": "2020-10-01",
+          "openai-organization": "bbdc9d156d453699d861b3b3afbfd981",
+          "openai-project": "d2b722b2-1410-508b-b0ce-46e743a21ecb",
+          "openai-processing-ms": "1900",
+          "azureml-served-by-cluster": "hyena-eastus2-02,hyena-eastus2-01",
+          "api-supported-versions": "1.0,2025-05-15-preview,2025-11-15-preview",
+          "x-http2-stream-id": "369",
+          "apim-request-id": "16785dd9-4771-5114-b6fd-a2a146326762",
+          "x-content-type-options": "nosniff",
+          "x-ms-region": "East US 2",
+          "x-lab-phase": "baseline-estimate-true",
+          "x-lab-tpm": "9833",
+          "x-lab-quota": "9833",
+          "x-lab-consumed": "167",
+          "apim-trace-id": "65056df72f8cce70be7006ed93afe51b",
+          "ocp-apim-apiid": "lab-project-preview",
+          "ocp-apim-operationid": "responses",
+          "ocp-apim-subscriptionid": "repro"
+        },
+        "body": {
+          "metadata": {},
+          "top_logprobs": 0,
+          "temperature": 1,
+          "top_p": 1,
+          "service_tier": "default",
+          "prompt_cache_retention": "in_memory",
+          "model": "lab-model",
+          "reasoning": {
+            "effort": "minimal",
+            "context": "current_turn",
+            "mode": "standard"
+          },
+          "background": false,
+          "max_output_tokens": 128,
+          "text": {
+            "format": {
+              "type": "text"
+            },
+            "verbosity": "medium"
+          },
+          "tools": [],
+          "tool_choice": "auto",
+          "truncation": "disabled",
+          "id": "resp_example-21de76d96ee24176b3ed08a7",
+          "object": "response",
+          "status": "incomplete",
+          "created_at": 1792542674,
+          "error": null,
+          "incomplete_details": {
+            "reason": "max_output_tokens"
+          },
+          "output": [
+            {
+              "type": "reasoning",
+              "id": "rs_example-f73671a32df91045c7c41867",
+              "created_by": {
+                "response_id": "resp_example-21de76d96ee24176b3ed08a7"
+              },
+              "response_id": "resp_example-21de76d96ee24176b3ed08a7",
+              "encrypted_content": "gAAAAABq2AfUHcoPYySRM9q8wMqeya4xtXIs0r3boFuou0TvIGaaEeGZLLgqalkz05TKbi2C9EICviZ65rvxkWdhjrxt-6Fxd_s2fvYJrczPhiFZ2rTdR1uOfB6k62jX522OGycFyM40mLWEcL1TLLh4L3S1yj4CPFC2Xg7zbecwwU4HfZ3gN7W_erWco6owsInmGrLG9huIMdn_TYt2dEpYV3aF7_ggRsKT1JQk4zyc2z0fdbWEnMDe79nYnnx4wvV0zpW4Igjt-P79iLW612qipawQE3ChR6K1OtWyU58tn0JNJo1Z-4ny-KGjFmkVMkiqLg8veBpZMov--zBp817QKCSGRH5csjEQYF_6Unv0VyMj7M_OMiNq4xQ8HvxHX8RA1GiOq5lYw0mVAMo_YgzuUN9ZuUUYbehMdxcb34uH7ezuo89D5VdUIgyQcwM77kkqI0NOlCoo7CGU-gl_5Ia8a_9geZmPk4t8SOc6UKzbQCbc21saCRREN2KHiAH1FHU0i7zdIlfEsvM6P0RXhBWYZXwfHP44qoESrSebc_ZBGuoWLR4eUQ04-alZSS9-JqzYdhNwYlU78W-UdkkLsWMoC2fo_LST6rQYNOPmOHwjp5QJUDpit3deI7x9hjmUBEDfPJ2Si9QbJ8XoEn682RZ_uO2N_eTvK-DXemSspShWHjdeMMlamq4mHFFXbKjs5qTb25n3lzXgpXWrjCrt6NWs4RURtLQcb5C9o7D_cFSdjeZ7D8moMq5lfxk2TJQs0HOfD_JAVdvjDQ2WPEJhexKCe3_-sUJnyGeTzfABQq5yusS_wTjMCozumwMOe1PdMCtA20h_G3P2s3MxDDmyHqkXih1XMp2I7smkmmjQrjwWYSDHcq7zJoKgwP_MnSLgJZP8gLl9PXlYOMsOJhfhfHYgUQ7dZU1V6fzEXCwtqm8vaKGX9HcQ8PTiInPa1SBujydF1_4p89pxdemTfaVENAcYeYVw6IkfDEbxsM--g_wlrNf8hkwE0X1vaRp__sqPmXBfygLATUasjDeDaqKI3f_piuPCIwK_mt9u6xZ3eNoqyJC9rQCG2CjM2n_TRHSov_FXclaKnT_fjZJVV46GXvNxrt2r6oXMTC2PuVlH6VRpc0epqZTrDTK-kRRLeBUHzx6aVGrneP5ghdykJLVE0YCHSxMPi53FGBmwnpQNUgPIPhc3ewceXQjCQYCn1xNJWrKd2qSGDrJ-7pBJqC6cRlpJqvyXquWDPg==",
+              "summary": [],
+              "content": []
+            },
+            {
+              "type": "message",
+              "id": "msg_example-82a250696ebdd1c011d8c98e",
+              "created_by": {
+                "response_id": "resp_example-21de76d96ee24176b3ed08a7"
+              },
+              "response_id": "resp_example-21de76d96ee24176b3ed08a7",
+              "role": "assistant",
+              "content": [
+                {
+                  "type": "output_text",
+                  "text": "1. Toothbrush \u2014 Used to clean teeth and maintain oral hygiene.\n2. Toothpaste \u2014 Applied to a toothbrush to help remove plaque and freshen breath.\n3. Bath towel \u2014 Used to dry the body after bathing or showering.\n4. Soap bar \u2014 Used for washing hands and body to remove dirt and oils.\n5. Shampoo bottle \u2014 Used to cleanse and condition hair.\n6. Comb \u2014 Used to detangle and style hair.\n7. Hairbrush \u2014 Used to smooth hair and distribute natural oils.\n8. Razor \u2014 Used to shave unwanted",
+                  "annotations": [],
+                  "logprobs": []
+                }
+              ],
+              "status": "incomplete"
+            }
+          ],
+          "instructions": null,
+          "usage": {
+            "input_tokens": 39,
+            "input_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0
+            },
+            "output_tokens": 128,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 167
+          },
+          "parallel_tool_calls": true,
+          "agent_reference": null,
+          "content_filters": [
+            {
+              "blocked": false,
+              "source_type": "prompt",
+              "content_filter_results": {
+                "sexual": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "hate": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "violence": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "self_harm": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "defender_for_ai": {
+                  "detected": false,
+                  "filtered": false,
+                  "details": {}
+                }
+              },
+              "content_filter_raw": [],
+              "content_filter_offsets": {
+                "start_offset": 0,
+                "end_offset": 1315,
+                "check_offset": 0
+              }
+            },
+            {
+              "blocked": false,
+              "source_type": "completion",
+              "content_filter_results": {
+                "sexual": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "hate": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "violence": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "self_harm": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "defender_for_ai": {
+                  "detected": false,
+                  "filtered": false,
+                  "details": {}
+                }
+              },
+              "content_filter_raw": [],
+              "content_filter_offsets": {
+                "start_offset": 0,
+                "end_offset": 521,
+                "check_offset": 0
+              }
+            }
+          ]
+        }
+      },
+      "actualTotalTokens": 167
+    },
+    {
+      "utc": "2026-10-21T00:31:25.306171+00:00",
+      "elapsedSeconds": 10.604,
+      "api": "project-preview",
+      "operation": "responses",
+      "phase": "baseline-estimate-true",
+      "direct": false,
+      "requestId": "9ffd491a-7cd7-5c7d-9563-0c8faaac310f",
+      "url": "https://apim-lab-v2-example.azure-api.net/lab-project-preview/responses",
+      "requestBody": {
+        "model": "lab-model",
+        "stream": false,
+        "input": "For a synthetic gateway test, write a numbered list of thirty ordinary household objects, each followed by a short sentence about its everyday use. Do not discuss private information.",
+        "max_output_tokens": 128,
+        "store": false,
+        "reasoning": {
+          "effort": "minimal"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-length": "5257",
+          "connection": "close",
+          "content-type": "application/json",
+          "date": "Wed, 21 Oct 2026 00:31:34 GMT",
+          "access-control-expose-headers": "Operation-Location,Location,Apim-Request-Id,x-agent-session-id,x-agent-invocation-id",
+          "vary": "Origin,Accept-Encoding",
+          "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+          "request-context": "appId=",
+          "x-ms-response-type": "standard",
+          "x-request-id": "ab65e84f-20af-517d-9977-e5bb981b04df",
+          "x-ms-aoai-configured-data-retention-days": "30",
+          "skip-error-remapping": "true",
+          "openai-client-partition-id": "bbdc9d156d453699d861b3b3afbfd981",
+          "azureml-internal-forward-count": "1",
+          "x-ms-is-spilled-over": "false",
+          "x-ratelimit-key": "lab-model",
+          "x-ratelimit-remaining-requests": "9",
+          "x-ratelimit-reset-requests": "6",
+          "x-ratelimit-limit-requests": "10",
+          "x-ratelimit-renewalperiod-requests": "60",
+          "x-ratelimit-abusepenalty-active": "False",
+          "x-ratelimit-remaining-tokens": "9955",
+          "x-ratelimit-reset-tokens": "0",
+          "x-ratelimit-limit-tokens": "10000",
+          "x-ratelimit-renewalperiod-tokens": "60",
+          "azureai-fe-is-streaming": "False",
+          "azureai-fe-offer-type": "paygo",
+          "x-ms-served-model": "gpt-5-mini-2025-08-07",
+          "openai-version": "2020-10-01",
+          "openai-organization": "bbdc9d156d453699d861b3b3afbfd981",
+          "openai-project": "d2b722b2-1410-508b-b0ce-46e743a21ecb",
+          "openai-processing-ms": "2260",
+          "azureml-served-by-cluster": "hyena-eastus2-02,hyena-eastus2-02",
+          "api-supported-versions": "1.0,2025-05-15-preview,2025-11-15-preview",
+          "x-http2-stream-id": "207",
+          "apim-request-id": "47a6d7f6-6107-5137-9ed0-a724dbeb5960",
+          "x-content-type-options": "nosniff",
+          "x-ms-region": "East US 2",
+          "x-lab-phase": "baseline-estimate-true",
+          "x-lab-tpm": "9833",
+          "x-lab-quota": "9666",
+          "x-lab-consumed": "167",
+          "apim-trace-id": "5b908b5ce65212fcdc7883ad91600f6c",
+          "ocp-apim-apiid": "lab-project-preview",
+          "ocp-apim-operationid": "responses",
+          "ocp-apim-subscriptionid": "repro"
+        },
+        "body": {
+          "metadata": {},
+          "top_logprobs": 0,
+          "temperature": 1,
+          "top_p": 1,
+          "service_tier": "default",
+          "prompt_cache_retention": "in_memory",
+          "model": "lab-model",
+          "reasoning": {
+            "effort": "minimal",
+            "context": "current_turn",
+            "mode": "standard"
+          },
+          "background": false,
+          "max_output_tokens": 128,
+          "text": {
+            "format": {
+              "type": "text"
+            },
+            "verbosity": "medium"
+          },
+          "tools": [],
+          "tool_choice": "auto",
+          "truncation": "disabled",
+          "id": "resp_example-fc13cec278ef7d4cc20c7fbe",
+          "object": "response",
+          "status": "incomplete",
+          "created_at": 1792542692,
+          "error": null,
+          "incomplete_details": {
+            "reason": "max_output_tokens"
+          },
+          "output": [
+            {
+              "type": "reasoning",
+              "id": "rs_example-ac0c943d86ff066110a86de0",
+              "created_by": {
+                "response_id": "resp_example-fc13cec278ef7d4cc20c7fbe"
+              },
+              "response_id": "resp_example-fc13cec278ef7d4cc20c7fbe",
+              "encrypted_content": "gAAAAABq2Afmubk4bVkBEci48ZvoCERVclpjzQ6pnxwBpyr2mBJbxG3dWOOmlNFvZxNEsl6zV2SvPAotCKR1CCc35zLByv15UImk93pW4TqxODtocSWZ5-DPH2-ShpABn8V9MHhXZwS8ayJpLc4ur4u5DPNj1IKtkem4Mnmwp1dHlYOEthoCiwaE6_a-gEEhe8oGIfliuvj1zQULdilrPGySHNnUE3H2lhZwcojV_DY0lZpaoo2FCwTPCmD_1XQFQ6iz_tN8IBhCwreeCkBpDbSKvQbtGdBrVBW9MIx28HqyPIfQhfZ_XvEVHLs7kqST4fNUDV48OnGskqadzFi9fbifEwsJtpP3zZgNVN0RPNkJQmsDLLjTXfprJ2Nya6GX6a0O-8nME6FHK-3id5o29g_tIJbWYIVhleG8HBYjKzjBqZzsjSc7lSRj7wOX_Z8R0OiZ_ocxa_nnlT-pUk893S53Pa1EJaa1e04wwNvW4yyPNo_jThhxcxQ-wQaAsst9rJr92Iid2Vr0WkTkWohwbR9hGDZUA29QOfCSrwoNcaYl8mqMHKpMZ5r5vBBUY5srvBQ160R3aaS-l_G6_DWyzukaFfC5c1_Jqm4QPOCnfpLr0iRoF4_0m44HKcBq_TGXs78mkVgkngrHvuMYunjOM-MfdKwSgFch_PPDkYyusZ3OEIgR8URkvDrc9w7EhALpwqL2pKgb473KPVhg7go04pxCQEYGrfbIhIMZUg3-yE47CMxZh-EwSLoVnjNgCueo1GRVRMrBIV6lKl9YoeJlX-sAg_--QZaZtrMtedih4NKTDH5AjKRGJRmYHIm2mnoqVhRp-XbrCTo03nulMoK6nFOZAEuLSIs-ODzu8IkCjGMgKf0lq0UtnjvDcPQKZd7_1VE-wwNathcpZ3vKBPyymp1Hk98OJb0xGInqacY9YNwjRXFgsSkJPWGnpRTdcOuxR-GJz_lM5_UohwuUxOfYhdteYhBOzQqigKUAoeUxu_2AdWqYttPYWzBhmkXlgB1mLP5fPSbUHZdbrBm8CPovSS3J5NqXp4Y1VTZgD1toU5dzB2mwKLcIKBUhTvYD--40NHilMwOgpN4Q3Hm3suNj_juh8PeBMN_dzHlKomcR8O_yLZeNsGBNq1vOgIzT17JyVt0gU5f66R1ALi6nFXFCViPMCAHDaLOpcETEWHpCneMSM78w9_m-79KV0wVpFuk167JIKuSlWsYzb8jY8xEusl6ovgC3baSSjQ==",
+              "summary": [],
+              "content": []
+            },
+            {
+              "type": "message",
+              "id": "msg_example-e635fdf7e5c5447b8ccaaeda",
+              "created_by": {
+                "response_id": "resp_example-fc13cec278ef7d4cc20c7fbe"
+              },
+              "response_id": "resp_example-fc13cec278ef7d4cc20c7fbe",
+              "role": "assistant",
+              "content": [
+                {
+                  "type": "output_text",
+                  "text": "1. Toothbrush \u2014 used daily to clean teeth and maintain oral hygiene.  \n2. Coffee mug \u2014 holds hot beverages like coffee or tea for drinking.  \n3. Refrigerator \u2014 keeps food and drinks cold to preserve freshness.  \n4. Sofa \u2014 provides comfortable seating in a living room for relaxing.  \n5. Television \u2014 displays video and audio for entertainment and news.  \n6. Lamp \u2014 provides localized light for reading or tasks.  \n7. Dining table \u2014 surface for eating meals and gathering with others.  \n8. Plate \u2014 holds food while eating",
+                  "annotations": [],
+                  "logprobs": []
+                }
+              ],
+              "status": "incomplete"
+            }
+          ],
+          "instructions": null,
+          "usage": {
+            "input_tokens": 39,
+            "input_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0
+            },
+            "output_tokens": 128,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 167
+          },
+          "parallel_tool_calls": true,
+          "agent_reference": null,
+          "content_filters": [
+            {
+              "blocked": false,
+              "source_type": "prompt",
+              "content_filter_results": {
+                "sexual": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "hate": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "violence": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "self_harm": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "defender_for_ai": {
+                  "detected": false,
+                  "filtered": false,
+                  "details": {}
+                }
+              },
+              "content_filter_raw": [],
+              "content_filter_offsets": {
+                "start_offset": 0,
+                "end_offset": 1315,
+                "check_offset": 0
+              }
+            },
+            {
+              "blocked": false,
+              "source_type": "completion",
+              "content_filter_results": {
+                "sexual": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "hate": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "violence": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "self_harm": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "defender_for_ai": {
+                  "detected": false,
+                  "filtered": false,
+                  "details": {}
+                }
+              },
+              "content_filter_raw": [],
+              "content_filter_offsets": {
+                "start_offset": 0,
+                "end_offset": 562,
+                "check_offset": 0
+              }
+            }
+          ]
+        }
+      },
+      "actualTotalTokens": 167
+    },
+    {
+      "utc": "2026-10-21T00:31:38.345632+00:00",
+      "elapsedSeconds": 3.369,
+      "api": "account",
+      "operation": "chat",
+      "phase": "baseline-estimate-true",
+      "direct": false,
+      "requestId": "16198318-989f-5476-8968-cece1a885a75",
+      "url": "https://apim-lab-v2-example.azure-api.net/lab-account/chat/completions",
+      "requestBody": {
+        "model": "lab-model",
+        "stream": false,
+        "messages": [
+          {
+            "role": "user",
+            "content": "For a synthetic gateway test, write a numbered list of thirty ordinary household objects, each followed by a short sentence about its everyday use. Do not discuss private information."
+          }
+        ],
+        "max_completion_tokens": 128,
+        "reasoning_effort": "minimal"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-length": "1219",
+          "connection": "close",
+          "content-type": "application/json",
+          "date": "Wed, 21 Oct 2026 00:31:39 GMT",
+          "vary": "Origin",
+          "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+          "azureai-fe-is-streaming": "False",
+          "azureai-fe-offer-type": "paygo",
+          "azureml-model-session": "d20261005131252-2d93733f",
+          "skip-error-remapping": "true",
+          "x-accel-buffering": "no",
+          "x-ms-is-spilled-over": "false",
+          "x-ms-rai-invoked": "true",
+          "x-ms-served-model": "gpt-5-mini-2025-08-07",
+          "x-ratelimit-abusepenalty-active": "False",
+          "x-ratelimit-key": "lab-model",
+          "x-ratelimit-limit-requests": "10",
+          "x-ratelimit-limit-tokens": "10000",
+          "x-ratelimit-remaining-requests": "9",
+          "x-ratelimit-remaining-tokens": "9961",
+          "x-ratelimit-renewalperiod-requests": "60",
+          "x-ratelimit-renewalperiod-tokens": "60",
+          "x-ratelimit-reset-requests": "6",
+          "x-ratelimit-reset-tokens": "0",
+          "x-request-id": "1e271615-a5f0-5486-841b-7b1cede3a5e3",
+          "apim-request-id": "4e633f4c-582c-57e4-bd33-9e16f88e92ca",
+          "x-http2-stream-id": "315",
+          "x-ms-client-request-id": "16198318-989f-5476-8968-cece1a885a75",
+          "x-content-type-options": "nosniff",
+          "x-ms-region": "East US 2",
+          "x-lab-phase": "baseline-estimate-true",
+          "x-lab-tpm": "9833",
+          "x-lab-quota": "9833",
+          "x-lab-consumed": "167",
+          "apim-trace-id": "0b54c181afefd10dbee02b4b7d1aa4a2",
+          "ocp-apim-apiid": "lab-account",
+          "ocp-apim-operationid": "chat",
+          "ocp-apim-subscriptionid": "repro"
+        },
+        "body": {
+          "choices": [
+            {
+              "content_filter_results": {},
+              "finish_reason": "length",
+              "index": 0,
+              "logprobs": null,
+              "message": {
+                "annotations": [],
+                "content": "",
+                "refusal": null,
+                "role": "assistant"
+              }
+            }
+          ],
+          "created": 1792542698,
+          "id": "chatcmpl-example-72f90356059562c74f315bef",
+          "model": "gpt-5-mini-2025-08-07",
+          "object": "chat.completion",
+          "prompt_filter_results": [
+            {
+              "prompt_index": 0,
+              "content_filter_results": {
+                "defender_for_ai": {
+                  "detected": false,
+                  "filtered": false,
+                  "details": {}
+                },
+                "hate": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "self_harm": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "sexual": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "violence": {
+                  "filtered": false,
+                  "severity": "safe"
+                }
+              }
+            }
+          ],
+          "routing": {
+            "serving_pipereplica": "d20261005131252-2d93733f-default-r1-dp0-default"
+          },
+          "service_tier": "default",
+          "system_fingerprint": null,
+          "usage": {
+            "completion_tokens": 128,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 128,
+              "rejected_prediction_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 7,
+              "engine_ttft_ms": 32,
+              "engine_ttlt_ms": 944,
+              "pre_inference_ms": 134,
+              "service_tbt_ms": 7,
+              "service_ttft_ms": 537,
+              "service_ttlt_ms": 1488,
+              "user_visible_ttft_ms": 403
+            },
+            "prompt_tokens": 39,
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "total_tokens": 167
+          }
+        }
+      },
+      "actualTotalTokens": 167
+    },
+    {
+      "utc": "2026-10-21T00:31:42.905551+00:00",
+      "elapsedSeconds": 3.077,
+      "api": "account",
+      "operation": "chat",
+      "phase": "baseline-estimate-true",
+      "direct": false,
+      "requestId": "210e1b5d-f6d2-51f6-aa7c-887e2c769ed0",
+      "url": "https://apim-lab-v2-example.azure-api.net/lab-account/chat/completions",
+      "requestBody": {
+        "model": "lab-model",
+        "stream": false,
+        "messages": [
+          {
+            "role": "user",
+            "content": "For a synthetic gateway test, write a numbered list of thirty ordinary household objects, each followed by a short sentence about its everyday use. Do not discuss private information."
+          }
+        ],
+        "max_completion_tokens": 128,
+        "reasoning_effort": "minimal"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-length": "1219",
+          "connection": "close",
+          "content-type": "application/json",
+          "date": "Wed, 21 Oct 2026 00:31:44 GMT",
+          "vary": "Origin",
+          "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+          "azureai-fe-is-streaming": "False",
+          "azureai-fe-offer-type": "paygo",
+          "azureml-model-session": "d20261006123742-c4b23712",
+          "skip-error-remapping": "true",
+          "x-accel-buffering": "no",
+          "x-ms-is-spilled-over": "false",
+          "x-ms-rai-invoked": "true",
+          "x-ms-served-model": "gpt-5-mini-2025-08-07",
+          "x-ratelimit-abusepenalty-active": "False",
+          "x-ratelimit-key": "lab-model",
+          "x-ratelimit-limit-requests": "10",
+          "x-ratelimit-limit-tokens": "10000",
+          "x-ratelimit-remaining-requests": "9",
+          "x-ratelimit-remaining-tokens": "9961",
+          "x-ratelimit-renewalperiod-requests": "60",
+          "x-ratelimit-renewalperiod-tokens": "60",
+          "x-ratelimit-reset-requests": "7",
+          "x-ratelimit-reset-tokens": "0",
+          "x-request-id": "e1c927b1-b322-5322-b88d-f2ac9c426819",
+          "apim-request-id": "19286589-23d9-5d9e-9b74-4c99a53d0d01",
+          "x-http2-stream-id": "725",
+          "x-ms-client-request-id": "210e1b5d-f6d2-51f6-aa7c-887e2c769ed0",
+          "x-content-type-options": "nosniff",
+          "x-ms-region": "East US 2",
+          "x-lab-phase": "baseline-estimate-true",
+          "x-lab-tpm": "9833",
+          "x-lab-quota": "9666",
+          "x-lab-consumed": "167",
+          "apim-trace-id": "ce09b51b3adcf52c9a616008fbefb894",
+          "ocp-apim-apiid": "lab-account",
+          "ocp-apim-operationid": "chat",
+          "ocp-apim-subscriptionid": "repro"
+        },
+        "body": {
+          "choices": [
+            {
+              "content_filter_results": {},
+              "finish_reason": "length",
+              "index": 0,
+              "logprobs": null,
+              "message": {
+                "annotations": [],
+                "content": "",
+                "refusal": null,
+                "role": "assistant"
+              }
+            }
+          ],
+          "created": 1792542702,
+          "id": "chatcmpl-example-065cc551cc85c054abcbaa90",
+          "model": "gpt-5-mini-2025-08-07",
+          "object": "chat.completion",
+          "prompt_filter_results": [
+            {
+              "prompt_index": 0,
+              "content_filter_results": {
+                "defender_for_ai": {
+                  "detected": false,
+                  "filtered": false,
+                  "details": {}
+                },
+                "hate": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "self_harm": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "sexual": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "violence": {
+                  "filtered": false,
+                  "severity": "safe"
+                }
+              }
+            }
+          ],
+          "routing": {
+            "serving_pipereplica": "d20261006123742-c4b23712-default-r0-dp0-default"
+          },
+          "service_tier": "default",
+          "system_fingerprint": null,
+          "usage": {
+            "completion_tokens": 128,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 128,
+              "rejected_prediction_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 6,
+              "engine_ttft_ms": 27,
+              "engine_ttlt_ms": 806,
+              "pre_inference_ms": 510,
+              "service_tbt_ms": 6,
+              "service_ttft_ms": 959,
+              "service_ttlt_ms": 1671,
+              "user_visible_ttft_ms": 448
+            },
+            "prompt_tokens": 39,
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "total_tokens": 167
+          }
+        }
+      },
+      "actualTotalTokens": 167
+    },
+    {
+      "utc": "2026-10-21T00:31:47.207418+00:00",
+      "elapsedSeconds": 2.041,
+      "api": "account",
+      "operation": "chat",
+      "phase": "baseline-estimate-true",
+      "direct": false,
+      "requestId": "edd6aa50-16ad-5239-9dd2-5f40d724c64f",
+      "url": "https://apim-lab-v2-example.azure-api.net/lab-account/chat/completions",
+      "requestBody": {
+        "model": "lab-model",
+        "stream": false,
+        "messages": [
+          {
+            "role": "user",
+            "content": "For a synthetic gateway test, write a numbered list of thirty ordinary household objects, each followed by a short sentence about its everyday use. Do not discuss private information."
+          }
+        ],
+        "max_completion_tokens": 128,
+        "reasoning_effort": "minimal"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-length": "1218",
+          "connection": "close",
+          "content-type": "application/json",
+          "date": "Wed, 21 Oct 2026 00:31:47 GMT",
+          "vary": "Origin",
+          "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+          "azureai-fe-is-streaming": "False",
+          "azureai-fe-offer-type": "paygo",
+          "azureml-model-session": "d20261006123742-c4b23712",
+          "skip-error-remapping": "true",
+          "x-accel-buffering": "no",
+          "x-ms-is-spilled-over": "false",
+          "x-ms-rai-invoked": "true",
+          "x-ms-served-model": "gpt-5-mini-2025-08-07",
+          "x-ratelimit-abusepenalty-active": "False",
+          "x-ratelimit-key": "lab-model",
+          "x-ratelimit-limit-requests": "10",
+          "x-ratelimit-limit-tokens": "10000",
+          "x-ratelimit-remaining-requests": "8",
+          "x-ratelimit-remaining-tokens": "9961",
+          "x-ratelimit-renewalperiod-requests": "60",
+          "x-ratelimit-renewalperiod-tokens": "60",
+          "x-ratelimit-reset-requests": "10",
+          "x-ratelimit-reset-tokens": "0",
+          "x-request-id": "8409d299-d7ed-5f48-8ddc-712aedd27648",
+          "apim-request-id": "1c06d654-fc51-5443-a673-16239c0a89a6",
+          "x-http2-stream-id": "103",
+          "x-ms-client-request-id": "edd6aa50-16ad-5239-9dd2-5f40d724c64f",
+          "x-content-type-options": "nosniff",
+          "x-ms-region": "East US 2",
+          "x-lab-phase": "baseline-estimate-true",
+          "x-lab-tpm": "9833",
+          "x-lab-quota": "9499",
+          "x-lab-consumed": "167",
+          "apim-trace-id": "545f78ad7ae14cd60f895b982d414408",
+          "ocp-apim-apiid": "lab-account",
+          "ocp-apim-operationid": "chat",
+          "ocp-apim-subscriptionid": "repro"
+        },
+        "body": {
+          "choices": [
+            {
+              "content_filter_results": {},
+              "finish_reason": "length",
+              "index": 0,
+              "logprobs": null,
+              "message": {
+                "annotations": [],
+                "content": "",
+                "refusal": null,
+                "role": "assistant"
+              }
+            }
+          ],
+          "created": 1792542706,
+          "id": "chatcmpl-example-f81c5cda3eb85ddf1919758a",
+          "model": "gpt-5-mini-2025-08-07",
+          "object": "chat.completion",
+          "prompt_filter_results": [
+            {
+              "prompt_index": 0,
+              "content_filter_results": {
+                "defender_for_ai": {
+                  "detected": false,
+                  "filtered": false,
+                  "details": {}
+                },
+                "hate": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "self_harm": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "sexual": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "violence": {
+                  "filtered": false,
+                  "severity": "safe"
+                }
+              }
+            }
+          ],
+          "routing": {
+            "serving_pipereplica": "d20261006123742-c4b23712-default-r0-dp0-default"
+          },
+          "service_tier": "default",
+          "system_fingerprint": null,
+          "usage": {
+            "completion_tokens": 128,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 128,
+              "rejected_prediction_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 7,
+              "engine_ttft_ms": 39,
+              "engine_ttlt_ms": 935,
+              "pre_inference_ms": 65,
+              "service_tbt_ms": 7,
+              "service_ttft_ms": 456,
+              "service_ttlt_ms": 1380,
+              "user_visible_ttft_ms": 391
+            },
+            "prompt_tokens": 39,
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "total_tokens": 167
+          }
+        }
+      },
+      "actualTotalTokens": 167
+    },
+    {
+      "utc": "2026-10-21T00:31:50.413447+00:00",
+      "elapsedSeconds": 2.585,
+      "api": "account",
+      "operation": "responses",
+      "phase": "baseline-estimate-true",
+      "direct": false,
+      "requestId": "90eb37da-6d9e-59b6-af2c-779aab2e396f",
+      "url": "https://apim-lab-v2-example.azure-api.net/lab-account/responses",
+      "requestBody": {
+        "model": "lab-model",
+        "stream": false,
+        "input": "For a synthetic gateway test, write a numbered list of thirty ordinary household objects, each followed by a short sentence about its everyday use. Do not discuss private information.",
+        "max_output_tokens": 128,
+        "store": false,
+        "reasoning": {
+          "effort": "minimal"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-length": "5686",
+          "connection": "close",
+          "content-type": "application/json",
+          "date": "Wed, 21 Oct 2026 00:31:50 GMT",
+          "vary": "Origin",
+          "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+          "x-ms-aoai-configured-data-retention-days": "30",
+          "skip-error-remapping": "true",
+          "x-ms-is-spilled-over": "false",
+          "x-ratelimit-key": "lab-model",
+          "x-ratelimit-remaining-requests": "8",
+          "x-ratelimit-reset-requests": "12",
+          "x-ratelimit-limit-requests": "10",
+          "x-ratelimit-renewalperiod-requests": "60",
+          "x-ratelimit-abusepenalty-active": "False",
+          "x-ratelimit-remaining-tokens": "9955",
+          "x-ratelimit-reset-tokens": "0",
+          "x-ratelimit-limit-tokens": "10000",
+          "x-ratelimit-renewalperiod-tokens": "60",
+          "azureai-fe-is-streaming": "False",
+          "azureai-fe-offer-type": "paygo",
+          "x-ms-served-model": "gpt-5-mini-2025-08-07",
+          "x-request-id": "4b770663-c77c-52a5-b6a1-a24d485bfc2c",
+          "apim-request-id": "10305bef-fd1c-5b34-a910-7d11f688f19b",
+          "x-http2-stream-id": "749",
+          "x-ms-client-request-id": "90eb37da-6d9e-59b6-af2c-779aab2e396f",
+          "x-content-type-options": "nosniff",
+          "x-ms-region": "East US 2",
+          "x-lab-phase": "baseline-estimate-true",
+          "x-lab-tpm": "9833",
+          "x-lab-quota": "9833",
+          "x-lab-consumed": "167",
+          "apim-trace-id": "699e84392da9e5996856b7a7d1fbd61a",
+          "ocp-apim-apiid": "lab-account",
+          "ocp-apim-operationid": "responses",
+          "ocp-apim-subscriptionid": "repro"
+        },
+        "body": {
+          "id": "resp_example-dc78a9c7cfa150101af49115",
+          "object": "response",
+          "created_at": 1792542709,
+          "status": "incomplete",
+          "background": false,
+          "completed_at": null,
+          "content_filters": [
+            {
+              "blocked": false,
+              "source_type": "prompt",
+              "content_filter_raw": [],
+              "content_filter_results": {
+                "defender_for_ai": {
+                  "detected": false,
+                  "filtered": false,
+                  "details": {
+                    "evaluation": "unavailable",
+                    "evaluationReason": "missing_or_unknown_provider_evaluation_status"
+                  }
+                },
+                "hate": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "sexual": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "violence": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "self_harm": {
+                  "filtered": false,
+                  "severity": "safe"
+                }
+              },
+              "content_filter_offsets": {
+                "start_offset": 0,
+                "end_offset": 1315,
+                "check_offset": 0
+              }
+            },
+            {
+              "blocked": false,
+              "source_type": "completion",
+              "content_filter_raw": [],
+              "content_filter_results": {
+                "defender_for_ai": {
+                  "detected": false,
+                  "filtered": false,
+                  "details": {
+                    "evaluation": "unavailable",
+                    "evaluationReason": "missing_or_unknown_provider_evaluation_status"
+                  }
+                },
+                "hate": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "sexual": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "violence": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "self_harm": {
+                  "filtered": false,
+                  "severity": "safe"
+                }
+              },
+              "content_filter_offsets": {
+                "start_offset": 0,
+                "end_offset": 520,
+                "check_offset": 0
+              }
+            }
+          ],
+          "error": null,
+          "frequency_penalty": 0.0,
+          "incomplete_details": {
+            "reason": "max_output_tokens"
+          },
+          "instructions": null,
+          "max_output_tokens": 128,
+          "max_tool_calls": null,
+          "model": "lab-model",
+          "moderation": null,
+          "output": [
+            {
+              "id": "rs_example-d72e53de34433be0d226c393",
+              "type": "reasoning",
+              "content": [],
+              "encrypted_content": "gAAAAABq2Af3Vnbmem0GWQCeIiJKOUNXDsgHDHozTDhRH0ULzwLi1zwbzoXDK29q5SSJRT1InNVkDiIsTr6Bd0IjWTeZgeN5IRc3fL6_aosc2RgMeYDcb_99FbtRaYohvwCYPn_UlvT9NEmPc6QkA98Fk0O8Jm00c-pAhtjEaRfSSyR_algQaqAA2t-jNlm1L3gOdgnOFCxpa7va7qEM3GVUZG0qzDbUZUKWkcZTRZtGgWszG0ZlVejjNkTGQhuaLEIjGWfxayd8YSPdfzlwEWoNp9uIwsuuouL7x_h_WWv-zQTem5dwnQIhPayTpVB21ByeSAT3eAVgoSnUre4qihZx7PkeWF1ZL01j53xoJ-MECu6Dh__1EfuakSydMcW1rtcVZDsSA4Zt4IXmopyrNBqWKSsUk-kaea1i_55wt7Sb4dm4XRKK-pjOrothorhAOtL1WLHClAOQlpsS0cJT2QKkSb8Z8YOYEbC86cGL8VLX1cENAN5zQ80KREUOCcbwqjxj8low3-qVzNp9DvgSMKYOnD1tclaDcc1iN8vA0zNWytv1AWWG-iZZXt9WaImNKRBopy31S5Yg54EM1Leiy1JAMWDZXGkUUXlYXpmxGeelN_nqz8JHHLGRupQABa88uc-B9dpEkjeMAr-AhkpE3JTidfSSP0jOtMk0dT3Xd8f5-GtmwNywVePDNEcS1BCD6ssvRBo7gyFpwPmNYr5fHZ5M2el7eGBQvC1g9Fg1Dw6LW7Y8qEH7Hv22XramS9aPvktFAy4QZ7sDuw6-TRc-MvweFwjcs2eu9XAr8D3TMFwjoTVrwZaDUG7dEatKU7BvUVuWhLGdkuZn5gi5T-VsqwEYgOc3flUiHec-FSs0I8COeYOxot6PE0rcOt2raE6yuZq8GJ1zoBlptSvyTZy1UmIGJv1kmnehEoJbIXPqNWdmejH7gvFjHd6d3auvcQ3qayPV40iRrx7BXqhRi6WfpG2SmWAvxO4S8cml9vlAGlwDYv4V9y6vN0UkQe1s17dE3tZaEg8tI-RQen9jWH3Prtcb_TcK3voqpyTgOr5nv35L3A2fElD16aEOBWuFZelOsxUmjHA2KglLVckRsW3v-ZtQQJyhAOb9XKBzFpuNnSLrcj3lYaSH8KV8n9Hn-qyuIw8XuDl8d83IhrVxDd9IbU06f291JfJkvVuwi4GykF9BsMQOqGLKYJI=",
+              "summary": []
+            },
+            {
+              "id": "msg_example-aa9cb06561fbd84a68caa07a",
+              "type": "message",
+              "status": "incomplete",
+              "content": [
+                {
+                  "type": "output_text",
+                  "annotations": [],
+                  "logprobs": [],
+                  "text": "1. Toothbrush \u2014 Used to clean teeth and maintain oral hygiene.\n2. Bath towel \u2014 Used to dry off after bathing or showering.\n3. Coffee mug \u2014 Used to hold and drink hot beverages like coffee or tea.\n4. Refrigerator \u2014 Used to keep food and drinks cold and preserve freshness.\n5. Microwave oven \u2014 Used to quickly heat or reheat food.\n6. Cutting board \u2014 Used as a surface for chopping fruits, vegetables, and other ingredients.\n7. Frying pan \u2014 Used to cook foods such as eggs, vegetables, and"
+                }
+              ],
+              "role": "assistant"
+            }
+          ],
+          "parallel_tool_calls": true,
+          "presence_penalty": 0.0,
+          "previous_response_id": null,
+          "prompt_cache_key": null,
+          "prompt_cache_retention": "in_memory",
+          "reasoning": {
+            "context": "current_turn",
+            "effort": "minimal",
+            "mode": "standard",
+            "summary": null
+          },
+          "safety_identifier": null,
+          "service_tier": "default",
+          "store": false,
+          "temperature": 1.0,
+          "text": {
+            "format": {
+              "type": "text"
+            },
+            "verbosity": "medium"
+          },
+          "tool_choice": "auto",
+          "tool_usage": {
+            "image_gen": {
+              "input_tokens": 0,
+              "input_tokens_details": {
+                "image_tokens": 0,
+                "text_tokens": 0
+              },
+              "output_tokens": 0,
+              "output_tokens_details": {
+                "image_tokens": 0,
+                "text_tokens": 0
+              },
+              "total_tokens": 0
+            },
+            "web_search": {
+              "num_requests": 0
+            }
+          },
+          "tools": [],
+          "top_logprobs": 0,
+          "top_p": 1.0,
+          "truncation": "disabled",
+          "usage": {
+            "input_tokens": 39,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 128,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 167
+          },
+          "user": null,
+          "metadata": {}
+        }
+      },
+      "actualTotalTokens": 167
+    },
+    {
+      "utc": "2026-10-21T00:31:54.097788+00:00",
+      "elapsedSeconds": 2.656,
+      "api": "account",
+      "operation": "responses",
+      "phase": "baseline-estimate-true",
+      "direct": false,
+      "requestId": "974a438d-1009-5c35-8e0f-5e1bde3bc865",
+      "url": "https://apim-lab-v2-example.azure-api.net/lab-account/responses",
+      "requestBody": {
+        "model": "lab-model",
+        "stream": false,
+        "input": "For a synthetic gateway test, write a numbered list of thirty ordinary household objects, each followed by a short sentence about its everyday use. Do not discuss private information.",
+        "max_output_tokens": 128,
+        "store": false,
+        "reasoning": {
+          "effort": "minimal"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-length": "5676",
+          "connection": "close",
+          "content-type": "application/json",
+          "date": "Wed, 21 Oct 2026 00:31:55 GMT",
+          "vary": "Origin",
+          "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+          "x-ms-aoai-configured-data-retention-days": "30",
+          "skip-error-remapping": "true",
+          "x-ms-is-spilled-over": "false",
+          "x-ratelimit-key": "lab-model",
+          "x-ratelimit-remaining-requests": "7",
+          "x-ratelimit-reset-requests": "15",
+          "x-ratelimit-limit-requests": "10",
+          "x-ratelimit-renewalperiod-requests": "60",
+          "x-ratelimit-abusepenalty-active": "False",
+          "x-ratelimit-remaining-tokens": "9955",
+          "x-ratelimit-reset-tokens": "0",
+          "x-ratelimit-limit-tokens": "10000",
+          "x-ratelimit-renewalperiod-tokens": "60",
+          "azureai-fe-is-streaming": "False",
+          "azureai-fe-offer-type": "paygo",
+          "x-ms-served-model": "gpt-5-mini-2025-08-07",
+          "x-request-id": "2d4e322b-498b-5ff3-883f-ca223906fec8",
+          "apim-request-id": "05f6cefa-197a-5b43-92ff-063731f8bea0",
+          "x-http2-stream-id": "503",
+          "x-ms-client-request-id": "974a438d-1009-5c35-8e0f-5e1bde3bc865",
+          "x-content-type-options": "nosniff",
+          "x-ms-region": "East US 2",
+          "x-lab-phase": "baseline-estimate-true",
+          "x-lab-tpm": "9833",
+          "x-lab-quota": "9666",
+          "x-lab-consumed": "167",
+          "apim-trace-id": "6e3914ad797a1293a486b1a286204cb1",
+          "ocp-apim-apiid": "lab-account",
+          "ocp-apim-operationid": "responses",
+          "ocp-apim-subscriptionid": "repro"
+        },
+        "body": {
+          "id": "resp_example-271707877a36dac87c612cfe",
+          "object": "response",
+          "created_at": 1792542713,
+          "status": "incomplete",
+          "background": false,
+          "completed_at": null,
+          "content_filters": [
+            {
+              "blocked": false,
+              "source_type": "prompt",
+              "content_filter_raw": [],
+              "content_filter_results": {
+                "defender_for_ai": {
+                  "detected": false,
+                  "filtered": false,
+                  "details": {
+                    "evaluation": "unavailable",
+                    "evaluationReason": "missing_or_unknown_provider_evaluation_status"
+                  }
+                },
+                "hate": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "sexual": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "violence": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "self_harm": {
+                  "filtered": false,
+                  "severity": "safe"
+                }
+              },
+              "content_filter_offsets": {
+                "start_offset": 0,
+                "end_offset": 1315,
+                "check_offset": 0
+              }
+            },
+            {
+              "blocked": false,
+              "source_type": "completion",
+              "content_filter_raw": [],
+              "content_filter_results": {
+                "defender_for_ai": {
+                  "detected": false,
+                  "filtered": false,
+                  "details": {
+                    "evaluation": "unavailable",
+                    "evaluationReason": "missing_or_unknown_provider_evaluation_status"
+                  }
+                },
+                "hate": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "sexual": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "violence": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "self_harm": {
+                  "filtered": false,
+                  "severity": "safe"
+                }
+              },
+              "content_filter_offsets": {
+                "start_offset": 0,
+                "end_offset": 514,
+                "check_offset": 0
+              }
+            }
+          ],
+          "error": null,
+          "frequency_penalty": 0.0,
+          "incomplete_details": {
+            "reason": "max_output_tokens"
+          },
+          "instructions": null,
+          "max_output_tokens": 128,
+          "max_tool_calls": null,
+          "model": "lab-model",
+          "moderation": null,
+          "output": [
+            {
+              "id": "rs_example-53c5de03d11bd9eadb685526",
+              "type": "reasoning",
+              "content": [],
+              "encrypted_content": "gAAAAABq2Af7KUDeUVNc-cTOwtGL8817QEvx8dnR57fL6uANFaALxuxlcRUTe_y6PD69FT4orBYJ2NopLCvXSQRFLNoHIg-lWS1tRy3YxpBB9NUoqDnTjekRHetpehAy4YLbPaWSUmJBiuD8Iw1qKdl9UvYlxawPBK56T3rycgwqLB5F3TWujCw-urA6Wk9sq5Nx-a-ZTjiztTd6zTq6fOAssEjDBMAk19eO7-HYBe43rr1cbbFFADwzkjMhnrijpXkpyV_BIUcdQRfgduxjArQvk43JYMfL8ubANoWKAXTv7maEH7bsny-I6LCKjW_xL5Oe9kEg7h2HQ7cKbQf-5kAeDQhNewHYrGJ1-4zi10ouYvXjdhvGPvExaUlxODPpzAZTOgThTE2afsdk6_hGPJMSjlEwpR7b8cyJ2lDQaEdK3INFkA8fHi36rklUPX9t3SiwwiSP2uChT-xT2tPwW2X-6SzABVZJEXvRy8eBbIDObrZMWceZwZaQGSGm0DIf_su8kxo6gWk8mWdaf_VjjqK0t_THYl7FJeG31lCx5_Gn_KSHH8kJG54L95eiOUZ0cU6dUmu1t3M3zb4sh1x3__6yME7afg4h77WdmkLy0FxxNcoqLtxP-x8zeIDM2KzTumTG5xUbKLPeTVe3C70UoZdPVH68-DBsKsX47VSbTqCi70KfdMjuhwrMdtY5uspBX7ANMVYPQZb7gSStiPhfvE5IGo9UeS24j8rJGbC67CYDe3ihxakXizDwK42944mPFKiIg2G82g8ReOKpZAyBp8Q85HD_gxRo2Khg_1JHuyNtriM1_SVczirwQxKW7iHCcwB_rcRVwlgA2C9OLtn6a221eOlVkgt6BOGCMZ8icaLsH2D5pnSiVHqfkkMUGkaZs0Dfqor8uUTb9nh4-nV_l88xmXHTe296EwufW0_poBsZVMHT86JWt1Vj9HPufDApiQ5E-0xhkthsKNoD0k2lY38HhBANh4VufAKKqsI8RfJN1Lt2NuDzFOJ-omUhsL7PSWkuv-5amsDets8xelEbaqK4f1fjY2pVKp1YJpbcnEismQIVBDpHRwCkMlJKUc1G4EiTpVjAr_QPCK62Ee541kyb2fwW0w1jUuefKtPjltbhepT8icN-MMiBAf-2gWaNQH2ygbot4TmACCaxoHFOf1FCowmLM4CACOarbwqt746gUlGfipeIvK8=",
+              "summary": []
+            },
+            {
+              "id": "msg_example-e0535b7c9e41711185ba2c6e",
+              "type": "message",
+              "status": "incomplete",
+              "content": [
+                {
+                  "type": "output_text",
+                  "annotations": [],
+                  "logprobs": [],
+                  "text": "1. Refrigerator \u2014 keeps food and drinks cold to preserve freshness.  \n2. Stove \u2014 cooks meals using gas or electricity.  \n3. Microwave \u2014 quickly heats or reheats food.  \n4. Toaster \u2014 browns slices of bread for toast.  \n5. Kettle \u2014 boils water for tea, coffee, or cooking.  \n6. Coffee maker \u2014 brews coffee for daily consumption.  \n7. Blender \u2014 purees or mixes ingredients for smoothies and sauces.  \n8. Dishwasher \u2014 cleans dishes, glasses, and utensils automatically.  \n9"
+                }
+              ],
+              "role": "assistant"
+            }
+          ],
+          "parallel_tool_calls": true,
+          "presence_penalty": 0.0,
+          "previous_response_id": null,
+          "prompt_cache_key": null,
+          "prompt_cache_retention": "in_memory",
+          "reasoning": {
+            "context": "current_turn",
+            "effort": "minimal",
+            "mode": "standard",
+            "summary": null
+          },
+          "safety_identifier": null,
+          "service_tier": "default",
+          "store": false,
+          "temperature": 1.0,
+          "text": {
+            "format": {
+              "type": "text"
+            },
+            "verbosity": "medium"
+          },
+          "tool_choice": "auto",
+          "tool_usage": {
+            "image_gen": {
+              "input_tokens": 0,
+              "input_tokens_details": {
+                "image_tokens": 0,
+                "text_tokens": 0
+              },
+              "output_tokens": 0,
+              "output_tokens_details": {
+                "image_tokens": 0,
+                "text_tokens": 0
+              },
+              "total_tokens": 0
+            },
+            "web_search": {
+              "num_requests": 0
+            }
+          },
+          "tools": [],
+          "top_logprobs": 0,
+          "top_p": 1.0,
+          "truncation": "disabled",
+          "usage": {
+            "input_tokens": 39,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 128,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 167
+          },
+          "user": null,
+          "metadata": {}
+        }
+      },
+      "actualTotalTokens": 167
+    },
+    {
+      "utc": "2026-10-21T00:31:57.562468+00:00",
+      "elapsedSeconds": 2.087,
+      "api": "account",
+      "operation": "responses",
+      "phase": "baseline-estimate-true",
+      "direct": false,
+      "requestId": "8a95e6c6-ecf9-536c-aa07-800dba75cf6c",
+      "url": "https://apim-lab-v2-example.azure-api.net/lab-account/responses",
+      "requestBody": {
+        "model": "lab-model",
+        "stream": false,
+        "input": "For a synthetic gateway test, write a numbered list of thirty ordinary household objects, each followed by a short sentence about its everyday use. Do not discuss private information.",
+        "max_output_tokens": 128,
+        "store": false,
+        "reasoning": {
+          "effort": "minimal"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-length": "5679",
+          "connection": "close",
+          "content-type": "application/json",
+          "date": "Wed, 21 Oct 2026 00:31:58 GMT",
+          "vary": "Origin",
+          "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+          "x-ms-aoai-configured-data-retention-days": "30",
+          "skip-error-remapping": "true",
+          "x-ms-is-spilled-over": "false",
+          "x-ratelimit-key": "lab-model",
+          "x-ratelimit-remaining-requests": "7",
+          "x-ratelimit-reset-requests": "17",
+          "x-ratelimit-limit-requests": "10",
+          "x-ratelimit-renewalperiod-requests": "60",
+          "x-ratelimit-abusepenalty-active": "False",
+          "x-ratelimit-remaining-tokens": "9955",
+          "x-ratelimit-reset-tokens": "0",
+          "x-ratelimit-limit-tokens": "10000",
+          "x-ratelimit-renewalperiod-tokens": "60",
+          "azureai-fe-is-streaming": "False",
+          "azureai-fe-offer-type": "paygo",
+          "x-ms-served-model": "gpt-5-mini-2025-08-07",
+          "x-request-id": "91f116b3-a21b-5c59-ad02-a22c71bb6792",
+          "apim-request-id": "c5256294-a0b5-5ba2-bcf9-37c424c79b8b",
+          "x-http2-stream-id": "275",
+          "x-ms-client-request-id": "8a95e6c6-ecf9-536c-aa07-800dba75cf6c",
+          "x-content-type-options": "nosniff",
+          "x-ms-region": "East US 2",
+          "x-lab-phase": "baseline-estimate-true",
+          "x-lab-tpm": "9833",
+          "x-lab-quota": "9499",
+          "x-lab-consumed": "167",
+          "apim-trace-id": "b33de333589b7466ecbbaf3006e3f472",
+          "ocp-apim-apiid": "lab-account",
+          "ocp-apim-operationid": "responses",
+          "ocp-apim-subscriptionid": "repro"
+        },
+        "body": {
+          "id": "resp_example-10b6436f76183977bbf76d4d",
+          "object": "response",
+          "created_at": 1792542716,
+          "status": "incomplete",
+          "background": false,
+          "completed_at": null,
+          "content_filters": [
+            {
+              "blocked": false,
+              "source_type": "prompt",
+              "content_filter_raw": [],
+              "content_filter_results": {
+                "defender_for_ai": {
+                  "detected": false,
+                  "filtered": false,
+                  "details": {
+                    "evaluation": "unavailable",
+                    "evaluationReason": "missing_or_unknown_provider_evaluation_status"
+                  }
+                },
+                "hate": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "sexual": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "violence": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "self_harm": {
+                  "filtered": false,
+                  "severity": "safe"
+                }
+              },
+              "content_filter_offsets": {
+                "start_offset": 0,
+                "end_offset": 1315,
+                "check_offset": 0
+              }
+            },
+            {
+              "blocked": false,
+              "source_type": "completion",
+              "content_filter_raw": [],
+              "content_filter_results": {
+                "defender_for_ai": {
+                  "detected": false,
+                  "filtered": false,
+                  "details": {
+                    "evaluation": "unavailable",
+                    "evaluationReason": "missing_or_unknown_provider_evaluation_status"
+                  }
+                },
+                "hate": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "sexual": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "violence": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "self_harm": {
+                  "filtered": false,
+                  "severity": "safe"
+                }
+              },
+              "content_filter_offsets": {
+                "start_offset": 0,
+                "end_offset": 520,
+                "check_offset": 0
+              }
+            }
+          ],
+          "error": null,
+          "frequency_penalty": 0.0,
+          "incomplete_details": {
+            "reason": "max_output_tokens"
+          },
+          "instructions": null,
+          "max_output_tokens": 128,
+          "max_tool_calls": null,
+          "model": "lab-model",
+          "moderation": null,
+          "output": [
+            {
+              "id": "rs_example-73d57aea95163fc8268d130f",
+              "type": "reasoning",
+              "content": [],
+              "encrypted_content": "gAAAAABq2Af-imWwqBV_4HQSPq98P-ydK9utYSmI0iRzEH9mUEys3bC1uot46cp-OGcyCRiwJLlF4zI2MZ4lCnp-V1BkdV2uu2f8LXQ2x3YthbF_cBzRZelX3gtZsGJtx16DHDVnJTSY462pcNVDzuIMIS5tVGFZG5INyq37cvZjOdvLuj5RJf1xGTfhhNPZ5yONxR7jiwJ6PjEncA_RmmV7HlsTJd058_D99lULQXfQpuga68jSstLkpIcCFqEHsinZWOtivUj_6Vlaw8lCzZC7HfMxGSEHA9a3nNLajITyBcgeZ-zeSn2aCmEkdwZX9zS28ik19pOutXO-V-qiKZojCMF0Af6TqJ8SdGwX4wCdJheOe77KE733q4xYBahhtg0VLVdO9ZEYSKeKKy-ee8H3fT5SGZqGyahPu8FfSpunaj5OF6R71lv2moUXXsX2bEwAiTJKhJdwPFdN19Xz6Gcyw9TYVetstLxLWKcLK2Viy5guROdtiXWRHqf30aAsr-nQf7stvKH-IOvnXjkzK2jnqFSyBm3n99K3pqTXFpngpyqx3CzqJEFzxr1Oe8pO7Wge9GTcO9f5csyuIVGjWn6Pj8GCySFJfAxHjckq38wdS5C-MyEWc315Q7bHdZ_nsLjB_o57lcDCh_8bmbaGIsSRDxOzBzg4LkSLjy8I876wFSG1XrsU6yxhU7SUSZ--5axQmozU-40Wg1Qet_3OCsVZ2N3ZwRhphs6e9bZPmzSVOKddoZxgmxJ1be55qFIYyHxemBBboeAp3-twJtB56fWV5n4HJB8re8HtqrpdiKYqmQENCCKEDDT0bLQc91MdHpjnm5sCjMaWO3TrGj2eKCVzCvnrpm2gP0VDevOcpoH-3BEDk9tcqokQw8NT3BP45r_PxxZHzqNlWvMFvO0KClgQo9Wkd6NxmtdjqFewt0o4VLPqGjn_4ilpSUrBPvTOMAlv9i9Kp5RHf1A9wVp3uoVCGtdMwDg-V4ZJJuwmXi1gh4byHx20aBdYVkTqUu3OhwICt_GBI7rpGzoKlksJvOaU9NM_3Suj95lH4Man2WlE97c6Wx5QcDJ2R7tJk24AEYKOUrqz-F3FK8REtjxEpZuN5RL6g5fOM0tkFG021ss8avwDeR3Nf-3g4-7W804aToCJzxvvk1aX_wzT9fOX-H77u58rCpZgbaX6iW78P8qJSRGDfqB3rNo=",
+              "summary": []
+            },
+            {
+              "id": "msg_example-4fa3d619bf43fef0414301c3",
+              "type": "message",
+              "status": "incomplete",
+              "content": [
+                {
+                  "type": "output_text",
+                  "annotations": [],
+                  "logprobs": [],
+                  "text": "1. Chair \u2014 Used for sitting while eating, working, or relaxing.  \n2. Table \u2014 Provides a flat surface for dining, working, or holding items.  \n3. Lamp \u2014 Gives localized light for reading or illuminating a room.  \n4. Pillow \u2014 Supports the head or provides comfort while sleeping or lounging.  \n5. Blanket \u2014 Keeps a person warm or adds comfort on a bed or couch.  \n6. Mug \u2014 Holds hot beverages like coffee or tea for drinking.  \n7. Plate \u2014 Serves and contains food during meals.  \n"
+                }
+              ],
+              "role": "assistant"
+            }
+          ],
+          "parallel_tool_calls": true,
+          "presence_penalty": 0.0,
+          "previous_response_id": null,
+          "prompt_cache_key": null,
+          "prompt_cache_retention": "in_memory",
+          "reasoning": {
+            "context": "current_turn",
+            "effort": "minimal",
+            "mode": "standard",
+            "summary": null
+          },
+          "safety_identifier": null,
+          "service_tier": "default",
+          "store": false,
+          "temperature": 1.0,
+          "text": {
+            "format": {
+              "type": "text"
+            },
+            "verbosity": "medium"
+          },
+          "tool_choice": "auto",
+          "tool_usage": {
+            "image_gen": {
+              "input_tokens": 0,
+              "input_tokens_details": {
+                "image_tokens": 0,
+                "text_tokens": 0
+              },
+              "output_tokens": 0,
+              "output_tokens_details": {
+                "image_tokens": 0,
+                "text_tokens": 0
+              },
+              "total_tokens": 0
+            },
+            "web_search": {
+              "num_requests": 0
+            }
+          },
+          "tools": [],
+          "top_logprobs": 0,
+          "top_p": 1.0,
+          "truncation": "disabled",
+          "usage": {
+            "input_tokens": 39,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 128,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 167
+          },
+          "user": null,
+          "metadata": {}
+        }
+      },
+      "actualTotalTokens": 167
+    },
+    {
+      "utc": "2026-10-21T00:32:09.475751+00:00",
+      "elapsedSeconds": 2.248,
+      "api": "project-preview",
+      "operation": "responses",
+      "phase": "baseline-estimate-false",
+      "direct": false,
+      "requestId": "4de987fb-4cd6-523d-92a7-6abcef341344",
+      "url": "https://apim-lab-v2-example.azure-api.net/lab-project-preview/responses",
+      "requestBody": {
+        "model": "lab-model",
+        "stream": false,
+        "input": "For a synthetic gateway test, write a numbered list of thirty ordinary household objects, each followed by a short sentence about its everyday use. Do not discuss private information.",
+        "max_output_tokens": 128,
+        "store": false,
+        "reasoning": {
+          "effort": "minimal"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-length": "5183",
+          "connection": "close",
+          "content-type": "application/json",
+          "date": "Wed, 21 Oct 2026 00:32:09 GMT",
+          "access-control-expose-headers": "Operation-Location,Location,Apim-Request-Id,x-agent-session-id,x-agent-invocation-id",
+          "vary": "Origin,Accept-Encoding",
+          "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+          "request-context": "appId=",
+          "x-ms-response-type": "standard",
+          "x-request-id": "849f5289-ac4a-50b8-9875-2eb4386d97a2",
+          "x-ms-aoai-configured-data-retention-days": "30",
+          "skip-error-remapping": "true",
+          "openai-client-partition-id": "bbdc9d156d453699d861b3b3afbfd981",
+          "azureml-internal-forward-count": "1",
+          "x-ms-is-spilled-over": "false",
+          "x-ratelimit-key": "lab-model",
+          "x-ratelimit-remaining-requests": "8",
+          "x-ratelimit-reset-requests": "11",
+          "x-ratelimit-limit-requests": "10",
+          "x-ratelimit-renewalperiod-requests": "60",
+          "x-ratelimit-abusepenalty-active": "False",
+          "x-ratelimit-remaining-tokens": "9955",
+          "x-ratelimit-reset-tokens": "0",
+          "x-ratelimit-limit-tokens": "10000",
+          "x-ratelimit-renewalperiod-tokens": "60",
+          "azureai-fe-is-streaming": "False",
+          "azureai-fe-offer-type": "paygo",
+          "x-ms-served-model": "gpt-5-mini-2025-08-07",
+          "openai-version": "2020-10-01",
+          "openai-organization": "bbdc9d156d453699d861b3b3afbfd981",
+          "openai-project": "d2b722b2-1410-508b-b0ce-46e743a21ecb",
+          "openai-processing-ms": "1582",
+          "azureml-served-by-cluster": "hyena-eastus2-02,hyena-eastus2-02",
+          "api-supported-versions": "1.0,2025-05-15-preview,2025-11-15-preview",
+          "x-http2-stream-id": "317",
+          "apim-request-id": "2581702b-8a7d-5862-bce4-ac77867cf99d",
+          "x-content-type-options": "nosniff",
+          "x-ms-region": "East US 2",
+          "x-lab-phase": "baseline-estimate-false",
+          "x-lab-tpm": "9833",
+          "x-lab-quota": "9833",
+          "x-lab-consumed": "167",
+          "apim-trace-id": "71642ea46f38b65dc3129d2228991a4a",
+          "ocp-apim-apiid": "lab-project-preview",
+          "ocp-apim-operationid": "responses",
+          "ocp-apim-subscriptionid": "repro"
+        },
+        "body": {
+          "metadata": {},
+          "top_logprobs": 0,
+          "temperature": 1,
+          "top_p": 1,
+          "service_tier": "default",
+          "prompt_cache_retention": "in_memory",
+          "model": "lab-model",
+          "reasoning": {
+            "effort": "minimal",
+            "context": "current_turn",
+            "mode": "standard"
+          },
+          "background": false,
+          "max_output_tokens": 128,
+          "text": {
+            "format": {
+              "type": "text"
+            },
+            "verbosity": "medium"
+          },
+          "tools": [],
+          "tool_choice": "auto",
+          "truncation": "disabled",
+          "id": "resp_example-64e1ca0335867a1d680094ea",
+          "object": "response",
+          "status": "incomplete",
+          "created_at": 1792542728,
+          "error": null,
+          "incomplete_details": {
+            "reason": "max_output_tokens"
+          },
+          "output": [
+            {
+              "type": "reasoning",
+              "id": "rs_example-b3adb407bd3e6869a717d0fd",
+              "created_by": {
+                "response_id": "resp_example-64e1ca0335867a1d680094ea"
+              },
+              "response_id": "resp_example-64e1ca0335867a1d680094ea",
+              "encrypted_content": "gAAAAABq2AgK5m8rloJyk34xNlDf4rS2pIFmHXLb0KlJFGfV5WIuHNIpr_zZi-0twt9XwQuDiDgS6hIlsoiJJrCQm3CBTWmEyXPdYxRFRy6vIYPpYv7LWOde9EPDWsU6FYtsgJIs8MHyn9RggbSE0QubwtzMhjB8RLRmwS6-AnBQYfOlr3djWoWQMfec9TWB5UCr9MNhW5JEphH79vagkMpZ5kaJc27KyyOSHKV3hbFYIh1TsYkGyLvMGVpLZjGHfFo4f8NsXpc8qHkTAJVawAJElAlIJUb5zb9hWhpaBPjpTuRR2sKKCpm1p0r4fXoS-OIRSfXycCs1hHAjpGIE31WscJdyo3NxWNrLBL5MwtqyTJ-q6sLhAOt2MqoQLGTc-SLdu2-8E7D4rwIX3LemhmR9hMyntuj-IIBAaZMj9gYOYp1BCV1PmE-CpMG9Mg-smpq0AnUSrPIC5jS6-umlFtDGLAhr-baxtlGPWLR53g8d0xZrLsoGAGCUjMRO0lhfBR4jHVVF0xGqIlrJFlrmpoZTDbJMWg0PPjbC3x-B0p2IZCf3wgjKChAmMk9NwXQju3IVW4aCvGfuxKp3pXIWlSE4r-_TNHe2o9SAUIUnIEef7HwbOC9ReUf8D93p1vIFXonoUIjIi37UjGYt3ogYbzt4YFOr0jqd-JE9sQbUn-temeSrM0R76D8GCqFojTRn2sj4772zm5CqU5GE5FHQSDFsnRRxvS3Wpmz6LbF7mRjZ5SBXkpxC1IJ80KvrwqhNBSGx3VTaA8B7wNLQJO9VrHdobAMlFg4ZOkwL7LekUzFz_bkkjR3N0eNeGtXSzn7RmoNZyMiQ6-jKuYm50IYbjRKjMk13yPgUJkxcgaLNkR79UZvTZ7ZC37FC8V7fTEb9rNsyFo6oM19Q-hi2188Ao5rbMN9FZa24bRZyojEpr6TnxqAXO03CSqjWEDIsPOEGSC7Ugln6sVQftHkbBQgsRjJVao12Qf8bb_QP94g7Nd2Hkz-jq8dcOhwf9GPdH2bmt_AHS1L1ZrCvEHoc7gf4-F6gWwu1GgvfGtFJ9PRNhC5HaSzRK8-dHqEQiOZRci3KvnGjBJ_rlgT7Rn6V0BQMpj8oTzL0dCfcrv6y3t_VbiwM_cDo36gUgMVQ9IJCnENM7lL6BdYiyVKFo27EbzmoUsnaC4ZOboh6ynyrTvC_B-pgeEjIgdaMyWrNXlXw81fRl5grLzljfRuBoFh_Njza-H6i9WC3Z3IYdA==",
+              "summary": [],
+              "content": []
+            },
+            {
+              "type": "message",
+              "id": "msg_example-0d6b65dc0adab00784f11b5d",
+              "created_by": {
+                "response_id": "resp_example-64e1ca0335867a1d680094ea"
+              },
+              "response_id": "resp_example-64e1ca0335867a1d680094ea",
+              "role": "assistant",
+              "content": [
+                {
+                  "type": "output_text",
+                  "text": "1. Spoon \u2014 Used for stirring coffee, eating soup, or serving condiments.  \n2. Chair \u2014 Provides a place to sit while eating, working, or relaxing.  \n3. Toothbrush \u2014 Cleans teeth and helps maintain oral hygiene.  \n4. Towel \u2014 Dries hands, dishes, or the body after bathing.  \n5. Lamp \u2014 Illuminates a room for reading or tasks.  \n6. Refrigerator \u2014 Keeps food and drinks cold to preserve freshness.  \n7. Mug \u2014 Holds hot beverages like tea or coffee.  \n8",
+                  "annotations": [],
+                  "logprobs": []
+                }
+              ],
+              "status": "incomplete"
+            }
+          ],
+          "instructions": null,
+          "usage": {
+            "input_tokens": 39,
+            "input_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0
+            },
+            "output_tokens": 128,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 167
+          },
+          "parallel_tool_calls": true,
+          "agent_reference": null,
+          "content_filters": [
+            {
+              "blocked": false,
+              "source_type": "prompt",
+              "content_filter_results": {
+                "sexual": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "hate": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "violence": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "self_harm": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "defender_for_ai": {
+                  "detected": false,
+                  "filtered": false,
+                  "details": {}
+                }
+              },
+              "content_filter_raw": [],
+              "content_filter_offsets": {
+                "start_offset": 0,
+                "end_offset": 1315,
+                "check_offset": 0
+              }
+            },
+            {
+              "blocked": false,
+              "source_type": "completion",
+              "content_filter_results": {
+                "sexual": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "hate": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "violence": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "self_harm": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "defender_for_ai": {
+                  "detected": false,
+                  "filtered": false,
+                  "details": {}
+                }
+              },
+              "content_filter_raw": [],
+              "content_filter_offsets": {
+                "start_offset": 0,
+                "end_offset": 490,
+                "check_offset": 0
+              }
+            }
+          ]
+        }
+      },
+      "actualTotalTokens": 167
+    },
+    {
+      "utc": "2026-10-21T00:32:12.733662+00:00",
+      "elapsedSeconds": 2.168,
+      "api": "project-preview",
+      "operation": "responses",
+      "phase": "baseline-estimate-false",
+      "direct": false,
+      "requestId": "a026a371-928e-5a75-b9bc-12c3d2b8b39b",
+      "url": "https://apim-lab-v2-example.azure-api.net/lab-project-preview/responses",
+      "requestBody": {
+        "model": "lab-model",
+        "stream": false,
+        "input": "For a synthetic gateway test, write a numbered list of thirty ordinary household objects, each followed by a short sentence about its everyday use. Do not discuss private information.",
+        "max_output_tokens": 128,
+        "store": false,
+        "reasoning": {
+          "effort": "minimal"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-length": "5220",
+          "connection": "close",
+          "content-type": "application/json",
+          "date": "Wed, 21 Oct 2026 00:32:13 GMT",
+          "access-control-expose-headers": "Operation-Location,Location,Apim-Request-Id,x-agent-session-id,x-agent-invocation-id",
+          "vary": "Origin,Accept-Encoding",
+          "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+          "request-context": "appId=",
+          "x-ms-response-type": "standard",
+          "x-request-id": "c64f08f5-3b0d-523f-b48e-4fc341f8dbe2",
+          "x-ms-aoai-configured-data-retention-days": "30",
+          "skip-error-remapping": "true",
+          "openai-client-partition-id": "bbdc9d156d453699d861b3b3afbfd981",
+          "azureml-internal-forward-count": "1",
+          "x-ms-is-spilled-over": "false",
+          "x-ratelimit-key": "lab-model",
+          "x-ratelimit-remaining-requests": "8",
+          "x-ratelimit-reset-requests": "14",
+          "x-ratelimit-limit-requests": "10",
+          "x-ratelimit-renewalperiod-requests": "60",
+          "x-ratelimit-abusepenalty-active": "False",
+          "x-ratelimit-remaining-tokens": "9955",
+          "x-ratelimit-reset-tokens": "0",
+          "x-ratelimit-limit-tokens": "10000",
+          "x-ratelimit-renewalperiod-tokens": "60",
+          "azureai-fe-is-streaming": "False",
+          "azureai-fe-offer-type": "paygo",
+          "x-ms-served-model": "gpt-5-mini-2025-08-07",
+          "openai-version": "2020-10-01",
+          "openai-organization": "bbdc9d156d453699d861b3b3afbfd981",
+          "openai-project": "d2b722b2-1410-508b-b0ce-46e743a21ecb",
+          "openai-processing-ms": "1595",
+          "azureml-served-by-cluster": "hyena-eastus2-02,hyena-eastus2-02",
+          "api-supported-versions": "1.0,2025-05-15-preview,2025-11-15-preview",
+          "x-http2-stream-id": "181",
+          "apim-request-id": "de11f8b6-e62e-5173-bec9-bf7f8db13f79",
+          "x-content-type-options": "nosniff",
+          "x-ms-region": "East US 2",
+          "x-lab-phase": "baseline-estimate-false",
+          "x-lab-tpm": "9833",
+          "x-lab-quota": "9666",
+          "x-lab-consumed": "167",
+          "apim-trace-id": "af6c5ab10a646894d54d553a3914999f",
+          "ocp-apim-apiid": "lab-project-preview",
+          "ocp-apim-operationid": "responses",
+          "ocp-apim-subscriptionid": "repro"
+        },
+        "body": {
+          "metadata": {},
+          "top_logprobs": 0,
+          "temperature": 1,
+          "top_p": 1,
+          "service_tier": "default",
+          "prompt_cache_retention": "in_memory",
+          "model": "lab-model",
+          "reasoning": {
+            "effort": "minimal",
+            "context": "current_turn",
+            "mode": "standard"
+          },
+          "background": false,
+          "max_output_tokens": 128,
+          "text": {
+            "format": {
+              "type": "text"
+            },
+            "verbosity": "medium"
+          },
+          "tools": [],
+          "tool_choice": "auto",
+          "truncation": "disabled",
+          "id": "resp_example-d28e0b6afa09d7576c4b0e0c",
+          "object": "response",
+          "status": "incomplete",
+          "created_at": 1792542731,
+          "error": null,
+          "incomplete_details": {
+            "reason": "max_output_tokens"
+          },
+          "output": [
+            {
+              "type": "reasoning",
+              "id": "rs_example-7ba3aca537ccc9af1afc5038",
+              "created_by": {
+                "response_id": "resp_example-d28e0b6afa09d7576c4b0e0c"
+              },
+              "response_id": "resp_example-d28e0b6afa09d7576c4b0e0c",
+              "encrypted_content": "gAAAAABq2AgNO0LRnYr2HahIPNrPng7TdJazTHzhL-KgflamG_FNtBS-USOjH6gDFY1yBJY5eJjUHdcNutWfqnc018jbkjhppMqrUQ__BP0bLTUCPO9hbSngmSCdDp7iLEq0r061d3dOEelCamxYVpZcfh0BA0qJrvApVafNI1ePIgtFW0ugDRzllNwYFvYz9YNXd_SswVUEtCyHqjR7jSVYnJSzyptaTLcvFbqFqi0W3ViY-Tb6O3TN47aWmg4sy2ivt8xpEbTDPOP6No0D4dPwo6k99A1x9OkZJA8bAg87tAMZiesAxPLp1a7fFc5qEexfw34GFv4S5xwNbKl9K3IDW35_KxZocp9JiOxHuxe8nHw7qmkyr5Ysh8vRlpNMLiPXY7wIJFBk4V_N5-pjO2JIvERLZMxvyPco11LvCXpcTuBYh-P0RKlxUGVJnwQlEdu6oag_kMN5ToYeY8q5mT88FkcJCTm3CF8BQImHZbUyHj55yzUEOAdzQZFMsY32RPk3HdQYvC_wuT8VmUgWaviMVkEL57gBXbiq3iOgATeRNHn9vhPJAx-R0is20UFDbKTHWQZCoj5_FqqH1QuF8SxLxZ47_rLZtUBQ7NRawq_AlqVG0IoY8K2qQJwcc6lYTgsQyHkAglUX46cTwi7OCM-1ltCOy55Xojxsoin1kTngyENMgCsUgoMLH_pUceBwGJV1z0vFwsg1_EOJBn6ERSY3qQEwhh4CAyFl-zu41Y2psRQbolosIYvgSPzOroSzP3mIXjq-hQHn3kuvWLcJzzM67RRe4sKgwB2gQAcdClx66m0S20zv18KGQvzQYTnJWa_D7z7GCQJ72P8fxbopVUJXLLho0OxpFYBg_Vcya41jxDutlENvca3uG0mKIXQy__DwDLzjIevnCl6rwdZTNq7DjCFIa7cw6xY2wRALQ2krOm6VLw40ATvOTuvK8b8Cerhfn1xkhIuwnqaAfj8LLtQyIqDPunW-Q1U1ODDQaR-Yt87GEivQSMyKTM9ZFpVFsB1JjUicM6535lxdnUOfA8rFuUQaVCkC0BmDUy6EpIkZ87pcEqJOyN-AA48K-B2j_Dp9pdO5L-z2CQ3Q0fSod6GXGg0BluBDeWAPxTsKYfjyamQA3nSlQqGnBWIoxnXuOMc38BjfDacW9cAgpmuy02nPWzQcWsw2C0NBCe9f_NqPHx85DHawKmcvDcY8Q0uE0Y4m8fhmEe_KUfrPx46rGd8nLyaBcYUa9g==",
+              "summary": [],
+              "content": []
+            },
+            {
+              "type": "message",
+              "id": "msg_example-6b9a73528ea0288a2db4fef8",
+              "created_by": {
+                "response_id": "resp_example-d28e0b6afa09d7576c4b0e0c"
+              },
+              "response_id": "resp_example-d28e0b6afa09d7576c4b0e0c",
+              "role": "assistant",
+              "content": [
+                {
+                  "type": "output_text",
+                  "text": "1. Toothbrush \u2014 Used daily to clean teeth and maintain oral hygiene.  \n2. Bath towel \u2014 Used to dry the body after showering or bathing.  \n3. Coffee mug \u2014 Used to hold and drink hot beverages like coffee or tea.  \n4. Refrigerator \u2014 Used to keep food and drinks cold and fresh.  \n5. Sofa \u2014 Used for sitting, relaxing, or watching television.  \n6. Lamp \u2014 Used to provide light for reading or general room illumination.  \n7. Television remote \u2014 Used to change channels and control a TV from",
+                  "annotations": [],
+                  "logprobs": []
+                }
+              ],
+              "status": "incomplete"
+            }
+          ],
+          "instructions": null,
+          "usage": {
+            "input_tokens": 39,
+            "input_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0
+            },
+            "output_tokens": 128,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 167
+          },
+          "parallel_tool_calls": true,
+          "agent_reference": null,
+          "content_filters": [
+            {
+              "blocked": false,
+              "source_type": "prompt",
+              "content_filter_results": {
+                "sexual": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "hate": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "violence": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "self_harm": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "defender_for_ai": {
+                  "detected": false,
+                  "filtered": false,
+                  "details": {}
+                }
+              },
+              "content_filter_raw": [],
+              "content_filter_offsets": {
+                "start_offset": 0,
+                "end_offset": 1315,
+                "check_offset": 0
+              }
+            },
+            {
+              "blocked": false,
+              "source_type": "completion",
+              "content_filter_results": {
+                "sexual": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "hate": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "violence": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "self_harm": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "defender_for_ai": {
+                  "detected": false,
+                  "filtered": false,
+                  "details": {}
+                }
+              },
+              "content_filter_raw": [],
+              "content_filter_offsets": {
+                "start_offset": 0,
+                "end_offset": 534,
+                "check_offset": 0
+              }
+            }
+          ]
+        }
+      },
+      "actualTotalTokens": 167
+    },
+    {
+      "utc": "2026-10-21T00:32:15.866786+00:00",
+      "elapsedSeconds": 2.756,
+      "api": "project-preview",
+      "operation": "responses",
+      "phase": "baseline-estimate-false",
+      "direct": false,
+      "requestId": "a4d27985-2aec-5de4-ab10-790fe9929739",
+      "url": "https://apim-lab-v2-example.azure-api.net/lab-project-preview/responses",
+      "requestBody": {
+        "model": "lab-model",
+        "stream": false,
+        "input": "For a synthetic gateway test, write a numbered list of thirty ordinary household objects, each followed by a short sentence about its everyday use. Do not discuss private information.",
+        "max_output_tokens": 128,
+        "store": false,
+        "reasoning": {
+          "effort": "minimal"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-length": "5163",
+          "connection": "close",
+          "content-type": "application/json",
+          "date": "Wed, 21 Oct 2026 00:32:16 GMT",
+          "access-control-expose-headers": "Operation-Location,Location,Apim-Request-Id,x-agent-session-id,x-agent-invocation-id",
+          "vary": "Origin,Accept-Encoding",
+          "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+          "request-context": "appId=",
+          "x-ms-response-type": "standard",
+          "x-request-id": "a5114d75-ac2e-53e7-8137-9bb260fd588d",
+          "x-ms-aoai-configured-data-retention-days": "30",
+          "skip-error-remapping": "true",
+          "openai-client-partition-id": "bbdc9d156d453699d861b3b3afbfd981",
+          "azureml-internal-forward-count": "1",
+          "x-ms-is-spilled-over": "false",
+          "x-ratelimit-key": "lab-model",
+          "x-ratelimit-remaining-requests": "7",
+          "x-ratelimit-reset-requests": "16",
+          "x-ratelimit-limit-requests": "10",
+          "x-ratelimit-renewalperiod-requests": "60",
+          "x-ratelimit-abusepenalty-active": "False",
+          "x-ratelimit-remaining-tokens": "9955",
+          "x-ratelimit-reset-tokens": "0",
+          "x-ratelimit-limit-tokens": "10000",
+          "x-ratelimit-renewalperiod-tokens": "60",
+          "azureai-fe-is-streaming": "False",
+          "azureai-fe-offer-type": "paygo",
+          "x-ms-served-model": "gpt-5-mini-2025-08-07",
+          "openai-version": "2020-10-01",
+          "openai-organization": "bbdc9d156d453699d861b3b3afbfd981",
+          "openai-project": "d2b722b2-1410-508b-b0ce-46e743a21ecb",
+          "openai-processing-ms": "1733",
+          "azureml-served-by-cluster": "hyena-eastus2-02,hyena-eastus2-02",
+          "api-supported-versions": "1.0,2025-05-15-preview,2025-11-15-preview",
+          "x-http2-stream-id": "321",
+          "apim-request-id": "ad94395b-0578-5475-be8a-b0418db05d01",
+          "x-content-type-options": "nosniff",
+          "x-ms-region": "East US 2",
+          "x-lab-phase": "baseline-estimate-false",
+          "x-lab-tpm": "9833",
+          "x-lab-quota": "9499",
+          "x-lab-consumed": "167",
+          "apim-trace-id": "2553205783d1ad3a5983917207161edc",
+          "ocp-apim-apiid": "lab-project-preview",
+          "ocp-apim-operationid": "responses",
+          "ocp-apim-subscriptionid": "repro"
+        },
+        "body": {
+          "metadata": {},
+          "top_logprobs": 0,
+          "temperature": 1,
+          "top_p": 1,
+          "service_tier": "default",
+          "prompt_cache_retention": "in_memory",
+          "model": "lab-model",
+          "reasoning": {
+            "effort": "minimal",
+            "context": "current_turn",
+            "mode": "standard"
+          },
+          "background": false,
+          "max_output_tokens": 128,
+          "text": {
+            "format": {
+              "type": "text"
+            },
+            "verbosity": "medium"
+          },
+          "tools": [],
+          "tool_choice": "auto",
+          "truncation": "disabled",
+          "id": "resp_example-d43865c6c3d8e98db4bbc93f",
+          "object": "response",
+          "status": "incomplete",
+          "created_at": 1792542735,
+          "error": null,
+          "incomplete_details": {
+            "reason": "max_output_tokens"
+          },
+          "output": [
+            {
+              "type": "reasoning",
+              "id": "rs_example-89e3e8a7de68bb876c607a28",
+              "created_by": {
+                "response_id": "resp_example-d43865c6c3d8e98db4bbc93f"
+              },
+              "response_id": "resp_example-d43865c6c3d8e98db4bbc93f",
+              "encrypted_content": "gAAAAABq2AgQp5fDivN_j9yzZjnUBPBeOx9kDHjrkZZOG4M78PMaxTRJ0qGluqpQvrVQpxyYIXEDZwEpEMTRaFjdPaC4rD2S9UGwWK3gnJnufZNr8ylv3bMu7rs2HCtBW2C1FdiM8retvyI6ET7m_oxysM-2Dfxl9A43h_8h1j3m6t9tiCsbl3RNeH9ps4ikvdAaC3yYFS3ChqfSdxWVUN9WagWWAn5xGe409PZm-bcfp-KTtmBLYWz7zbkTG_GSH2CRQXwaAaY79ceBedCdhrsFocjZ0y2F41YvT-_V0CIe-G51ODTn6Mc2VnSLLJf9BtZFp9WjgECR2lQw53TmKZnsABghvVS2EiOjNJfHsYwg1DZJ78JhHNPtXaQCXoT6rSNOsuOzvt9tOEws-oY3tY8PqBRQOrjAQPBUFZGZq43WM690p02OzgeQNBd_JmBRGFV2yd9bvB7Mwky8UQyWHTACqHaDoApwM8K-cOoi0ejlzez9jxkfg6RnNadX0pc8gwdIL7Qp06zTPDRUx4zdOiaxjoch-TfHKYcs4zmV05IPAcJWW_hjuWtJZd9td42oibgdojKelOO6agsASWCvY6W2P4gp6Xb_Ki3QAOoUwoigODNl_komUdTWK9YkyyKWWfSfV0ZpH2jwNpur0QiGlvNjDvpmy4Gd23FJMHBCxWJnS6YOcVO82QPD1In6hohpVFJap3e9D2nWIDBwV3kCjDkPVbXM9Wg100mdaMge0VagHBSUPNHGnbfgOX-ii3s29TTWRbJ8V3RCBgD_M0p41y7RPKFPUGctcaOjk0JROaEZHeT0Lzns1GWo7eeuPpSJrWKC7HzIPAB75wUk99j4vjBei21uSz8jkCRWK55uc7IxjtcjmP7ekcmV0qvfEk1ozImacLPK5CK7W4eTI7t4EIm1gCSX9MT9BB9_9TFEXmxbINF2VawPPny7mSUF54wLjZhGgTPFiyOMFbCyxyotbSEWZW_dDxD5VTipFYKPmnXHCh1mQaFmNjw5Jejb3hvTc_Gh5QR4m0EfrQY20a9Abm2OIayQ9IpRK_BF-GqOzyxJcqWLPeJzYAep91gwk_dm-O-BbLkIsv16TSS_qBeSYOXoTqG4oeQyHzt1pN12p_a3TPPVfMm-fcGoN1tvqtDIIidYLp8jXwvo4H7ORRyV7jnLDv1xgztX5rOWR4d-71FN8Y8OB9KJTRTYvGhGIwewRzIu3pkTut5GIObKVLAeJRNSic-l9V8BAA==",
+              "summary": [],
+              "content": []
+            },
+            {
+              "type": "message",
+              "id": "msg_example-be3077c7b7aef15f80e4162f",
+              "created_by": {
+                "response_id": "resp_example-d43865c6c3d8e98db4bbc93f"
+              },
+              "response_id": "resp_example-d43865c6c3d8e98db4bbc93f",
+              "role": "assistant",
+              "content": [
+                {
+                  "type": "output_text",
+                  "text": "1. Toothbrush \u2014 used to clean teeth and maintain oral hygiene.\n2. Hairbrush \u2014 used to detangle and style hair.\n3. Mug \u2014 used for drinking hot beverages like coffee or tea.\n4. Plate \u2014 used to hold and serve food.\n5. Fork \u2014 used to stab or pick up food while eating.\n6. Knife (table knife) \u2014 used to cut or spread food.\n7. Spoon \u2014 used to scoop and eat liquids or soft foods.\n8. Towel \u2014 used to dry hands, dishes, or the body.\n",
+                  "annotations": [],
+                  "logprobs": []
+                }
+              ],
+              "status": "incomplete"
+            }
+          ],
+          "instructions": null,
+          "usage": {
+            "input_tokens": 39,
+            "input_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0
+            },
+            "output_tokens": 128,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 167
+          },
+          "parallel_tool_calls": true,
+          "agent_reference": null,
+          "content_filters": [
+            {
+              "blocked": false,
+              "source_type": "prompt",
+              "content_filter_results": {
+                "sexual": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "hate": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "violence": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "self_harm": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "defender_for_ai": {
+                  "detected": false,
+                  "filtered": false,
+                  "details": {}
+                }
+              },
+              "content_filter_raw": [],
+              "content_filter_offsets": {
+                "start_offset": 0,
+                "end_offset": 1315,
+                "check_offset": 0
+              }
+            },
+            {
+              "blocked": false,
+              "source_type": "completion",
+              "content_filter_results": {
+                "sexual": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "hate": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "violence": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "self_harm": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "defender_for_ai": {
+                  "detected": false,
+                  "filtered": false,
+                  "details": {}
+                }
+              },
+              "content_filter_raw": [],
+              "content_filter_offsets": {
+                "start_offset": 0,
+                "end_offset": 467,
+                "check_offset": 0
+              }
+            }
+          ]
+        }
+      },
+      "actualTotalTokens": 167
+    },
+    {
+      "utc": "2026-10-21T00:32:19.672814+00:00",
+      "elapsedSeconds": 2.261,
+      "api": "account",
+      "operation": "chat",
+      "phase": "baseline-estimate-false",
+      "direct": false,
+      "requestId": "a5ab55f6-1930-5b33-9f27-682932943be0",
+      "url": "https://apim-lab-v2-example.azure-api.net/lab-account/chat/completions",
+      "requestBody": {
+        "model": "lab-model",
+        "stream": false,
+        "messages": [
+          {
+            "role": "user",
+            "content": "For a synthetic gateway test, write a numbered list of thirty ordinary household objects, each followed by a short sentence about its everyday use. Do not discuss private information."
+          }
+        ],
+        "max_completion_tokens": 128,
+        "reasoning_effort": "minimal"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-length": "1219",
+          "connection": "close",
+          "content-type": "application/json",
+          "date": "Wed, 21 Oct 2026 00:32:19 GMT",
+          "vary": "Origin",
+          "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+          "azureai-fe-is-streaming": "False",
+          "azureai-fe-offer-type": "paygo",
+          "azureml-model-session": "d20261005131252-2d93733f",
+          "skip-error-remapping": "true",
+          "x-accel-buffering": "no",
+          "x-ms-is-spilled-over": "false",
+          "x-ms-rai-invoked": "true",
+          "x-ms-served-model": "gpt-5-mini-2025-08-07",
+          "x-ratelimit-abusepenalty-active": "False",
+          "x-ratelimit-key": "lab-model",
+          "x-ratelimit-limit-requests": "10",
+          "x-ratelimit-limit-tokens": "10000",
+          "x-ratelimit-remaining-requests": "7",
+          "x-ratelimit-remaining-tokens": "9961",
+          "x-ratelimit-renewalperiod-requests": "60",
+          "x-ratelimit-renewalperiod-tokens": "60",
+          "x-ratelimit-reset-requests": "19",
+          "x-ratelimit-reset-tokens": "0",
+          "x-request-id": "bc7d1be2-09a2-5b8a-9240-ebe914e6f050",
+          "apim-request-id": "f54d335b-f8f8-5e2a-b6ae-78f15c6d7750",
+          "x-http2-stream-id": "615",
+          "x-ms-client-request-id": "a5ab55f6-1930-5b33-9f27-682932943be0",
+          "x-content-type-options": "nosniff",
+          "x-ms-region": "East US 2",
+          "x-lab-phase": "baseline-estimate-false",
+          "x-lab-tpm": "9833",
+          "x-lab-quota": "9833",
+          "x-lab-consumed": "167",
+          "apim-trace-id": "fb4d56cb9a3666fc279232e33699d004",
+          "ocp-apim-apiid": "lab-account",
+          "ocp-apim-operationid": "chat",
+          "ocp-apim-subscriptionid": "repro"
+        },
+        "body": {
+          "choices": [
+            {
+              "content_filter_results": {},
+              "finish_reason": "length",
+              "index": 0,
+              "logprobs": null,
+              "message": {
+                "annotations": [],
+                "content": "",
+                "refusal": null,
+                "role": "assistant"
+              }
+            }
+          ],
+          "created": 1792542738,
+          "id": "chatcmpl-example-b6034d5cdbf9f9f6d99bfd10",
+          "model": "gpt-5-mini-2025-08-07",
+          "object": "chat.completion",
+          "prompt_filter_results": [
+            {
+              "prompt_index": 0,
+              "content_filter_results": {
+                "defender_for_ai": {
+                  "detected": false,
+                  "filtered": false,
+                  "details": {}
+                },
+                "hate": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "self_harm": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "sexual": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "violence": {
+                  "filtered": false,
+                  "severity": "safe"
+                }
+              }
+            }
+          ],
+          "routing": {
+            "serving_pipereplica": "d20261005131252-2d93733f-default-r1-dp0-default"
+          },
+          "service_tier": "default",
+          "system_fingerprint": null,
+          "usage": {
+            "completion_tokens": 128,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 128,
+              "rejected_prediction_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 6,
+              "engine_ttft_ms": 26,
+              "engine_ttlt_ms": 760,
+              "pre_inference_ms": 104,
+              "service_tbt_ms": 6,
+              "service_ttft_ms": 494,
+              "service_ttlt_ms": 1224,
+              "user_visible_ttft_ms": 390
+            },
+            "prompt_tokens": 39,
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "total_tokens": 167
+          }
+        }
+      },
+      "actualTotalTokens": 167
+    },
+    {
+      "utc": "2026-10-21T00:32:22.921568+00:00",
+      "elapsedSeconds": 2.22,
+      "api": "account",
+      "operation": "chat",
+      "phase": "baseline-estimate-false",
+      "direct": false,
+      "requestId": "16e768d3-743c-5763-9528-9002b17c66cf",
+      "url": "https://apim-lab-v2-example.azure-api.net/lab-account/chat/completions",
+      "requestBody": {
+        "model": "lab-model",
+        "stream": false,
+        "messages": [
+          {
+            "role": "user",
+            "content": "For a synthetic gateway test, write a numbered list of thirty ordinary household objects, each followed by a short sentence about its everyday use. Do not discuss private information."
+          }
+        ],
+        "max_completion_tokens": 128,
+        "reasoning_effort": "minimal"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-length": "1312",
+          "connection": "close",
+          "content-type": "application/json",
+          "date": "Wed, 21 Oct 2026 00:32:23 GMT",
+          "vary": "Origin",
+          "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+          "azureai-fe-is-streaming": "False",
+          "azureai-fe-offer-type": "paygo",
+          "azureml-model-session": "d20261006123742-c4b23712",
+          "skip-error-remapping": "true",
+          "x-accel-buffering": "no",
+          "x-ms-is-spilled-over": "false",
+          "x-ms-rai-invoked": "true",
+          "x-ms-served-model": "gpt-5-mini-2025-08-07",
+          "x-ratelimit-abusepenalty-active": "False",
+          "x-ratelimit-key": "lab-model",
+          "x-ratelimit-limit-requests": "10",
+          "x-ratelimit-limit-tokens": "10000",
+          "x-ratelimit-remaining-requests": "6",
+          "x-ratelimit-remaining-tokens": "9961",
+          "x-ratelimit-renewalperiod-requests": "60",
+          "x-ratelimit-renewalperiod-tokens": "60",
+          "x-ratelimit-reset-requests": "22",
+          "x-ratelimit-reset-tokens": "0",
+          "x-request-id": "8dc9c168-f3dc-56bf-97c5-dd5f5459b4e2",
+          "apim-request-id": "b5712432-4e28-5588-844e-2f57346f215d",
+          "x-http2-stream-id": "743",
+          "x-ms-client-request-id": "16e768d3-743c-5763-9528-9002b17c66cf",
+          "x-content-type-options": "nosniff",
+          "x-ms-region": "East US 2",
+          "x-lab-phase": "baseline-estimate-false",
+          "x-lab-tpm": "9833",
+          "x-lab-quota": "9666",
+          "x-lab-consumed": "167",
+          "apim-trace-id": "b200778ab58607b45037f40a83f2bf06",
+          "ocp-apim-apiid": "lab-account",
+          "ocp-apim-operationid": "chat",
+          "ocp-apim-subscriptionid": "repro"
+        },
+        "body": {
+          "choices": [
+            {
+              "content_filter_results": {},
+              "finish_reason": "length",
+              "index": 0,
+              "logprobs": null,
+              "message": {
+                "annotations": [],
+                "content": "",
+                "refusal": null,
+                "role": "assistant"
+              }
+            }
+          ],
+          "created": 1792542742,
+          "id": "chatcmpl-example-5d022a669088160edbbdfd09",
+          "model": "gpt-5-mini-2025-08-07",
+          "object": "chat.completion",
+          "prompt_filter_results": [
+            {
+              "prompt_index": 0,
+              "content_filter_results": {
+                "defender_for_ai": {
+                  "detected": false,
+                  "filtered": false,
+                  "details": {
+                    "evaluation": "unavailable",
+                    "evaluationReason": "missing_or_unknown_provider_evaluation_status"
+                  }
+                },
+                "hate": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "self_harm": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "sexual": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "violence": {
+                  "filtered": false,
+                  "severity": "safe"
+                }
+              }
+            }
+          ],
+          "routing": {
+            "serving_pipereplica": "d20261006123742-c4b23712-default-r0-dp0-default"
+          },
+          "service_tier": "default",
+          "system_fingerprint": null,
+          "usage": {
+            "completion_tokens": 128,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 128,
+              "rejected_prediction_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 6,
+              "engine_ttft_ms": 27,
+              "engine_ttlt_ms": 814,
+              "pre_inference_ms": 115,
+              "service_tbt_ms": 6,
+              "service_ttft_ms": 483,
+              "service_ttlt_ms": 1259,
+              "user_visible_ttft_ms": 367
+            },
+            "prompt_tokens": 39,
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "total_tokens": 167
+          }
+        }
+      },
+      "actualTotalTokens": 167
+    },
+    {
+      "utc": "2026-10-21T00:32:26.142754+00:00",
+      "elapsedSeconds": 2.197,
+      "api": "account",
+      "operation": "chat",
+      "phase": "baseline-estimate-false",
+      "direct": false,
+      "requestId": "a0f485fc-3952-594b-8a21-681ee45e8a45",
+      "url": "https://apim-lab-v2-example.azure-api.net/lab-account/chat/completions",
+      "requestBody": {
+        "model": "lab-model",
+        "stream": false,
+        "messages": [
+          {
+            "role": "user",
+            "content": "For a synthetic gateway test, write a numbered list of thirty ordinary household objects, each followed by a short sentence about its everyday use. Do not discuss private information."
+          }
+        ],
+        "max_completion_tokens": 128,
+        "reasoning_effort": "minimal"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-length": "1219",
+          "connection": "close",
+          "content-type": "application/json",
+          "date": "Wed, 21 Oct 2026 00:32:26 GMT",
+          "vary": "Origin",
+          "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+          "azureai-fe-is-streaming": "False",
+          "azureai-fe-offer-type": "paygo",
+          "azureml-model-session": "d20261006123742-c4b23712",
+          "skip-error-remapping": "true",
+          "x-accel-buffering": "no",
+          "x-ms-is-spilled-over": "false",
+          "x-ms-rai-invoked": "true",
+          "x-ms-served-model": "gpt-5-mini-2025-08-07",
+          "x-ratelimit-abusepenalty-active": "False",
+          "x-ratelimit-key": "lab-model",
+          "x-ratelimit-limit-requests": "10",
+          "x-ratelimit-limit-tokens": "10000",
+          "x-ratelimit-remaining-requests": "6",
+          "x-ratelimit-remaining-tokens": "9961",
+          "x-ratelimit-renewalperiod-requests": "60",
+          "x-ratelimit-renewalperiod-tokens": "60",
+          "x-ratelimit-reset-requests": "25",
+          "x-ratelimit-reset-tokens": "0",
+          "x-request-id": "64f6944b-6680-57d1-8898-eb9888b62227",
+          "apim-request-id": "f3a806be-3f7b-53a5-b280-8b81470ed517",
+          "x-http2-stream-id": "931",
+          "x-ms-client-request-id": "a0f485fc-3952-594b-8a21-681ee45e8a45",
+          "x-content-type-options": "nosniff",
+          "x-ms-region": "East US 2",
+          "x-lab-phase": "baseline-estimate-false",
+          "x-lab-tpm": "9833",
+          "x-lab-quota": "9499",
+          "x-lab-consumed": "167",
+          "apim-trace-id": "b1ae8dedf0847a02eef65f3ff16d9a02",
+          "ocp-apim-apiid": "lab-account",
+          "ocp-apim-operationid": "chat",
+          "ocp-apim-subscriptionid": "repro"
+        },
+        "body": {
+          "choices": [
+            {
+              "content_filter_results": {},
+              "finish_reason": "length",
+              "index": 0,
+              "logprobs": null,
+              "message": {
+                "annotations": [],
+                "content": "",
+                "refusal": null,
+                "role": "assistant"
+              }
+            }
+          ],
+          "created": 1792542745,
+          "id": "chatcmpl-example-d45ef247d89cf2140a0fef87",
+          "model": "gpt-5-mini-2025-08-07",
+          "object": "chat.completion",
+          "prompt_filter_results": [
+            {
+              "prompt_index": 0,
+              "content_filter_results": {
+                "defender_for_ai": {
+                  "detected": false,
+                  "filtered": false,
+                  "details": {}
+                },
+                "hate": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "self_harm": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "sexual": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "violence": {
+                  "filtered": false,
+                  "severity": "safe"
+                }
+              }
+            }
+          ],
+          "routing": {
+            "serving_pipereplica": "d20261006123742-c4b23712-default-r1-dp0-default"
+          },
+          "service_tier": "default",
+          "system_fingerprint": null,
+          "usage": {
+            "completion_tokens": 128,
+            "completion_tokens_details": {
+              "accepted_prediction_tokens": 0,
+              "audio_tokens": 0,
+              "reasoning_tokens": 128,
+              "rejected_prediction_tokens": 0
+            },
+            "latency_checkpoint": {
+              "engine_tbt_ms": 6,
+              "engine_ttft_ms": 31,
+              "engine_ttlt_ms": 845,
+              "pre_inference_ms": 107,
+              "service_tbt_ms": 6,
+              "service_ttft_ms": 454,
+              "service_ttlt_ms": 1260,
+              "user_visible_ttft_ms": 347
+            },
+            "prompt_tokens": 39,
+            "prompt_tokens_details": {
+              "audio_tokens": 0,
+              "cached_tokens": 0
+            },
+            "total_tokens": 167
+          }
+        }
+      },
+      "actualTotalTokens": 167
+    },
+    {
+      "utc": "2026-10-21T00:32:29.365446+00:00",
+      "elapsedSeconds": 2.324,
+      "api": "account",
+      "operation": "responses",
+      "phase": "baseline-estimate-false",
+      "direct": false,
+      "requestId": "e5f116c9-c847-50d5-a30c-fbb295d64596",
+      "url": "https://apim-lab-v2-example.azure-api.net/lab-account/responses",
+      "requestBody": {
+        "model": "lab-model",
+        "stream": false,
+        "input": "For a synthetic gateway test, write a numbered list of thirty ordinary household objects, each followed by a short sentence about its everyday use. Do not discuss private information.",
+        "max_output_tokens": 128,
+        "store": false,
+        "reasoning": {
+          "effort": "minimal"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-length": "5675",
+          "connection": "close",
+          "content-type": "application/json",
+          "date": "Wed, 21 Oct 2026 00:32:30 GMT",
+          "vary": "Origin",
+          "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+          "x-ms-aoai-configured-data-retention-days": "30",
+          "skip-error-remapping": "true",
+          "x-ms-is-spilled-over": "false",
+          "x-ratelimit-key": "lab-model",
+          "x-ratelimit-remaining-requests": "5",
+          "x-ratelimit-reset-requests": "27",
+          "x-ratelimit-limit-requests": "10",
+          "x-ratelimit-renewalperiod-requests": "60",
+          "x-ratelimit-abusepenalty-active": "False",
+          "x-ratelimit-remaining-tokens": "9955",
+          "x-ratelimit-reset-tokens": "0",
+          "x-ratelimit-limit-tokens": "10000",
+          "x-ratelimit-renewalperiod-tokens": "60",
+          "azureai-fe-is-streaming": "False",
+          "azureai-fe-offer-type": "paygo",
+          "x-ms-served-model": "gpt-5-mini-2025-08-07",
+          "x-request-id": "ea5825c4-52f1-5792-ab13-9888c92596be",
+          "apim-request-id": "d0e94b6e-2094-5004-bcb5-9a0c8fc42f14",
+          "x-http2-stream-id": "637",
+          "x-ms-client-request-id": "e5f116c9-c847-50d5-a30c-fbb295d64596",
+          "x-content-type-options": "nosniff",
+          "x-ms-region": "East US 2",
+          "x-lab-phase": "baseline-estimate-false",
+          "x-lab-tpm": "9833",
+          "x-lab-quota": "9833",
+          "x-lab-consumed": "167",
+          "apim-trace-id": "7c3efbd7977628de5eff55c5c4e7df94",
+          "ocp-apim-apiid": "lab-account",
+          "ocp-apim-operationid": "responses",
+          "ocp-apim-subscriptionid": "repro"
+        },
+        "body": {
+          "id": "resp_example-c843cd47302cf1649a5ff92a",
+          "object": "response",
+          "created_at": 1792542748,
+          "status": "incomplete",
+          "background": false,
+          "completed_at": null,
+          "content_filters": [
+            {
+              "blocked": false,
+              "source_type": "prompt",
+              "content_filter_raw": [],
+              "content_filter_results": {
+                "defender_for_ai": {
+                  "detected": false,
+                  "filtered": false,
+                  "details": {
+                    "evaluation": "unavailable",
+                    "evaluationReason": "missing_or_unknown_provider_evaluation_status"
+                  }
+                },
+                "hate": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "sexual": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "violence": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "self_harm": {
+                  "filtered": false,
+                  "severity": "safe"
+                }
+              },
+              "content_filter_offsets": {
+                "start_offset": 0,
+                "end_offset": 1315,
+                "check_offset": 0
+              }
+            },
+            {
+              "blocked": false,
+              "source_type": "completion",
+              "content_filter_raw": [],
+              "content_filter_results": {
+                "defender_for_ai": {
+                  "detected": false,
+                  "filtered": false,
+                  "details": {
+                    "evaluation": "unavailable",
+                    "evaluationReason": "missing_or_unknown_provider_evaluation_status"
+                  }
+                },
+                "hate": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "sexual": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "violence": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "self_harm": {
+                  "filtered": false,
+                  "severity": "safe"
+                }
+              },
+              "content_filter_offsets": {
+                "start_offset": 0,
+                "end_offset": 503,
+                "check_offset": 0
+              }
+            }
+          ],
+          "error": null,
+          "frequency_penalty": 0.0,
+          "incomplete_details": {
+            "reason": "max_output_tokens"
+          },
+          "instructions": null,
+          "max_output_tokens": 128,
+          "max_tool_calls": null,
+          "model": "lab-model",
+          "moderation": null,
+          "output": [
+            {
+              "id": "rs_example-3bf299df257d56801c01d279",
+              "type": "reasoning",
+              "content": [],
+              "encrypted_content": "gAAAAABq2AgeO7nFLYJI0MqyN6wDHNpSnC61gPqJQdUc3SDXiHV6qfLYb5fQJYNLgS2oCfG5Vp1JdKrkqjbVzDCNQrFvn9tKln80TKOb2nTebupGM5oYc2EDEhDv_PH1aYOPZPGY5WXfxaFi893Quct8DazMHec9eIpsyVD2X71i02taKWBcPTP087PxvsZ5XfkMYQdm-e8kIfoBDy3YeOeAay69LGfDuaYJiMwbMSly8akjy3hjKYgcqFDaVig7eKDhfPTuqDekg3LblVZ3yp1d0zNk8xMSIm5lD6F8JrA3GJ-ZttT0dQ9A0J79ekZD708q1w0ksSZQWQ8ea8uwDB3GAZGqyIWpW0gm8HdZXBZ_W_TAaLQxYo73NSqMG3nfOvv-oBKnZtFfX_-6yJ5ixVUFRjDMtT8xCYuJxIWT-raiKV6KTWuNeylxYkTsrTBvslHq0BkTOOEqenbqXJPPLDeIo-cluOfqf2OlvxOOcXOY1t4sQ3UYbzQQyFIQNQlggiFyeBgX-xRjIrg5E85d_C11cAcX1CDpODYAb3LtWdvChaXLbSPSw7KMv5tKiMGQ8HGEl6uYvkVzN1WB3kwOcGNMxSS9Ar9cBYxFGMwK1vQNCe9k6rcMyUPzBqCgx7IqheKsUZDvi3vdwv8YOCU9hQM8JzDRvsOqrO1lTicY9gq5MhI23WDB6rPB4egWFl7VlvO-0lUw3TapOYs0XMNTKrzODOaQT7cMXwfHaHa8zanS3uCNO84SNHXlynNGXPVptjtWezfhz6u4pEeyUuKrDTPEy9gq1yZscYyDqRT-nwWLael7l3k2leRh2rIDdqSitYfulzC96FTtqk32OWtPK1lgSUmfS_cRHDMvMlj8fyd8KtlPiYa3dI5tSMQsp19n2rE2IdeHngG8OICJ23W_kDWWz4Gd9-QV5EWBFPP3URJW5jm6aJtaySvbgG6TNXtbqfEiGS9CXQHTA7ik6CVeSpgOdbGEFqOhoeTauj78JwYZYiWAFaOwGgZvmNeW_Mtpc4od3OH1vTiMrkr3YxVEeIyQ086RN8ZQTQ4RavBpQ-ofNezQB215rANlqd5Pxi1Edi2Wm8k00aTWa0ikGrSYCif9ob-6Kv9jMxQ_8ul8qeO1bXyCU82ptlfI9CMNOqTqqkmoUnfUMrIPVjotnWoYeiU5b2kR8u3mBh1BV4It0aD-q1UrgL6oFXU=",
+              "summary": []
+            },
+            {
+              "id": "msg_example-40a7b824c587f054dd285a7c",
+              "type": "message",
+              "status": "incomplete",
+              "content": [
+                {
+                  "type": "output_text",
+                  "annotations": [],
+                  "logprobs": [],
+                  "text": "1. Toothbrush \u2014 used to clean teeth and maintain oral hygiene.\n2. Toothpaste \u2014 applied to a toothbrush to remove plaque and freshen breath.\n3. Towel \u2014 used to dry hands, body, or dishes after washing.\n4. Soap bar \u2014 used to cleanse skin during bathing or handwashing.\n5. Shampoo bottle \u2014 used to wash and condition hair.\n6. Comb \u2014 used to detangle and style hair.\n7. Hair brush \u2014 used to smooth hair and remove knots.\n8. Mirror \u2014 used to check appearance and assist with"
+                }
+              ],
+              "role": "assistant"
+            }
+          ],
+          "parallel_tool_calls": true,
+          "presence_penalty": 0.0,
+          "previous_response_id": null,
+          "prompt_cache_key": null,
+          "prompt_cache_retention": "in_memory",
+          "reasoning": {
+            "context": "current_turn",
+            "effort": "minimal",
+            "mode": "standard",
+            "summary": null
+          },
+          "safety_identifier": null,
+          "service_tier": "default",
+          "store": false,
+          "temperature": 1.0,
+          "text": {
+            "format": {
+              "type": "text"
+            },
+            "verbosity": "medium"
+          },
+          "tool_choice": "auto",
+          "tool_usage": {
+            "image_gen": {
+              "input_tokens": 0,
+              "input_tokens_details": {
+                "image_tokens": 0,
+                "text_tokens": 0
+              },
+              "output_tokens": 0,
+              "output_tokens_details": {
+                "image_tokens": 0,
+                "text_tokens": 0
+              },
+              "total_tokens": 0
+            },
+            "web_search": {
+              "num_requests": 0
+            }
+          },
+          "tools": [],
+          "top_logprobs": 0,
+          "top_p": 1.0,
+          "truncation": "disabled",
+          "usage": {
+            "input_tokens": 39,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 128,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 167
+          },
+          "user": null,
+          "metadata": {}
+        }
+      },
+      "actualTotalTokens": 167
+    },
+    {
+      "utc": "2026-10-21T00:32:32.953439+00:00",
+      "elapsedSeconds": 3.218,
+      "api": "account",
+      "operation": "responses",
+      "phase": "baseline-estimate-false",
+      "direct": false,
+      "requestId": "2a879010-9d7c-59f3-ba10-5294080a3301",
+      "url": "https://apim-lab-v2-example.azure-api.net/lab-account/responses",
+      "requestBody": {
+        "model": "lab-model",
+        "stream": false,
+        "input": "For a synthetic gateway test, write a numbered list of thirty ordinary household objects, each followed by a short sentence about its everyday use. Do not discuss private information.",
+        "max_output_tokens": 128,
+        "store": false,
+        "reasoning": {
+          "effort": "minimal"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-length": "5428",
+          "connection": "close",
+          "content-type": "application/json",
+          "date": "Wed, 21 Oct 2026 00:32:33 GMT",
+          "vary": "Origin",
+          "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+          "x-ms-aoai-configured-data-retention-days": "30",
+          "skip-error-remapping": "true",
+          "x-ms-is-spilled-over": "false",
+          "x-ratelimit-key": "lab-model",
+          "x-ratelimit-remaining-requests": "5",
+          "x-ratelimit-reset-requests": "29",
+          "x-ratelimit-limit-requests": "10",
+          "x-ratelimit-renewalperiod-requests": "60",
+          "x-ratelimit-abusepenalty-active": "False",
+          "x-ratelimit-remaining-tokens": "9955",
+          "x-ratelimit-reset-tokens": "0",
+          "x-ratelimit-limit-tokens": "10000",
+          "x-ratelimit-renewalperiod-tokens": "60",
+          "azureai-fe-is-streaming": "False",
+          "azureai-fe-offer-type": "paygo",
+          "x-ms-served-model": "gpt-5-mini-2025-08-07",
+          "x-request-id": "393f2ebc-4db3-5706-a6db-a5386d116a91",
+          "apim-request-id": "d8cfce33-f14e-52be-a112-b7bdcc1a0bb5",
+          "x-http2-stream-id": "399",
+          "x-ms-client-request-id": "2a879010-9d7c-59f3-ba10-5294080a3301",
+          "x-content-type-options": "nosniff",
+          "x-ms-region": "East US 2",
+          "x-lab-phase": "baseline-estimate-false",
+          "x-lab-tpm": "9833",
+          "x-lab-quota": "9666",
+          "x-lab-consumed": "167",
+          "apim-trace-id": "c46d577aa892effa1221d7e13f4ad336",
+          "ocp-apim-apiid": "lab-account",
+          "ocp-apim-operationid": "responses",
+          "ocp-apim-subscriptionid": "repro"
+        },
+        "body": {
+          "id": "resp_example-d104ca4b8e59a3f8972452a3",
+          "object": "response",
+          "created_at": 1792542752,
+          "status": "incomplete",
+          "background": false,
+          "completed_at": null,
+          "content_filters": [
+            {
+              "blocked": false,
+              "source_type": "prompt",
+              "content_filter_raw": [],
+              "content_filter_results": {
+                "defender_for_ai": {
+                  "detected": false,
+                  "filtered": false,
+                  "details": {}
+                },
+                "hate": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "sexual": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "violence": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "self_harm": {
+                  "filtered": false,
+                  "severity": "safe"
+                }
+              },
+              "content_filter_offsets": {
+                "start_offset": 0,
+                "end_offset": 1315,
+                "check_offset": 0
+              }
+            },
+            {
+              "blocked": false,
+              "source_type": "completion",
+              "content_filter_raw": [],
+              "content_filter_results": {
+                "defender_for_ai": {
+                  "detected": false,
+                  "filtered": false,
+                  "details": {}
+                },
+                "hate": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "sexual": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "violence": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "self_harm": {
+                  "filtered": false,
+                  "severity": "safe"
+                }
+              },
+              "content_filter_offsets": {
+                "start_offset": 0,
+                "end_offset": 530,
+                "check_offset": 0
+              }
+            }
+          ],
+          "error": null,
+          "frequency_penalty": 0.0,
+          "incomplete_details": {
+            "reason": "max_output_tokens"
+          },
+          "instructions": null,
+          "max_output_tokens": 128,
+          "max_tool_calls": null,
+          "model": "lab-model",
+          "moderation": null,
+          "output": [
+            {
+              "id": "rs_example-c1864b4f929e3681668ab6e6",
+              "type": "reasoning",
+              "content": [],
+              "encrypted_content": "gAAAAABq2Agi-ZXPsC_GYufd-Wz8XBpybpErfLVvjpiENCClpMzyOorz9Ffa0Hr6C6SXu-GY9E1JMYwHCcy2W8-r6YLQMSKcIvHnUHKj2jxgsJvicv7phAtvrv7pKlRlEN4mzkffdnxfF5PzFiADSQgPOYdSFV-r72AIkmNf3E8LSG6i7A_aooFmtf2hAjT5JFTyo3pNxzKLL1agXVbgEezAHBz5mJE9HX0A4kRU1_zQR7Qit8C9slPjgjlBs4B9riphcGE5IPtfAtFN71dJjYmcQbTWHR7vQ7w3v9mLmlacVto6duUW7EhuShraMzUuH-o3SEIndBXHASKresA3cg_MjcyVI_8FeuF3aMj3VwsWdj_rlNfXsAEu63IrRNNALduhe0-YHQme_2SLpbbqmlAxIGPEOzILyRm4q8imk24E0E73l41NkcEWq-A2fW2FgDQi_zm6rYYVIpDvL3YkJF8fGQMIvjMtRq0bL3jZmxF9_9ucTkKRw3-v6cmS7XRZ6ih8QQXPBnkX_7bRpyPlTKRJzwy6Lvo4uBsZwPAIOoVppG4pwuBS1Ypr7c5UbssHfog1kMWTz2Pq4XTQoW3TIoNILihdq_Ulwwjud2VD2c8t2aYKNFBsNVaJzxKtmGMIIO3LCpL7cKWmNkHs1i0LZEIGTTpx_qO-Jq-W4LdFBIwQxbLsrDKMEqKSa7cDW2VFUTlueedqfJ3DniaajP74mK7-ChEBs8lTa4PkeanXWunqZYYrKjfSAbJMW6Ey0sJ3SnW7d6p7ORZb8b3Xa2kPAM-sAQI9KWDahzLZ83SvHfLd_NO_WOyXtXAz58u--kAtLuTf7ccFWnQQkDwkuLMCVifHwa3KOUVLERQ9VuhfNEerSfkJ3l_Hauk2TGUuwH6B0bQOm5uFV4PP1V6S-i3kwdOALeNR58Nc4AjIWm2Q58E43ZPy4ttLEXYyk9zbTM37oX1FJbKCFef_hnlarGNfY_xXI6bw3jEPWc5U2BuD3i8rON1PV1GM85x8hA4mECf5E9gAWQs1py5SRt2vMDQfTOvu_fP8TpSq8qBDI99uEsW6v6V5Z0XLj-kiSoysHZvtUsEpmmGK1L9ME_YAX6BTVyjD9rQz-sTBwd2QjDQCdkgdjx_YaCSXooNgR8VH5_0FIkO919PscFTxJrEo5wSfM1Rn8cS78H-5AQEIM1F16LeJuGRAGfOjzi0=",
+              "summary": []
+            },
+            {
+              "id": "msg_example-c37e236142f1fd62377cb081",
+              "type": "message",
+              "status": "incomplete",
+              "content": [
+                {
+                  "type": "output_text",
+                  "annotations": [],
+                  "logprobs": [],
+                  "text": "1. Toothbrush \u2014 used to clean teeth and maintain oral hygiene.  \n2. Coffee mug \u2014 holds hot beverages for drinking.  \n3. Dish sponge \u2014 scrubs plates and cookware to remove food residue.  \n4. Refrigerator \u2014 keeps food and drinks cold to preserve freshness.  \n5. Microwave \u2014 heats or reheats meals quickly.  \n6. Dining chair \u2014 provides seating at a table.  \n7. Table lamp \u2014 offers localized light for reading or tasks.  \n8. Sofa \u2014 supplies comfortable seating in a living room.  \n9. Throw"
+                }
+              ],
+              "role": "assistant"
+            }
+          ],
+          "parallel_tool_calls": true,
+          "presence_penalty": 0.0,
+          "previous_response_id": null,
+          "prompt_cache_key": null,
+          "prompt_cache_retention": "in_memory",
+          "reasoning": {
+            "context": "current_turn",
+            "effort": "minimal",
+            "mode": "standard",
+            "summary": null
+          },
+          "safety_identifier": null,
+          "service_tier": "default",
+          "store": false,
+          "temperature": 1.0,
+          "text": {
+            "format": {
+              "type": "text"
+            },
+            "verbosity": "medium"
+          },
+          "tool_choice": "auto",
+          "tool_usage": {
+            "image_gen": {
+              "input_tokens": 0,
+              "input_tokens_details": {
+                "image_tokens": 0,
+                "text_tokens": 0
+              },
+              "output_tokens": 0,
+              "output_tokens_details": {
+                "image_tokens": 0,
+                "text_tokens": 0
+              },
+              "total_tokens": 0
+            },
+            "web_search": {
+              "num_requests": 0
+            }
+          },
+          "tools": [],
+          "top_logprobs": 0,
+          "top_p": 1.0,
+          "truncation": "disabled",
+          "usage": {
+            "input_tokens": 39,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 128,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 167
+          },
+          "user": null,
+          "metadata": {}
+        }
+      },
+      "actualTotalTokens": 167
+    },
+    {
+      "utc": "2026-10-21T00:32:37.343789+00:00",
+      "elapsedSeconds": 2.258,
+      "api": "account",
+      "operation": "responses",
+      "phase": "baseline-estimate-false",
+      "direct": false,
+      "requestId": "d0f330d2-0929-533b-a527-4a2b77b1983f",
+      "url": "https://apim-lab-v2-example.azure-api.net/lab-account/responses",
+      "requestBody": {
+        "model": "lab-model",
+        "stream": false,
+        "input": "For a synthetic gateway test, write a numbered list of thirty ordinary household objects, each followed by a short sentence about its everyday use. Do not discuss private information.",
+        "max_output_tokens": 128,
+        "store": false,
+        "reasoning": {
+          "effort": "minimal"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-length": "5649",
+          "connection": "close",
+          "content-type": "application/json",
+          "date": "Wed, 21 Oct 2026 00:32:37 GMT",
+          "vary": "Origin",
+          "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+          "x-ms-aoai-configured-data-retention-days": "30",
+          "skip-error-remapping": "true",
+          "x-ms-is-spilled-over": "false",
+          "x-ratelimit-key": "lab-model",
+          "x-ratelimit-remaining-requests": "5",
+          "x-ratelimit-reset-requests": "31",
+          "x-ratelimit-limit-requests": "10",
+          "x-ratelimit-renewalperiod-requests": "60",
+          "x-ratelimit-abusepenalty-active": "False",
+          "x-ratelimit-remaining-tokens": "9955",
+          "x-ratelimit-reset-tokens": "0",
+          "x-ratelimit-limit-tokens": "10000",
+          "x-ratelimit-renewalperiod-tokens": "60",
+          "azureai-fe-is-streaming": "False",
+          "azureai-fe-offer-type": "paygo",
+          "x-ms-served-model": "gpt-5-mini-2025-08-07",
+          "x-request-id": "b54bbc8f-4375-5bb9-9ab0-26effacf4695",
+          "apim-request-id": "777b9d21-e366-5d3c-a1e4-a3b756f9aa17",
+          "x-http2-stream-id": "385",
+          "x-ms-client-request-id": "d0f330d2-0929-533b-a527-4a2b77b1983f",
+          "x-content-type-options": "nosniff",
+          "x-ms-region": "East US 2",
+          "x-lab-phase": "baseline-estimate-false",
+          "x-lab-tpm": "9833",
+          "x-lab-quota": "9833",
+          "x-lab-consumed": "167",
+          "apim-trace-id": "0d6a46bb954eca9499066ad9fa5b1f6d",
+          "ocp-apim-apiid": "lab-account",
+          "ocp-apim-operationid": "responses",
+          "ocp-apim-subscriptionid": "repro"
+        },
+        "body": {
+          "id": "resp_example-9d665b62e382e818db9040c0",
+          "object": "response",
+          "created_at": 1792542756,
+          "status": "incomplete",
+          "background": false,
+          "completed_at": null,
+          "content_filters": [
+            {
+              "blocked": false,
+              "source_type": "prompt",
+              "content_filter_raw": [],
+              "content_filter_results": {
+                "defender_for_ai": {
+                  "detected": false,
+                  "filtered": false,
+                  "details": {
+                    "evaluation": "unavailable",
+                    "evaluationReason": "missing_or_unknown_provider_evaluation_status"
+                  }
+                },
+                "hate": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "sexual": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "violence": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "self_harm": {
+                  "filtered": false,
+                  "severity": "safe"
+                }
+              },
+              "content_filter_offsets": {
+                "start_offset": 0,
+                "end_offset": 1315,
+                "check_offset": 0
+              }
+            },
+            {
+              "blocked": false,
+              "source_type": "completion",
+              "content_filter_raw": [],
+              "content_filter_results": {
+                "defender_for_ai": {
+                  "detected": false,
+                  "filtered": false,
+                  "details": {
+                    "evaluation": "unavailable",
+                    "evaluationReason": "missing_or_unknown_provider_evaluation_status"
+                  }
+                },
+                "hate": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "sexual": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "violence": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "self_harm": {
+                  "filtered": false,
+                  "severity": "safe"
+                }
+              },
+              "content_filter_offsets": {
+                "start_offset": 0,
+                "end_offset": 488,
+                "check_offset": 0
+              }
+            }
+          ],
+          "error": null,
+          "frequency_penalty": 0.0,
+          "incomplete_details": {
+            "reason": "max_output_tokens"
+          },
+          "instructions": null,
+          "max_output_tokens": 128,
+          "max_tool_calls": null,
+          "model": "lab-model",
+          "moderation": null,
+          "output": [
+            {
+              "id": "rs_example-e6bed648abbe561f8b7ba3ee",
+              "type": "reasoning",
+              "content": [],
+              "encrypted_content": "gAAAAABq2AgmxQl94hP9RD6lFmZG7b7XVhmo-TRnT8bBJSpR0EOXm80oMs6uHciKfuxnv9bR3B8Heu1-q8qHtdB4Seg-VKhb5e4Nqb4RU6qWIGhgV40fzN1v_UVa2wNR-jB0FEji9x33NDevGzvHq5tjVBqZ9RO0db_gpWBdUVg-SLuo91uZVexhhsO4WzeedbFiuqqiu2CiGzegQAGTdQSvfHsJZsbbi1tVO0EZq0dmXk3aZVB19jE1G5VrIwnUK4po-bcPKSPZEn9k3qxzAyAOwpQVyfEWuC_eCDDpB_VsoVHFX2RDWu7GwBPeTCiMVfFLwXEtRPUCE4j__-lQTIH71f-IKJ70_YIPL-Rbf_fNmi8N5jh5sxKWhEhK5mw1CCmU0D73GeQyZT2L6Sso_CgoQRelGwwvNKWDJc-7BUfVplLMzVzvoY6W_zA5nVGHKRqGvv2uWaDFLmMYy3Mq69c-wcQDUuB5HBXlXEqvBBfPlWj7elEVyRXk9ODddhguVNdQ1OQKUrMyLolSQg_9zFnt0R25RspX7aHLZPC5sUdlHFeUU5n6ntXpkbUXJc_KEmNQeVv6LMlXbwC_k-BqHc5_P2zDa8NJNKG8gWnAMUYeaQZTy5LZ-P1v8Ny2bUExJLs767C9BvggxM-Otg4-mSA_6wckJ0GBWsQ4olSuqfWp9kpfHzdfRRd8UG43eoyRgxTukdL-K2zsFTyZPQbT2GkaDk7XeAPiOn96h-VdsvAmqYlNCcPs0Cw3OyfWThPO-jdO-txvttexXMuXRQuoS--3Z3qQui005qILrP32bvqkatZ1q7n4fxJRCq7aiUdKVCWS_CF95PdJ5oWBT1_jq4lp0NcKJcg11lK4GIxeX4CSsfZx2Z9suH_-ih7F6UVT23BinhMyr1ufiKR4D8f_GwdpNVT9Ct8XUuoOUoZeWdo7zaY8SFDzlqCRAyYTyfNFDLEvhxDk-fNAlWkm9-adCZEjqJhQfXzficIpBziC5HoMa-wvVGxXR7vXP2avFyqkkbhCrJlhNgUlk5NRZJhzqAOZCB8APAnTSiApWRaEKojxLzpDlaj-RDa3cA_xDI-0tlDqCPtLtM66DR8xFlS7V6weXWrh1kjf0rYucNXGmEshTVIMGzej9ZGu60l1rQWCR5PjhBi2-c6U4kQ2r5BeLaxw3wFtb0szqf7nttgU79TzThGT4ilnAZo=",
+              "summary": []
+            },
+            {
+              "id": "msg_example-44e5132bb7720917cec8da06",
+              "type": "message",
+              "status": "incomplete",
+              "content": [
+                {
+                  "type": "output_text",
+                  "annotations": [],
+                  "logprobs": [],
+                  "text": "1. Spoon \u2014 Used for stirring beverages and scooping food.  \n2. Fork \u2014 Used for piercing and lifting pieces of food while eating.  \n3. Knife \u2014 Used for cutting fruits, vegetables, and other foods.  \n4. Plate \u2014 Used to hold and serve meals.  \n5. Bowl \u2014 Used for cereal, soup, and mixing ingredients.  \n6. Glass \u2014 Used for drinking water, juice, or other beverages.  \n7. Mug \u2014 Used for holding hot drinks like coffee or tea.  \n8. Towel \u2014 Used for"
+                }
+              ],
+              "role": "assistant"
+            }
+          ],
+          "parallel_tool_calls": true,
+          "presence_penalty": 0.0,
+          "previous_response_id": null,
+          "prompt_cache_key": null,
+          "prompt_cache_retention": "in_memory",
+          "reasoning": {
+            "context": "current_turn",
+            "effort": "minimal",
+            "mode": "standard",
+            "summary": null
+          },
+          "safety_identifier": null,
+          "service_tier": "default",
+          "store": false,
+          "temperature": 1.0,
+          "text": {
+            "format": {
+              "type": "text"
+            },
+            "verbosity": "medium"
+          },
+          "tool_choice": "auto",
+          "tool_usage": {
+            "image_gen": {
+              "input_tokens": 0,
+              "input_tokens_details": {
+                "image_tokens": 0,
+                "text_tokens": 0
+              },
+              "output_tokens": 0,
+              "output_tokens_details": {
+                "image_tokens": 0,
+                "text_tokens": 0
+              },
+              "total_tokens": 0
+            },
+            "web_search": {
+              "num_requests": 0
+            }
+          },
+          "tools": [],
+          "top_logprobs": 0,
+          "top_p": 1.0,
+          "truncation": "disabled",
+          "usage": {
+            "input_tokens": 39,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 128,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 167
+          },
+          "user": null,
+          "metadata": {}
+        }
+      },
+      "actualTotalTokens": 167
+    },
+    {
+      "utc": "2026-10-21T00:32:47.524133+00:00",
+      "elapsedSeconds": 2.332,
+      "api": "project-preview",
+      "operation": "responses",
+      "phase": "quota",
+      "direct": false,
+      "requestId": "b2284aae-b472-5a37-bd20-fdbdcccaae75",
+      "url": "https://apim-lab-v2-example.azure-api.net/lab-project-preview/responses",
+      "requestBody": {
+        "model": "lab-model",
+        "stream": false,
+        "input": "For a synthetic gateway test, write a numbered list of thirty ordinary household objects, each followed by a short sentence about its everyday use. Do not discuss private information.",
+        "max_output_tokens": 128,
+        "store": false,
+        "reasoning": {
+          "effort": "minimal"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-length": "5170",
+          "connection": "close",
+          "content-type": "application/json",
+          "date": "Wed, 21 Oct 2026 00:32:47 GMT",
+          "access-control-expose-headers": "Operation-Location,Location,Apim-Request-Id,x-agent-session-id,x-agent-invocation-id",
+          "vary": "Origin,Accept-Encoding",
+          "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+          "request-context": "appId=",
+          "x-ms-response-type": "standard",
+          "x-request-id": "1d1879a5-08cb-5b59-9545-7f12d01a0b96",
+          "x-ms-aoai-configured-data-retention-days": "30",
+          "skip-error-remapping": "true",
+          "openai-client-partition-id": "bbdc9d156d453699d861b3b3afbfd981",
+          "azureml-internal-forward-count": "1",
+          "x-ms-is-spilled-over": "false",
+          "x-ratelimit-key": "lab-model",
+          "x-ratelimit-remaining-requests": "63",
+          "x-ratelimit-reset-requests": "22",
+          "x-ratelimit-limit-requests": "100",
+          "x-ratelimit-renewalperiod-requests": "60",
+          "x-ratelimit-abusepenalty-active": "False",
+          "x-ratelimit-remaining-tokens": "99955",
+          "x-ratelimit-reset-tokens": "0",
+          "x-ratelimit-limit-tokens": "100000",
+          "x-ratelimit-renewalperiod-tokens": "60",
+          "azureai-fe-is-streaming": "False",
+          "azureai-fe-offer-type": "paygo",
+          "x-ms-served-model": "gpt-5-mini-2025-08-07",
+          "openai-version": "2020-10-01",
+          "openai-organization": "bbdc9d156d453699d861b3b3afbfd981",
+          "openai-project": "d2b722b2-1410-508b-b0ce-46e743a21ecb",
+          "openai-processing-ms": "1783",
+          "azureml-served-by-cluster": "hyena-eastus2-02,hyena-eastus2-02",
+          "api-supported-versions": "1.0,2025-05-15-preview,2025-11-15-preview",
+          "x-http2-stream-id": "861",
+          "apim-request-id": "43addbe1-f351-5a47-a2c6-a09bbde1d751",
+          "x-content-type-options": "nosniff",
+          "x-ms-region": "East US 2",
+          "x-lab-phase": "baseline-estimate-false",
+          "x-lab-tpm": "9833",
+          "x-lab-quota": "9833",
+          "x-lab-consumed": "167",
+          "apim-trace-id": "f6248c1c8de07869ec2348950ff2b13b",
+          "ocp-apim-apiid": "lab-project-preview",
+          "ocp-apim-operationid": "responses",
+          "ocp-apim-subscriptionid": "repro"
+        },
+        "body": {
+          "metadata": {},
+          "top_logprobs": 0,
+          "temperature": 1,
+          "top_p": 1,
+          "service_tier": "default",
+          "prompt_cache_retention": "in_memory",
+          "model": "lab-model",
+          "reasoning": {
+            "effort": "minimal",
+            "context": "current_turn",
+            "mode": "standard"
+          },
+          "background": false,
+          "max_output_tokens": 128,
+          "text": {
+            "format": {
+              "type": "text"
+            },
+            "verbosity": "medium"
+          },
+          "tools": [],
+          "tool_choice": "auto",
+          "truncation": "disabled",
+          "id": "resp_example-f82430ba2de50cf776b129ac",
+          "object": "response",
+          "status": "incomplete",
+          "created_at": 1792542766,
+          "error": null,
+          "incomplete_details": {
+            "reason": "max_output_tokens"
+          },
+          "output": [
+            {
+              "type": "reasoning",
+              "id": "rs_example-2f141de17cd899172117c533",
+              "created_by": {
+                "response_id": "resp_example-f82430ba2de50cf776b129ac"
+              },
+              "response_id": "resp_example-f82430ba2de50cf776b129ac",
+              "encrypted_content": "gAAAAABq2AgwXM14YwWauAgaY1LGi-erySXwfUjlfbEViJTSRmLdb-UY-jNkbzq6jLEQnFTx2llfJQFWn9s19DQx68m1c1STWE3s8z8TGkS6cX5rQJzxMXhz9UO9vNuVSeMgrHIZgFq4pZx_B8nc2KJxNHcuA9Bwjs5hR70I3hmf5EyrjeJ9vXQDxCecCYvjoSIw5e23bLZ1q27neAXvbbKdN8ZUEV7oLLMYXM6lkiyAjYB7rJwaTQHPdSNLq9oHZz74YveTlywQXW6JyZIaQ5Jb5fFcrYE1KFeYBbvfrsrhMWiJ3UMD3CBV6vViQnejTwXaq2UHp8GGPp1p8-R1pArPgHJliXjJ9kn6IR6PIs7Ymc1g_-v6_ky77csUsik37_lkklQVFQY3qAteVnRr0Ths9q1SgWH2io2TwHwwDZJm0M2K_TAtZep8i2SoXL2VIAE56Nups3nOvVpFWT8RzqnmWH2BDtB_dyNuny9aV51uQXZjg1u5OUnQtdND-1P2ZX31Ikt6X7BfVod-Og8jGkro7rQhor_dUD5tWSf33Jq7VB_PCJ7M0dEg1fRiOH5yJP78Z_2sbSO41UmIoyCPwBtTrrfzTmwnSq3yB1ZS64vP_3F_slioMg1CoqSYyEkjWTi8kQwRS95ajJ5lMAmxJZKduVEfuQAnwEDF0qx7vnXDD83-X70kLSvQpMJby0DlwOzeM74423HX_mP6pVuQlRp9PoBggGe8DrJfMpDEFVNiZ6pPbl634zPGeduCAxR-mI-kugNCvn2CdEz8S1D91jJ1hIrrSxkoeCwHi6Jod4bJRz83HeM0z3gPFbiWnLzAoD0TnjlJI9YG4YCpfYYMpGV6TLrtoVytMc6jXvw4iuvFPeGluCc7tdfJXKQqUrtO4148Hwdo0MdfuOPi8zxs4UoDbN1r7F_gbs9NBfa_9h5AK4Ccoiezf3SHSKPDTBaZxIOriXe4dyxbqN9xjD5a2T8mYRpKsXFRqCma-DeFgJR_Ox9E8rikpGbrvozjxBdaIjEoSPcOu-P-NTVivWQaDr9n0xwR8FDGqcircZjiQ1Titmvd7NFiiUL9ZcSonymqSjaqiY35k-9BuceE88XHuukjgzrxx861_alE3jOlvfhMwKkipAYtB5Sc9vrugUV0uvdNjHG1n93KCTGsSqwE3K3njWld_qHE99EXfvYnOC6nxUraa3LcE40hFGpd3w4E7dQPN6BS7l1_jBURie5g-z6JpHVl7kT3Qw==",
+              "summary": [],
+              "content": []
+            },
+            {
+              "type": "message",
+              "id": "msg_example-54a87893dae34448256249b7",
+              "created_by": {
+                "response_id": "resp_example-f82430ba2de50cf776b129ac"
+              },
+              "response_id": "resp_example-f82430ba2de50cf776b129ac",
+              "role": "assistant",
+              "content": [
+                {
+                  "type": "output_text",
+                  "text": "1. Chair \u2014 Used for sitting while eating, working, or relaxing.  \n2. Table \u2014 Provides a surface for meals, work, or placing items.  \n3. Refrigerator \u2014 Keeps food and drinks cold to preserve freshness.  \n4. Oven \u2014 Bakes and roasts food for cooking meals.  \n5. Microwave \u2014 Heats or reheats food quickly.  \n6. Toaster \u2014 Toasts bread and similar items for breakfast.  \n7. Kettle \u2014 Boils water for tea, coffee, or cooking.  \n8. Coffee maker",
+                  "annotations": [],
+                  "logprobs": []
+                }
+              ],
+              "status": "incomplete"
+            }
+          ],
+          "instructions": null,
+          "usage": {
+            "input_tokens": 39,
+            "input_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0
+            },
+            "output_tokens": 128,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 167
+          },
+          "parallel_tool_calls": true,
+          "agent_reference": null,
+          "content_filters": [
+            {
+              "blocked": false,
+              "source_type": "prompt",
+              "content_filter_results": {
+                "sexual": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "hate": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "violence": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "self_harm": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "defender_for_ai": {
+                  "detected": false,
+                  "filtered": false,
+                  "details": {}
+                }
+              },
+              "content_filter_raw": [],
+              "content_filter_offsets": {
+                "start_offset": 0,
+                "end_offset": 1315,
+                "check_offset": 0
+              }
+            },
+            {
+              "blocked": false,
+              "source_type": "completion",
+              "content_filter_results": {
+                "sexual": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "hate": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "violence": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "self_harm": {
+                  "filtered": false,
+                  "severity": "safe"
+                },
+                "defender_for_ai": {
+                  "detected": false,
+                  "filtered": false,
+                  "details": {}
+                }
+              },
+              "content_filter_raw": [],
+              "content_filter_offsets": {
+                "start_offset": 0,
+                "end_offset": 480,
+                "check_offset": 0
+              }
+            }
+          ]
+        }
+      },
+      "actualTotalTokens": 167
+    }
+  ],
+  "finalPolicy": "Token accounting enabled with 10000 TPM and hourly token quota."
+}

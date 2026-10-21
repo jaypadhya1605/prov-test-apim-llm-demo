@@ -1,0 +1,206 @@
+{
+  "utc": "2026-10-21T01:02:25.842888+00:00",
+  "elapsedSeconds": 5.871,
+  "api": "project",
+  "operation": "responses",
+  "phase": "direct-final",
+  "direct": true,
+  "requestId": "9026297b-614b-5b7f-b752-307aad1a6350",
+  "url": "https://ai-token-lab-example.services.ai.azure.com/api/projects/project-token-lab/openai/v1/responses",
+  "requestBody": {
+    "model": "lab-model",
+    "stream": false,
+    "input": "For a synthetic gateway test, write a numbered list of thirty ordinary household objects, each followed by a short sentence about its everyday use. Do not discuss private information.",
+    "max_output_tokens": 128,
+    "store": false,
+    "reasoning": {
+      "effort": "minimal"
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "content-length": "4983",
+      "connection": "close",
+      "content-type": "application/json",
+      "date": "Wed, 21 Oct 2026 01:02:25 GMT",
+      "server": "istio-envoy",
+      "access-control-expose-headers": "Operation-Location,Location,Apim-Request-Id,x-agent-session-id,x-agent-invocation-id",
+      "vary": "Origin,Accept-Encoding",
+      "request-context": "appId=",
+      "x-ms-response-type": "standard",
+      "x-request-id": "90934f3b-869e-5c6e-b350-93916b00481b",
+      "x-ms-aoai-configured-data-retention-days": "30",
+      "skip-error-remapping": "true",
+      "openai-client-partition-id": "bbdc9d156d453699d861b3b3afbfd981",
+      "azureml-internal-forward-count": "1",
+      "x-ms-is-spilled-over": "false",
+      "x-ratelimit-key": "lab-model",
+      "x-ratelimit-remaining-requests": "0",
+      "x-ratelimit-reset-requests": "60",
+      "x-ratelimit-limit-requests": "1",
+      "x-ratelimit-renewalperiod-requests": "60",
+      "x-ratelimit-abusepenalty-active": "False",
+      "x-ratelimit-remaining-tokens": "955",
+      "x-ratelimit-reset-tokens": "2",
+      "x-ratelimit-limit-tokens": "1000",
+      "x-ratelimit-renewalperiod-tokens": "60",
+      "azureai-fe-is-streaming": "False",
+      "azureai-fe-offer-type": "paygo",
+      "x-ms-served-model": "gpt-5-mini-2025-08-07",
+      "openai-version": "2020-10-01",
+      "openai-organization": "bbdc9d156d453699d861b3b3afbfd981",
+      "openai-project": "d2b722b2-1410-508b-b0ce-46e743a21ecb",
+      "openai-processing-ms": "4210",
+      "azureml-served-by-cluster": "hyena-eastus2-02,hyena-eastus2-01",
+      "api-supported-versions": "1.0,2025-05-15-preview,2025-11-15-preview",
+      "x-http2-stream-id": "743",
+      "apim-request-id": "eb3d2311-ada7-5ea9-950d-10616d814505",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "x-content-type-options": "nosniff",
+      "x-ms-region": "East US 2"
+    },
+    "body": {
+      "metadata": {},
+      "top_logprobs": 0,
+      "temperature": 1,
+      "top_p": 1,
+      "service_tier": "default",
+      "prompt_cache_retention": "in_memory",
+      "model": "lab-model",
+      "reasoning": {
+        "effort": "minimal",
+        "context": "current_turn",
+        "mode": "standard"
+      },
+      "background": false,
+      "max_output_tokens": 128,
+      "text": {
+        "format": {
+          "type": "text"
+        },
+        "verbosity": "medium"
+      },
+      "tools": [],
+      "tool_choice": "auto",
+      "truncation": "disabled",
+      "id": "resp_example-5e5c96d0e4f07532c8ffe86d",
+      "object": "response",
+      "status": "incomplete",
+      "created_at": 1792544546,
+      "error": null,
+      "incomplete_details": {
+        "reason": "max_output_tokens"
+      },
+      "output": [
+        {
+          "type": "reasoning",
+          "id": "rs_example-e1d4cbc3e493793d5de9d21b",
+          "response_id": "resp_example-5e5c96d0e4f07532c8ffe86d",
+          "encrypted_content": "gAAAAABq2A8mPcWHBwpWN6SdIIyIFyU5RkjC89H07i9ICZGD4ZUXsKgWn6t_idW_p5N3JMu2_3dFxlGFfGbFiMghVrSc9Hq8YABl2t2et5rLgY_t8IpKQHQmgIiB6LIB_SEkR2Qjnw5GgqCekQEKmqquR6TxlGCvAOxOCnoNP34PefFAvXt5hHs0Rp5oLslZa92tMkRd4uiJOmdDgi7uDgqcxeCl7169ZgEE2VkNH1kLDlRnpUwMgk2i1oRl18-Ipko7fscHv6wB-M3XCDsSsH-BXmD-GenVbEGpjh0O_RAOXglYjmNvmWwek_-f-MLEIdmbt0Sh1UdksNUyxD8Z0u1v0kVXyIQsMrwqVCV2mc3yjwdFhj_9NScnw7C5rN8ru8X3ndnzhS3yj4mHAXra1GKEvJrDogwxqzzHfVMUyL6qdmP21ggvbfKq0qZnT9AWEg5TZYWhc70SilQGiCLx0QCPLfgYkj5QGWtuVTi2Q_Ibv91jYIQ31cuyTw9MET9HjCLXc18AmNiiszHuCNqEhSnQZYJTBA1Je1xG2lnqO5-pWAJVxZZuSD6dQ3GTN848xZSmKBzfSntfVMddu3SFyspjsbNBTdZHQ6V2j27Szs4agQaG1JJZ_UrLwCcYsXv1v7-WQMwdR8CEH1qLvItQjbLZHdSdMoOFy4DLx5gHlQrO1i4Ktbl7TdUYuEBvw_XzewzqdlClpWuTRb8ZSrH3LMO12p99p25dcm3Ljmuw3A28f4g1-nQIsGe5sKAd56deiQHKIqIVSB0xIuvijJDR7pbBRwNuB0U_4H_SThnn-IZEh40qLUC71M_Bb5vfrYDGzOlOwdeb08q5JI4nOUb7svxd4IBr64Dy95bUcJnTl_jVFMU4Mca0LfECCvwtTa96k_uzp7HtapjfqKxawXPemSLtuVRE-kcpoRREhVMdm4noAVlSyRZWgYxkpdRoOwk_OoSgNO2ijQgiAaK87teJMcHxPL0St0sWQKKu-4tnZ1h0NeFJ6hbrJVMz4BYNKD-UVwsPgg_qCMWgL1mAVMnU7_bGt24cFjh9orKepTCrzY-ZqQh2_4ViRC36h2kpQXWjwvC5hRgfmUboODYJ5i_gv0GPh0ogIYbmdrreF6yLFRofG_g7cn22J0nwkXQagVsPQd0FxHmfpvHg8aG__Kvy6M6eqIteaevdVpwjD8wzZp7vQmfWzMAbNA3PHStTKPsrDMKaiHcLwnSB6cPMMMtTFWERxqy6dsII3A==",
+          "summary": [],
+          "content": []
+        },
+        {
+          "type": "message",
+          "id": "msg_example-1c24c209d60e17c47c22b6e9",
+          "response_id": "resp_example-5e5c96d0e4f07532c8ffe86d",
+          "role": "assistant",
+          "content": [
+            {
+              "type": "output_text",
+              "text": "1. Toothbrush \u2014 used daily to clean teeth and maintain oral hygiene.  \n2. Toothpaste \u2014 applied to a toothbrush to help remove plaque and freshen breath.  \n3. Hairbrush \u2014 used to detangle and smooth hair.  \n4. Comb \u2014 used for styling hair and creating neat parts.  \n5. Towels \u2014 used for drying off after bathing or washing hands.  \n6. Soap bar \u2014 used for washing hands and body to remove dirt and oils.  \n7. Hand soap dispenser \u2014 used to dispense liquid soap for handwashing",
+              "annotations": [],
+              "logprobs": []
+            }
+          ],
+          "status": "incomplete"
+        }
+      ],
+      "instructions": null,
+      "usage": {
+        "input_tokens": 39,
+        "input_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0
+        },
+        "output_tokens": 128,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 167
+      },
+      "parallel_tool_calls": true,
+      "agent_reference": null,
+      "content_filters": [
+        {
+          "blocked": false,
+          "source_type": "prompt",
+          "content_filter_results": {
+            "sexual": {
+              "filtered": false,
+              "severity": "safe"
+            },
+            "hate": {
+              "filtered": false,
+              "severity": "safe"
+            },
+            "violence": {
+              "filtered": false,
+              "severity": "safe"
+            },
+            "self_harm": {
+              "filtered": false,
+              "severity": "safe"
+            },
+            "defender_for_ai": {
+              "detected": false,
+              "filtered": false,
+              "details": {}
+            }
+          },
+          "content_filter_raw": [],
+          "content_filter_offsets": {
+            "start_offset": 0,
+            "end_offset": 1315,
+            "check_offset": 0
+          }
+        },
+        {
+          "blocked": false,
+          "source_type": "completion",
+          "content_filter_results": {
+            "sexual": {
+              "filtered": false,
+              "severity": "safe"
+            },
+            "hate": {
+              "filtered": false,
+              "severity": "safe"
+            },
+            "violence": {
+              "filtered": false,
+              "severity": "safe"
+            },
+            "self_harm": {
+              "filtered": false,
+              "severity": "safe"
+            },
+            "defender_for_ai": {
+              "detected": false,
+              "filtered": false,
+              "details": {}
+            }
+          },
+          "content_filter_raw": [],
+          "content_filter_offsets": {
+            "start_offset": 0,
+            "end_offset": 515,
+            "check_offset": 0
+          }
+        }
+      ]
+    }
+  },
+  "actualTotalTokens": 167
+}

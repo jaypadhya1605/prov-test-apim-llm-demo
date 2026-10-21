@@ -1,0 +1,433 @@
+{
+  "serviceName": "apim-lab-classic-example",
+  "traceId": "5effa7ca-7b31-508d-a97f-93786f4dbc16",
+  "traceEntries": {
+    "inbound": [
+      {
+        "source": "api-inspector",
+        "timestamp": "2026-10-21T01:15:26.0331692Z",
+        "elapsed": "00:00:00.0003245",
+        "data": {
+          "request": {
+            "scheme": {
+              "received": "https",
+              "original": "https"
+            },
+            "method": "POST",
+            "url": "https://apim-lab-classic-example.azure-api.net/lab-account/responses",
+            "headers": [
+              {
+                "name": "Connection",
+                "value": "close"
+              },
+              {
+                "name": "Host",
+                "value": "apim-lab-classic-example.azure-api.net"
+              },
+              {
+                "name": "User-Agent",
+                "value": "Python-urllib/3.14"
+              },
+              {
+                "name": "Accept-Encoding",
+                "value": "identity"
+              },
+              {
+                "name": "Authorization",
+                "value": "[REDACTED]"
+              },
+              {
+                "name": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "name": "Content-Length",
+                "value": "313"
+              },
+              {
+                "name": "X-Ms-Client-Request-Id",
+                "value": "091f645d-a52c-5579-8e26-c5bd97da6d63"
+              },
+              {
+                "name": "Ocp-Apim-Subscription-Key",
+                "value": "[REDACTED]"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "source": "api-inspector",
+        "timestamp": "2026-10-21T01:15:26.0331759Z",
+        "elapsed": "00:00:00.0003307",
+        "data": {
+          "configuration": {
+            "api": {
+              "from": "/lab-account",
+              "to": {
+                "scheme": "https",
+                "host": "ai-token-lab-example.openai.azure.com",
+                "port": 443,
+                "path": "/openai/v1",
+                "queryString": "",
+                "query": {},
+                "isDefaultPort": true
+              },
+              "version": null,
+              "revision": "1"
+            },
+            "operation": {
+              "method": "POST",
+              "uriTemplate": "/responses"
+            },
+            "user": "-",
+            "product": "-"
+          }
+        }
+      },
+      {
+        "source": "graphql-configuration-setup",
+        "timestamp": "2026-10-21T01:15:26.0332085Z",
+        "elapsed": "00:00:00.0003635",
+        "data": "Skipping GraphQL creation for non-GraphQL API request"
+      },
+      {
+        "source": "cors",
+        "timestamp": "2026-10-21T01:15:26.0332435Z",
+        "elapsed": "00:00:00.0003986",
+        "data": "Origin header was missing or empty and the request was classified as not cross-domain. CORS policy was not applied."
+      },
+      {
+        "source": "validate-azure-ad-token",
+        "timestamp": "2026-10-21T01:15:26.0338612Z",
+        "elapsed": "00:00:00.0010163",
+        "data": {
+          "message": "Azure AD JWT validation succeeded"
+        }
+      },
+      {
+        "source": "authentication-managed-identity",
+        "timestamp": "2026-10-21T01:15:26.0341393Z",
+        "elapsed": "00:00:00.0012944",
+        "data": {
+          "message": "Obtaining managed identity token using clientId:24146b2b-79d2-5391-932d-556314241ed9 AAD Authority:https://login.windows.net/00000000-0000-0000-0000-000000000002 for https://cognitiveservices.azure.com audience succeeded.",
+          "errorResponse": null
+        }
+      },
+      {
+        "source": "authentication-managed-identity",
+        "timestamp": "2026-10-21T01:15:26.0341456Z",
+        "elapsed": "00:00:00.0013003",
+        "data": {
+          "message": "Managed identity token (authentication provider: built-in, client ID: systemAssigned) is added to Authorization header."
+        }
+      },
+      {
+        "source": "choose",
+        "timestamp": "2026-10-21T01:15:26.0341599Z",
+        "elapsed": "00:00:00.0013147",
+        "data": {
+          "message": "Expression was successfully evaluated.",
+          "expression": "context.Request.Headers.GetValueOrDefault(\"x-lab-probe\", \"\") == \"true\"",
+          "value": false
+        }
+      },
+      {
+        "source": "llm-token-limit",
+        "timestamp": "2026-10-21T01:15:26.0341898Z",
+        "elapsed": "00:00:00.0013446",
+        "data": {
+          "message": "Expression was successfully evaluated.",
+          "expression": "\"v1-classic-measured:baseline-estimate-false:\" + context.Api.Id + \":\" + context.Operation.Id + \":\" + context.Subscription.Id",
+          "value": "v1-classic-measured:baseline-estimate-false:lab-account:responses:repro"
+        }
+      },
+      {
+        "source": "llm-token-limit",
+        "timestamp": "2026-10-21T01:15:26.0342127Z",
+        "elapsed": "00:00:00.0013675",
+        "data": {
+          "message": "Expression was successfully evaluated.",
+          "expression": "\"v1-classic-measured:baseline-estimate-false:\" + context.Api.Id + \":\" + context.Operation.Id + \":\" + context.Subscription.Id",
+          "value": "v1-classic-measured:baseline-estimate-false:lab-account:responses:repro"
+        }
+      }
+    ],
+    "backend": [
+      {
+        "source": "request-payload-handler",
+        "timestamp": "2026-10-21T01:15:26.0342735Z",
+        "elapsed": "00:00:00.0014286",
+        "data": "Reading request payload because next handler requires access to it."
+      },
+      {
+        "source": "request-payload-handler",
+        "timestamp": "2026-10-21T01:15:26.0343445Z",
+        "elapsed": "00:00:00.0014994",
+        "data": "Reading request payload succeeded. 313 bytes read."
+      },
+      {
+        "source": "request-forwarder",
+        "timestamp": "2026-10-21T01:15:26.0348838Z",
+        "elapsed": "00:00:00.0020388",
+        "data": {
+          "message": "Request is being forwarded to the backend service. Timeout set to 300 seconds",
+          "request": {
+            "method": "POST",
+            "protocol": "https",
+            "url": "https://ai-token-lab-example.openai.azure.com/openai/v1/responses",
+            "proxyUrl": null,
+            "headers": [
+              {
+                "name": "User-Agent",
+                "value": "Python-urllib/3.14"
+              },
+              {
+                "name": "Accept-Encoding",
+                "value": "identity"
+              },
+              {
+                "name": "Authorization",
+                "value": "[REDACTED]"
+              },
+              {
+                "name": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "name": "X-Ms-Client-Request-Id",
+                "value": "091f645d-a52c-5579-8e26-c5bd97da6d63"
+              },
+              {
+                "name": "Ocp-Apim-Subscription-Key",
+                "value": "[REDACTED]"
+              },
+              {
+                "name": "X-Forwarded-For",
+                "value": "192.0.2.9"
+              },
+              {
+                "name": "host",
+                "value": "ai-token-lab-example.openai.azure.com"
+              },
+              {
+                "name": "content-length",
+                "value": "313"
+              }
+            ],
+            "clientCertificates": []
+          }
+        }
+      },
+      {
+        "source": "forward-request",
+        "timestamp": "2026-10-21T01:15:32.0622443Z",
+        "elapsed": "00:00:06.0292293",
+        "data": {
+          "response": {
+            "status": {
+              "code": 200,
+              "reason": "OK"
+            },
+            "headers": [
+              {
+                "name": "Content-Length",
+                "value": "5681"
+              },
+              {
+                "name": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "name": "Date",
+                "value": "Wed, 21 Oct 2026 01:15:25 GMT"
+              },
+              {
+                "name": "Server",
+                "value": "istio-envoy"
+              },
+              {
+                "name": "Vary",
+                "value": "Origin"
+              },
+              {
+                "name": "x-ms-aoai-configured-data-retention-days",
+                "value": "30"
+              },
+              {
+                "name": "skip-error-remapping",
+                "value": "true"
+              },
+              {
+                "name": "x-ms-is-spilled-over",
+                "value": "false"
+              },
+              {
+                "name": "x-ratelimit-key",
+                "value": "lab-model"
+              },
+              {
+                "name": "x-ratelimit-remaining-requests",
+                "value": "99"
+              },
+              {
+                "name": "x-ratelimit-reset-requests",
+                "value": "0"
+              },
+              {
+                "name": "x-ratelimit-limit-requests",
+                "value": "100"
+              },
+              {
+                "name": "x-ratelimit-renewalperiod-requests",
+                "value": "60"
+              },
+              {
+                "name": "x-ratelimit-abusepenalty-active",
+                "value": "False"
+              },
+              {
+                "name": "x-ratelimit-remaining-tokens",
+                "value": "99955"
+              },
+              {
+                "name": "x-ratelimit-reset-tokens",
+                "value": "0"
+              },
+              {
+                "name": "x-ratelimit-limit-tokens",
+                "value": "100000"
+              },
+              {
+                "name": "x-ratelimit-renewalperiod-tokens",
+                "value": "60"
+              },
+              {
+                "name": "azureai-fe-is-streaming",
+                "value": "False"
+              },
+              {
+                "name": "azureai-fe-offer-type",
+                "value": "paygo"
+              },
+              {
+                "name": "x-ms-served-model",
+                "value": "gpt-5-mini-2025-08-07"
+              },
+              {
+                "name": "x-request-id",
+                "value": "dfb74452-f299-5e4d-8861-50f855e8b7f8"
+              },
+              {
+                "name": "apim-request-id",
+                "value": "abf4939c-e4bf-56fa-9b7f-bb242f7038ed"
+              },
+              {
+                "name": "x-http2-stream-id",
+                "value": "749"
+              },
+              {
+                "name": "Strict-Transport-Security",
+                "value": "max-age=31536000; includeSubDomains; preload"
+              },
+              {
+                "name": "x-ms-client-request-id",
+                "value": "091f645d-a52c-5579-8e26-c5bd97da6d63"
+              },
+              {
+                "name": "X-Content-Type-Options",
+                "value": "nosniff"
+              },
+              {
+                "name": "x-ms-region",
+                "value": "East US 2"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "outbound": [
+      {
+        "source": "language-model-response-handler",
+        "timestamp": "2026-10-21T01:15:32.0623123Z",
+        "elapsed": "00:00:06.0292958",
+        "data": {
+          "message": "LanguageModelResponseHandler interpreting as json response."
+        }
+      },
+      {
+        "source": "response-payload-handler",
+        "timestamp": "2026-10-21T01:15:32.0623171Z",
+        "elapsed": "00:00:06.0293010",
+        "data": "Reading response payload because next handler requires access to it."
+      },
+      {
+        "source": "response-payload-handler",
+        "timestamp": "2026-10-21T01:15:32.062505Z",
+        "elapsed": "00:00:06.0294887",
+        "data": "Reading response payload succeeded. 5681 bytes read."
+      },
+      {
+        "source": "cache-model-process-response-handler",
+        "timestamp": "2026-10-21T01:15:32.0627637Z",
+        "elapsed": "00:00:06.0297475",
+        "data": {
+          "message": "CacheModelProcessResponseHandler cached the pair (https://ai-token-lab-example.openai.azure.com|lab-model,lab-model) for URI https://ai-token-lab-example.openai.azure.com/openai/v1/responses"
+        }
+      },
+      {
+        "source": "token-limit-process-response-handler",
+        "timestamp": "2026-10-21T01:15:32.0627947Z",
+        "elapsed": "00:00:06.0297781",
+        "data": {
+          "message": "LanguageModelTokenLimit rate-limit counter 7896092462765323360 is incremented by 167 (prompt: 39, completion: 128)"
+        }
+      },
+      {
+        "source": "token-limit-process-response-handler",
+        "timestamp": "2026-10-21T01:15:32.0628091Z",
+        "elapsed": "00:00:06.0297925",
+        "data": {
+          "message": "LanguageModelTokenLimit quota counter -4752304418974661643 is incremented by 167 (prompt: 39, completion: 128)"
+        }
+      },
+      {
+        "source": "trace",
+        "timestamp": "2026-10-21T01:15:32.062864Z",
+        "elapsed": "00:00:06.0298476",
+        "data": {
+          "message": "Expression was successfully evaluated.",
+          "expression": "context.Response.Body.As<string>(preserveContent: true)",
+          "value": "{\n  \"id\": \"resp_example-2e50feb34cedf7eca3632243\",\n  \"object\": \"response\",\n  \"created_at\": 1792545326,\n  \"status\": \"incomplete\",\n  \"background\": false,\n  \"completed_at\": null,\n  \"content_filters\": [\n    {\n      \"blocked\": false,\n      \"source_type\": \"prompt\",\n      \"content_filter_raw\": [],\n      \"content_filter_results\": {\n        \"defender_for_ai\": {\n          \"detected\": false,\n          \"filtered\": false,\n          \"details\": {\n            \"evaluation\": \"unavailable\",\n            \"evaluationReason\": \"missing_or_unknown_provider_evaluation_status\"\n          }\n        },\n        \"hate\": {\n          \"filtered\": false,\n          \"severity\": \"safe\"\n        },\n        \"sexual\": {\n          \"filtered\": false,\n          \"severity\": \"safe\"\n        },\n        \"violence\": {\n          \"filtered\": false,\n          \"severity\": \"safe\"\n        },\n        \"self_harm\": {\n          \"filtered\": false,\n          \"severity\": \"safe\"\n        }\n      },\n      \"content_filter_offsets\": {\n        \"start_offset\": 0,\n        \"end_offset\": 1315,\n        \"check_offset\": 0\n      }\n    },\n    {\n      \"blocked\": false,\n      \"source_type\": \"completion\",\n      \"content_filter_raw\": [],\n      \"content_filter_results\": {\n        \"defender_for_ai\": {\n          \"detected\": false,\n          \"filtered\": false,\n          \"details\": {\n            \"evaluation\": \"unavailable\",\n            \"evaluationReason\": \"missing_or_unknown_provider_evaluation_status\"\n          }\n        },\n        \"hate\": {\n          \"filtered\": false,\n          \"severity\": \"safe\"\n        },\n        \"sexual\": {\n          \"filtered\": false,\n          \"severity\": \"safe\"\n        },\n        \"violence\": {\n          \"filtered\": false,\n          \"severity\": \"safe\"\n        },\n        \"self_harm\": {\n          \"filtered\": false,\n          \"severity\": \"safe\"\n        }\n      },\n      \"content_filter_offsets\": {\n        \"start_offset\": 0,\n        \"end_offset\": 517,\n        \"check_offset\": 0\n      }\n    }\n  ],\n  \"error\": null,\n  \"frequency_penalty\": 0.0,\n  \"incomplete_details\": {\n    \"reason\": \"max_output_tokens\"\n  },\n  \"instructions\": null,\n  \"max_output_tokens\": 128,\n  \"max_tool_calls\": null,\n  \"model\": \"lab-model\",\n  \"moderation\": null,\n  \"output\": [\n    {\n      \"id\": \"rs_example-b93bb384220c988a975abc35\",\n      \"type\": \"reasoning\",\n      \"content\": [],\n      \"encrypted_content\": \"gAAAAABq2BIzC_hT4Vtj_W3nDbiWMgKFBY3CSHIVZDscQaIaxjUKSMgmZsEnyQmVzT23FUvb1OknEaJQNyKGx3aMgqwyMCw7YOb_AMdxwjkXTJbBIQrKSnUsppZqi1ZwYTIGOsEl4Voa47NylTciDloqt2z2DCdwqNezUfG8dZFzaKUkoAHg9zCLVM_oLtuVEbS4PxigRZympnxkHZmXm6Sj53WW3GBnbEEJqjfAKse9FfvkyFamt0s0jVYkBIGvpIa5JAWvTRymwgwCF1V6VntJCHEYZ7VydWQSImE9DmVq8Y3Ml6LQtlCEPf3n1aCK5zGSn2FVfalSuW4FuFiM2ZG1M5d4IW17E8zQEBshkv4OI2iFRF-9ueOjfTzg9hBDi4U3BOBI-6oLXzdrYChtUkHIXbzVMenFpoMrgoaCzk2m-AAkl3Hpgc_-bMIW6-2zJcCjVJjZGQIS99jKrhPAaew0pkc6XnbPTKvQcT2Kkks4FKSaDtwv0Ckok77NQnZGiOqMN-6j_4CWdGmkzPk-Q7VEfSF87fu03Hv8C7wE5PH85lXTgmEYz4v7MPVxBiLNNZEsQEdBNYcKaKYndwziBKjn-SCoyHc0wvt87i47Dem1v9vldH8H_U-G8cZpL8kOwxgJ1cgKYal0BSuaKPvN8a6D7N5_5Utq0F53pkqQNVsuprF1BbD_5ALHJ4OUth1r3phIXVKfdG5qAlYMB0AwiuBeg2LRYrvBn4WEhXfa4PxeHc1tqj3-MCEW47ccDaHDgFbAGT_h7sS-wrpBznfWLHzEpMzbfCXWzMVM6vEnOOgR_Ulqi1_Sks7bri6BUmXb4SSllBm0C535L77zClncO_k-W4bEuUtJnqeB8fR4HJHlbwlA1qqgXTQmUQOEekklD2QGWqTR1WMlD8eUZWw3Nv3Iman08p6vYthB2uqBebGkj0uyn2LmrVXaztTiJ99Rq03b2YqJAQxZYVws_KXATbAWIoxLgv4-dtN-ChuO5ieJI5S7UDfui-2ZVNRjcAxas2DIvszcsDBCxI_89_tYKCx0l-LqkB4o0TEioZ__C0WDcx-YmZm-oUQ20RwM2eeRoboCC-kVxzjbP2DCIvazDE6ch43L9Dh1dkQGjuujadm3Y8UKy1vjOEt2e5eVbZTBQsQorMQLEMQoH5XQKoQ4UbzneYlXN7UZ6A8jU_MF__im_8VVQVmWTQA=\",\n      \"summary\": []\n    },\n    {\n      \"id\": \"msg_example-97a52f8d04f495b898b94eff\",\n      \"type\": \"message\",\n      \"status\": \"incomplete\",\n      \"content\": [\n        {\n          \"type\": \"output_text\",\n          \"annotations\": [],\n          \"logprobs\": [],\n          \"text\": \"1. Spoon \\u2014 used for stirring drinks and scooping soup or cereal.  \\n2. Mug \\u2014 holds hot beverages like coffee or tea.  \\n3. Plate \\u2014 serves and contains food during meals.  \\n4. Fork \\u2014 helps pick up and eat solid foods.  \\n5. Knife \\u2014 cuts food items for preparation and eating.  \\n6. Cutting board \\u2014 provides a surface for chopping ingredients.  \\n7. Refrigerator \\u2014 keeps perishable food and drinks cold.  \\n8. Microwave \\u2014 heats or reheats meals quickly.  \\n9. Stove \\u2014 cooks food\"\n        }\n      ],\n      \"role\": \"assistant\"\n    }\n  ],\n  \"parallel_tool_calls\": true,\n  \"presence_penalty\": 0.0,\n  \"previous_response_id\": null,\n  \"prompt_cache_key\": null,\n  \"prompt_cache_retention\": \"in_memory\",\n  \"reasoning\": {\n    \"context\": \"current_turn\",\n    \"effort\": \"minimal\",\n    \"mode\": \"standard\",\n    \"summary\": null\n  },\n  \"safety_identifier\": null,\n  \"service_tier\": \"default\",\n  \"store\": false,\n  \"temperature\": 1.0,\n  \"text\": {\n    \"format\": {\n      \"type\": \"text\"\n    },\n    \"verbosity\": \"medium\"\n  },\n  \"tool_choice\": \"auto\",\n  \"tool_usage\": {\n    \"image_gen\": {\n      \"input_tokens\": 0,\n      \"input_tokens_details\": {\n        \"image_tokens\": 0,\n        \"text_tokens\": 0\n      },\n      \"output_tokens\": 0,\n      \"output_tokens_details\": {\n        \"image_tokens\": 0,\n        \"text_tokens\": 0\n      },\n      \"total_tokens\": 0\n    },\n    \"web_search\": {\n      \"num_requests\": 0\n    }\n  },\n  \"tools\": [],\n  \"top_logprobs\": 0,\n  \"top_p\": 1.0,\n  \"truncation\": \"disabled\",\n  \"usage\": {\n    \"input_tokens\": 39,\n    \"input_tokens_details\": {\n      \"cache_write_tokens\": 0,\n      \"cached_tokens\": 0\n    },\n    \"output_tokens\": 128,\n    \"output_tokens_details\": {\n      \"reasoning_tokens\": 0\n    },\n    \"total_tokens\": 167\n  },\n  \"user\": null,\n  \"metadata\": {}\n}"
+        }
+      },
+      {
+        "source": "lab-backend-body",
+        "timestamp": "2026-10-21T01:15:32.062871Z",
+        "elapsed": "00:00:06.0298543",
+        "data": "{\n  \"id\": \"resp_example-2e50feb34cedf7eca3632243\",\n  \"object\": \"response\",\n  \"created_at\": 1792545326,\n  \"status\": \"incomplete\",\n  \"background\": false,\n  \"completed_at\": null,\n  \"content_filters\": [\n    {\n      \"blocked\": false,\n      \"source_type\": \"prompt\",\n      \"content_filter_raw\": [],\n      \"content_filter_results\": {\n        \"defender_for_ai\": {\n          \"detected\": false,\n          \"filtered\": false,\n          \"details\": {\n            \"evaluation\": \"unavailable\",\n            \"evaluationReason\": \"missing_or_unknown_provider_evaluation_status\"\n          }\n        },\n        \"hate\": {\n          \"filtered\": false,\n          \"severity\": \"safe\"\n        },\n        \"sexual\": {\n          \"filtered\": false,\n          \"severity\": \"safe\"\n        },\n        \"violence\": {\n          \"filtered\": false,\n          \"severity\": \"safe\"\n        },\n        \"self_harm\": {\n          \"filtered\": false,\n          \"severity\": \"safe\"\n        }\n      },\n      \"content_filter_offsets\": {\n        \"start_offset\": 0,\n        \"end_offset\": 1315,\n        \"check_offset\": 0\n      }\n    },\n    {\n      \"blocked\": false,\n      \"source_type\": \"completion\",\n      \"content_filter_raw\": [],\n      \"content_filter_results\": {\n        \"defender_for_ai\": {\n          \"detected\": false,\n          \"filtered\": false,\n          \"details\": {\n            \"evaluation\": \"unavailable\",\n            \"evaluationReason\": \"missing_or_unknown_provider_evaluation_status\"\n          }\n        },\n        \"hate\": {\n          \"filtered\": false,\n          \"severity\": \"safe\"\n        },\n        \"sexual\": {\n          \"filtered\": false,\n          \"severity\": \"safe\"\n        },\n        \"violence\": {\n          \"filtered\": false,\n          \"severity\": \"safe\"\n        },\n        \"self_harm\": {\n          \"filtered\": false,\n          \"severity\": \"safe\"\n        }\n      },\n      \"content_filter_offsets\": {\n        \"start_offset\": 0,\n        \"end_offset\": 517,\n        \"check_offset\": 0\n      }\n    }\n  ],\n  \"error\": null,\n  \"frequency_penalty\": 0.0,\n  \"incomplete_details\": {\n    \"reason\": \"max_output_tokens\"\n  },\n  \"instructions\": null,\n  \"max_output_tokens\": 128,\n  \"max_tool_calls\": null,\n  \"model\": \"lab-model\",\n  \"moderation\": null,\n  \"output\": [\n    {\n      \"id\": \"rs_example-b93bb384220c988a975abc35\",\n      \"type\": \"reasoning\",\n      \"content\": [],\n      \"encrypted_content\": \"gAAAAABq2BIzC_hT4Vtj_W3nDbiWMgKFBY3CSHIVZDscQaIaxjUKSMgmZsEnyQmVzT23FUvb1OknEaJQNyKGx3aMgqwyMCw7YOb_AMdxwjkXTJbBIQrKSnUsppZqi1ZwYTIGOsEl4Voa47NylTciDloqt2z2DCdwqNezUfG8dZFzaKUkoAHg9zCLVM_oLtuVEbS4PxigRZympnxkHZmXm6Sj53WW3GBnbEEJqjfAKse9FfvkyFamt0s0jVYkBIGvpIa5JAWvTRymwgwCF1V6VntJCHEYZ7VydWQSImE9DmVq8Y3Ml6LQtlCEPf3n1aCK5zGSn2FVfalSuW4FuFiM2ZG1M5d4IW17E8zQEBshkv4OI2iFRF-9ueOjfTzg9hBDi4U3BOBI-6oLXzdrYChtUkHIXbzVMenFpoMrgoaCzk2m-AAkl3Hpgc_-bMIW6-2zJcCjVJjZGQIS99jKrhPAaew0pkc6XnbPTKvQcT2Kkks4FKSaDtwv0Ckok77NQnZGiOqMN-6j_4CWdGmkzPk-Q7VEfSF87fu03Hv8C7wE5PH85lXTgmEYz4v7MPVxBiLNNZEsQEdBNYcKaKYndwziBKjn-SCoyHc0wvt87i47Dem1v9vldH8H_U-G8cZpL8kOwxgJ1cgKYal0BSuaKPvN8a6D7N5_5Utq0F53pkqQNVsuprF1BbD_5ALHJ4OUth1r3phIXVKfdG5qAlYMB0AwiuBeg2LRYrvBn4WEhXfa4PxeHc1tqj3-MCEW47ccDaHDgFbAGT_h7sS-wrpBznfWLHzEpMzbfCXWzMVM6vEnOOgR_Ulqi1_Sks7bri6BUmXb4SSllBm0C535L77zClncO_k-W4bEuUtJnqeB8fR4HJHlbwlA1qqgXTQmUQOEekklD2QGWqTR1WMlD8eUZWw3Nv3Iman08p6vYthB2uqBebGkj0uyn2LmrVXaztTiJ99Rq03b2YqJAQxZYVws_KXATbAWIoxLgv4-dtN-ChuO5ieJI5S7UDfui-2ZVNRjcAxas2DIvszcsDBCxI_89_tYKCx0l-LqkB4o0TEioZ__C0WDcx-YmZm-oUQ20RwM2eeRoboCC-kVxzjbP2DCIvazDE6ch43L9Dh1dkQGjuujadm3Y8UKy1vjOEt2e5eVbZTBQsQorMQLEMQoH5XQKoQ4UbzneYlXN7UZ6A8jU_MF__im_8VVQVmWTQA=\",\n      \"summary\": []\n    },\n    {\n      \"id\": \"msg_example-97a52f8d04f495b898b94eff\",\n      \"type\": \"message\",\n      \"status\": \"incomplete\",\n      \"content\": [\n        {\n          \"type\": \"output_text\",\n          \"annotations\": [],\n          \"logprobs\": [],\n          \"text\": \"1. Spoon \\u2014 used for stirring drinks and scooping soup or cereal.  \\n2. Mug \\u2014 holds hot beverages like coffee or tea.  \\n3. Plate \\u2014 serves and contains food during meals.  \\n4. Fork \\u2014 helps pick up and eat solid foods.  \\n5. Knife \\u2014 cuts food items for preparation and eating.  \\n6. Cutting board \\u2014 provides a surface for chopping ingredients.  \\n7. Refrigerator \\u2014 keeps perishable food and drinks cold.  \\n8. Microwave \\u2014 heats or reheats meals quickly.  \\n9. Stove \\u2014 cooks food\"\n        }\n      ],\n      \"role\": \"assistant\"\n    }\n  ],\n  \"parallel_tool_calls\": true,\n  \"presence_penalty\": 0.0,\n  \"previous_response_id\": null,\n  \"prompt_cache_key\": null,\n  \"prompt_cache_retention\": \"in_memory\",\n  \"reasoning\": {\n    \"context\": \"current_turn\",\n    \"effort\": \"minimal\",\n    \"mode\": \"standard\",\n    \"summary\": null\n  },\n  \"safety_identifier\": null,\n  \"service_tier\": \"default\",\n  \"store\": false,\n  \"temperature\": 1.0,\n  \"text\": {\n    \"format\": {\n      \"type\": \"text\"\n    },\n    \"verbosity\": \"medium\"\n  },\n  \"tool_choice\": \"auto\",\n  \"tool_usage\": {\n    \"image_gen\": {\n      \"input_tokens\": 0,\n      \"input_tokens_details\": {\n        \"image_tokens\": 0,\n        \"text_tokens\": 0\n      },\n      \"output_tokens\": 0,\n      \"output_tokens_details\": {\n        \"image_tokens\": 0,\n        \"text_tokens\": 0\n      },\n      \"total_tokens\": 0\n    },\n    \"web_search\": {\n      \"num_requests\": 0\n    }\n  },\n  \"tools\": [],\n  \"top_logprobs\": 0,\n  \"top_p\": 1.0,\n  \"truncation\": \"disabled\",\n  \"usage\": {\n    \"input_tokens\": 39,\n    \"input_tokens_details\": {\n      \"cache_write_tokens\": 0,\n      \"cached_tokens\": 0\n    },\n    \"output_tokens\": 128,\n    \"output_tokens_details\": {\n      \"reasoning_tokens\": 0\n    },\n    \"total_tokens\": 167\n  },\n  \"user\": null,\n  \"metadata\": {}\n}"
+      },
+      {
+        "source": "set-header",
+        "timestamp": "2026-10-21T01:15:32.0628876Z",
+        "elapsed": "00:00:06.0298710",
+        "data": {
+          "message": "Specified value was assigned to the header (see below).",
+          "header": {
+            "name": "x-lab-phase",
+            "value": "baseline-estimate-false"
+          }
+        }
+      },
+      {
+        "source": "transfer-response",
+        "timestamp": "2026-10-21T01:15:32.0630561Z",
+        "elapsed": "00:00:06.0300398",
+        "data": {
+          "message": "Response has been sent to the caller in full"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,250 @@
+{
+  "utc": "2026-10-21T00:43:56.864837+00:00",
+  "elapsedSeconds": 2.863,
+  "api": "project-preview",
+  "operation": "responses",
+  "phase": "baseline-estimate-true",
+  "direct": false,
+  "requestId": "0a379134-8eef-50cb-b557-5015599c0720",
+  "url": "https://apim-lab-classic-example.azure-api.net/lab-project-preview/responses",
+  "requestBody": {
+    "model": "lab-model",
+    "stream": false,
+    "input": "For a synthetic gateway test, write a numbered list of thirty ordinary household objects, each followed by a short sentence about its everyday use. Do not discuss private information.",
+    "max_output_tokens": 128,
+    "store": false,
+    "reasoning": {
+      "effort": "minimal"
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "content-length": "5470",
+      "connection": "close",
+      "content-type": "application/json",
+      "date": "Wed, 21 Oct 2026 00:43:55 GMT",
+      "server": "istio-envoy",
+      "access-control-expose-headers": "Operation-Location,Location,Apim-Request-Id,x-agent-session-id,x-agent-invocation-id",
+      "vary": "Origin,Accept-Encoding",
+      "request-context": "appId=",
+      "x-ms-response-type": "standard",
+      "x-request-id": "c9006333-57b8-5c36-8611-ba8cab2bd10e",
+      "x-ms-aoai-configured-data-retention-days": "30",
+      "skip-error-remapping": "true",
+      "openai-client-partition-id": "f4e5ffdde2156e123e4b74cb89237c3e64689d2e-4665-4950-a35e-bc28f11c69b5",
+      "azureml-internal-forward-count": "1",
+      "x-ms-is-spilled-over": "false",
+      "x-ratelimit-key": "lab-model",
+      "x-ratelimit-remaining-requests": "99",
+      "x-ratelimit-reset-requests": "0",
+      "x-ratelimit-limit-requests": "100",
+      "x-ratelimit-renewalperiod-requests": "60",
+      "x-ratelimit-abusepenalty-active": "False",
+      "x-ratelimit-remaining-tokens": "99955",
+      "x-ratelimit-reset-tokens": "0",
+      "x-ratelimit-limit-tokens": "100000",
+      "x-ratelimit-renewalperiod-tokens": "60",
+      "azureai-fe-is-streaming": "False",
+      "azureai-fe-offer-type": "paygo",
+      "x-ms-served-model": "gpt-5-mini-2025-08-07",
+      "openai-version": "2020-10-01",
+      "openai-organization": "bbdc9d156d453699d861b3b3afbfd981",
+      "openai-project": "d2b722b2-1410-508b-b0ce-46e743a21ecb",
+      "openai-processing-ms": "1921",
+      "azureml-served-by-cluster": "hyena-eastus2-01,hyena-eastus2-02",
+      "api-supported-versions": "1.0,2025-05-15-preview,2025-11-15-preview",
+      "x-http2-stream-id": "953",
+      "apim-request-id": "1a5bed2c-df65-511b-b871-8c97518f6985",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "x-content-type-options": "nosniff",
+      "x-ms-region": "East US 2",
+      "x-lab-phase": "baseline-estimate-true",
+      "x-lab-tpm": "9666",
+      "x-lab-quota": "9666",
+      "x-lab-consumed": "167",
+      "apim-trace-id": "b6c58bf22f932bb3cee92f86dab6ed24",
+      "ocp-apim-apiid": "lab-project-preview",
+      "ocp-apim-operationid": "responses",
+      "ocp-apim-subscriptionid": "repro"
+    },
+    "body": {
+      "metadata": {},
+      "top_logprobs": 0,
+      "temperature": 1,
+      "top_p": 1,
+      "service_tier": "default",
+      "prompt_cache_retention": "in_memory",
+      "model": "lab-model",
+      "reasoning": {
+        "effort": "minimal",
+        "context": "current_turn",
+        "mode": "standard"
+      },
+      "background": false,
+      "max_output_tokens": 128,
+      "text": {
+        "format": {
+          "type": "text"
+        },
+        "verbosity": "medium"
+      },
+      "tools": [],
+      "tool_choice": "auto",
+      "truncation": "disabled",
+      "id": "resp_example-2955b7aed5a142524863fb97",
+      "object": "response",
+      "status": "incomplete",
+      "created_at": 1792543436,
+      "error": null,
+      "incomplete_details": {
+        "reason": "max_output_tokens"
+      },
+      "output": [
+        {
+          "type": "reasoning",
+          "id": "rs_example-14bd259cbb2a29342b80eaea",
+          "created_by": {
+            "response_id": "resp_example-2955b7aed5a142524863fb97"
+          },
+          "response_id": "resp_example-2955b7aed5a142524863fb97",
+          "encrypted_content": "gAAAAABq2ArObbQOeHvHWRX39iSKSm8dShBK8NZJbFrxvyOXiGSIP03LIYcXRb0w05JSuoU9VTOCO-ZkeMB1Kxlpu1SZbmwmc1VOzUe8pwq_vd7uORVBqpXFm_NTbiKLxViNaz0NdlKR2cqwn6-gOh7-ckhcmaWWBDpi63kldbl_Bs97hmT4IV0EeT5_ViL0QwLXKIeDm3X0O6mb2nFqHXAq0jBZDa69ILuSQJCppRgRSEO3sVqLy31z57YbPrWcNt2Y2oxoExe8ZlkxglVfNLKcjahGPPif5_RzUQiA2n18Xh0Xr_PFMQ71iwDUAOFseHV3O9ZCWlHUiDVhaOwOM_r3ZBAPnGqfxOOkrjABjb-2DdNa8TlOcz3dywusnDwBD0s18BlWUeK8XqYMv-hUQnd3rw6IKbATU1RpJsg4kKFE4xTnRFtGCGe1ec2aZDSYxY-_yYridrEggJRpDAr1Z5ybesctYwtEtJBPRautw09XVFjDIyETXYFYMftJU3v545YeYaY7bnJO85j3RMtZBvSqM_XbduZgXwONrcMo2477x2-R5trMaY7A9lPQJBe1iEePiGDtiUI3ny-oo-6RnMgHERpZ6143T1PMRLrXkutb0PlQ39rd5Hc6XQ4m9Ytq2ii7Em6IEm657C6DdbL2tU3N47_PALvX1ppYxvpTTvnkxjcR3CNPMgBVrE0maHJavyhBCzp7QSQZBo8RNZLdrR7aydWUJz0B3GXgsyp_4mFTJntyc2y7Cc8Ql1VJJVEgpTAN0pPkvyETTdyAwHsj-TTKR1xEBYg7mUcVjFpLuN1pKqF-QUHJICPTWY4tbeJ_073_pF6JCdQHHRM8luIhIQlvzzkXzdSwsvQu8kJlKOuqTJ3_LqCB9yfHuXhRq__5i4E9MIIr1RM2fbvRp6sNhVfSrZmp2bp6_OKrD4mcALJdOF_UvHt3c3BokiVlp31tAH7it2FeeHaBwffGFOQbGvj4CL2iulY_0H9_1Nt7vLpDwfZh3sXjd9S2GVztGEYYbwaFW0TLcr0o5iHP6SPR-WuHfwAmaV6YkRreY_C9QIOTWVCMXhTHi5haNVXkGq_S5PlfKnqFIwcEEEzTYVxijvx7QtKYC8NHd0UoqfyGSHdrZPL70WHgAFbGkwaJpu9tbRrm0V5FlLWT2Q2Rg-WNw-AcH8b-Hvd_CP_-QqwHS_mnF9y4uqx295MkOtyM0R5QDwa0YHYpfsRS7yeJRymYA6hY7or23AhUVA==",
+          "summary": [],
+          "content": []
+        },
+        {
+          "type": "message",
+          "id": "msg_example-a115067929a40f104618e2fb",
+          "created_by": {
+            "response_id": "resp_example-2955b7aed5a142524863fb97"
+          },
+          "response_id": "resp_example-2955b7aed5a142524863fb97",
+          "role": "assistant",
+          "content": [
+            {
+              "type": "output_text",
+              "text": "1. Toothbrush \u2014 used daily to clean teeth and maintain oral hygiene.  \n2. Toothpaste \u2014 applied to the toothbrush to remove plaque and freshen breath.  \n3. Bath towel \u2014 absorbs water and dries the body after bathing or showering.  \n4. Hand soap \u2014 used to wash hands and remove dirt and germs.  \n5. Shampoo \u2014 cleanses hair and scalp during a shower or bath.  \n6. Conditioner \u2014 softens and detangles hair after shampooing.  \n7. Hairbrush \u2014 smooths and styles hair and removes",
+              "annotations": [],
+              "logprobs": []
+            }
+          ],
+          "status": "incomplete"
+        }
+      ],
+      "instructions": null,
+      "usage": {
+        "input_tokens": 39,
+        "input_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0
+        },
+        "output_tokens": 128,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 167
+      },
+      "parallel_tool_calls": true,
+      "agent_reference": null,
+      "content_filters": [
+        {
+          "blocked": false,
+          "source_type": "prompt",
+          "content_filter_results": {
+            "sexual": {
+              "filtered": false,
+              "severity": "safe"
+            },
+            "hate": {
+              "filtered": false,
+              "severity": "safe"
+            },
+            "violence": {
+              "filtered": false,
+              "severity": "safe"
+            },
+            "self_harm": {
+              "filtered": false,
+              "severity": "safe"
+            },
+            "defender_for_ai": {
+              "detected": false,
+              "filtered": false,
+              "details": {
+                "evaluation": "unavailable",
+                "evaluationReason": "missing_or_unknown_provider_evaluation_status"
+              }
+            }
+          },
+          "content_filter_raw": [],
+          "content_filter_offsets": {
+            "start_offset": 0,
+            "end_offset": 1315,
+            "check_offset": 0
+          }
+        },
+        {
+          "blocked": false,
+          "source_type": "completion",
+          "content_filter_results": {
+            "sexual": {
+              "filtered": false,
+              "severity": "safe"
+            },
+            "hate": {
+              "filtered": false,
+              "severity": "safe"
+            },
+            "violence": {
+              "filtered": false,
+              "severity": "safe"
+            },
+            "self_harm": {
+              "filtered": false,
+              "severity": "safe"
+            },
+            "defender_for_ai": {
+              "detected": false,
+              "filtered": false,
+              "details": {
+                "evaluation": "unavailable",
+                "evaluationReason": "missing_or_unknown_provider_evaluation_status"
+              }
+            }
+          },
+          "content_filter_raw": [],
+          "content_filter_offsets": {
+            "start_offset": 0,
+            "end_offset": 514,
+            "check_offset": 0
+          }
+        }
+      ]
+    }
+  },
+  "actualTotalTokens": 167,
+  "backendStatuses": [
+    200
+  ],
+  "traceSources": [
+    "api-inspector",
+    "authentication-managed-identity",
+    "cache-model-process-response-handler",
+    "choose",
+    "cors",
+    "forward-request",
+    "graphql-configuration-setup",
+    "lab-backend-body",
+    "language-model-response-handler",
+    "llm-token-limit",
+    "request-forwarder",
+    "request-payload-handler",
+    "response-payload-handler",
+    "set-header",
+    "set-query-parameter",
+    "token-limit-process-response-handler",
+    "trace",
+    "transfer-response",
+    "validate-azure-ad-token"
+  ]
+}

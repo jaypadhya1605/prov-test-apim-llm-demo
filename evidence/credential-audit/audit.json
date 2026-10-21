@@ -1,0 +1,10 @@
+{
+  "utc": "2026-10-21T01:23:44.080397+00:00",
+  "checkedEvidenceFiles": 740,
+  "credentialLeaksDetected": 0,
+  "filesRequiringAttention": [],
+  "blockedMaterialFiles": 0,
+  "reportRelativeLinksVerified": true,
+  "exactV1BaselineBackendLimitsVerified": true,
+  "method": "Live credentials checked only in memory; evidence JWT/bearer-pattern and JSON checks; blocked-file name checks. Not an automated security scan."
+}

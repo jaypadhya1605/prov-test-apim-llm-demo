@@ -1,0 +1,38 @@
+[
+  {
+    "utc": "2026-10-21T01:16:37.382572+00:00",
+    "response": {
+      "status": 204,
+      "headers": {
+        "connection": "close",
+        "date": "Wed, 21 Oct 2026 01:16:35 GMT",
+        "x-lab-phase": "tpm"
+      },
+      "body": ""
+    }
+  },
+  {
+    "utc": "2026-10-21T01:16:40.811168+00:00",
+    "response": {
+      "status": 204,
+      "headers": {
+        "connection": "close",
+        "date": "Wed, 21 Oct 2026 01:16:39 GMT",
+        "x-lab-phase": "tpm"
+      },
+      "body": ""
+    }
+  },
+  {
+    "utc": "2026-10-21T01:16:44.374028+00:00",
+    "response": {
+      "status": 204,
+      "headers": {
+        "connection": "close",
+        "date": "Wed, 21 Oct 2026 01:16:42 GMT",
+        "x-lab-phase": "chat-control"
+      },
+      "body": ""
+    }
+  }
+]

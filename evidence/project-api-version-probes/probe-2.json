@@ -1,0 +1,200 @@
+{
+  "url": "https://ai-token-lab-example.services.ai.azure.com/api/projects/project-token-lab/openai/responses?api-version=2025-11-15-preview",
+  "response": {
+    "status": 200,
+    "headers": {
+      "content-length": "5457",
+      "connection": "close",
+      "content-type": "application/json",
+      "date": "Wed, 21 Oct 2026 00:23:05 GMT",
+      "server": "istio-envoy",
+      "access-control-expose-headers": "Operation-Location,Location,Apim-Request-Id,x-agent-session-id,x-agent-invocation-id",
+      "vary": "Origin,Accept-Encoding",
+      "request-context": "appId=",
+      "x-ms-response-type": "standard",
+      "x-request-id": "509492ab-888b-5b57-84d3-1c8ecc6d8f17",
+      "x-ms-aoai-configured-data-retention-days": "30",
+      "skip-error-remapping": "true",
+      "openai-client-partition-id": "bbdc9d156d453699d861b3b3afbfd981",
+      "azureml-internal-forward-count": "1",
+      "x-ms-is-spilled-over": "false",
+      "x-ratelimit-key": "lab-model",
+      "x-ratelimit-remaining-requests": "9",
+      "x-ratelimit-reset-requests": "6",
+      "x-ratelimit-limit-requests": "10",
+      "x-ratelimit-renewalperiod-requests": "60",
+      "x-ratelimit-abusepenalty-active": "False",
+      "x-ratelimit-remaining-tokens": "9955",
+      "x-ratelimit-reset-tokens": "0",
+      "x-ratelimit-limit-tokens": "10000",
+      "x-ratelimit-renewalperiod-tokens": "60",
+      "azureai-fe-is-streaming": "False",
+      "azureai-fe-offer-type": "paygo",
+      "x-ms-served-model": "gpt-5-mini-2025-08-07",
+      "openai-version": "2020-10-01",
+      "openai-organization": "bbdc9d156d453699d861b3b3afbfd981",
+      "openai-project": "d2b722b2-1410-508b-b0ce-46e743a21ecb",
+      "openai-processing-ms": "1563",
+      "azureml-served-by-cluster": "hyena-eastus2-01,hyena-eastus2-01",
+      "api-supported-versions": "1.0,2025-05-15-preview,2025-11-15-preview",
+      "x-http2-stream-id": "691",
+      "apim-request-id": "4d381e1d-e42d-5c2d-a0ea-8dc751967bc3",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "x-content-type-options": "nosniff",
+      "x-ms-region": "East US 2"
+    },
+    "body": {
+      "metadata": {},
+      "top_logprobs": 0,
+      "temperature": 1,
+      "top_p": 1,
+      "service_tier": "default",
+      "prompt_cache_retention": "in_memory",
+      "model": "lab-model",
+      "reasoning": {
+        "effort": "minimal",
+        "context": "current_turn",
+        "mode": "standard"
+      },
+      "background": false,
+      "max_output_tokens": 128,
+      "text": {
+        "format": {
+          "type": "text"
+        },
+        "verbosity": "medium"
+      },
+      "tools": [],
+      "tool_choice": "auto",
+      "truncation": "disabled",
+      "id": "resp_example-d920d46ecefc6a431b118145",
+      "object": "response",
+      "status": "incomplete",
+      "created_at": 1792542186,
+      "error": null,
+      "incomplete_details": {
+        "reason": "max_output_tokens"
+      },
+      "output": [
+        {
+          "type": "reasoning",
+          "id": "rs_example-8d2dd6f28f9f7a83f5121dda",
+          "created_by": {
+            "response_id": "resp_example-d920d46ecefc6a431b118145"
+          },
+          "response_id": "resp_example-d920d46ecefc6a431b118145",
+          "encrypted_content": "gAAAAABq2AXr1w9_NpyQ4uWs_hPgdcsv-clySijtG6lDzpkMOratHIAlWIkkPoewLIB_DPEuNoFzSt-i77YNkcRGObjWCLHlT2BkS_tgGR-9kZzR0qC6BK3t66daGhW5fpHv9Qu2FV1A_n5a6tjbGwHZdYelVzmyWPtlZfS5n_yQFEqQ8ZI4q1bWEUfZIjZPoqKiBVn0ZdOgstXVSp7QyRRK9_X7bXLpUYEXItqIcecxlvGOjZ3Y0i8w_jzs_2erbUiI_bWLzRb4oIBam4ABUrdQ4lGJzGUjTrFlbcuWw0hznDBo-oIxrHQ6sMLP7LDeQ5NzFdPmAH4Q7TFSSvFD9MQ3D2cocAxfNR6Ykzu_EuJM0UF1sByW5vmApGu2bfov31_AJIsvas9_kj9-B_mRyr798eQDGneePqL25IZSfK0NahYpYrO-00N9kE03E1cSTe64Fd3J5Z7AmEAcG7KVZT5kA-H6r-yZA4WZh7EwWIfvxSpjYHUoA8qscoatBFYpaCVV7x835dyyGNSP2Oj05IKBqziiRLDewEHogmAZidOevr3k8SJrymvO3dFmw3iFh6hGtX3mKH4JP2l3qlKSOEZPt5c5EvetmxjeuCpBEbBtT2_Mr1EUwJknGBkny3nPXAaXiNhTSbHKUyAHXBCJz8XEv1-Uqx6v42SvS_dpOkPIFb0WZmKNBG2PeWKCdNOq1SiUQUGozU0URaMiJRYdDbYwaw19ZTZFwVeKi_qku93xpDqnQg9rc61P5365MfQg-IM_K4RMqkWfJ_TL1Sp2ISodZ4A3FbeM6fAHgaR2cx-Bto9mTv-ZxnfUUJGZ0YAj8u0gID1oQpUnAnZnXUo8vWpysiZJGVE3xvXqS9m3r3vdqzAiUE18emwTSsdS6C7iwQTivjkSQ1Cb8UMMAgzeVyAS8vfFQfdGo_IbX6IlkCsCpbfyfuc4sojwhL2Ff1gXETTZQyaF-Hv173em2XzMDaGiXMLyAAcaZnzR9ChQd_IXl-lP9WEqdwQT1vbDAERiA4DQV9y-eU55-HIPGhEZK4FubmHnMm3XeaCgVkBXWDpSV46O2IaARfcKzXBnKI-lfH8vUYeELghEcLxN1BmCemDBwrWFeq_nugvJAEE1Xom3dwiO_mS2vJa3b6sOJZfSP-Vfr7lBqNkP13xP1_FnueGBLJtkhXh03EU_pUW_iVHnUFK0m31Z2A_J73RHldI3ZyakgrQXuHgV88A-9BmJdAU3qXsjQI-y-Q==",
+          "summary": [],
+          "content": []
+        },
+        {
+          "type": "message",
+          "id": "msg_example-17ef4b5eeafcfde016e307c7",
+          "created_by": {
+            "response_id": "resp_example-d920d46ecefc6a431b118145"
+          },
+          "response_id": "resp_example-d920d46ecefc6a431b118145",
+          "role": "assistant",
+          "content": [
+            {
+              "type": "output_text",
+              "text": "1. Toothbrush \u2014 Used daily to clean teeth and maintain oral hygiene.  \n2. Coffee mug \u2014 Holds hot beverages like coffee or tea for drinking.  \n3. Dinner plate \u2014 Serves and contains food during meals.  \n4. Fork \u2014 Picks up and helps eat solid food.  \n5. Spoon \u2014 Scoops liquids or soft foods like soup and yogurt.  \n6. Knife (dinner) \u2014 Cuts food into bite-sized pieces at the table.  \n7. Cutting board \u2014 Provides a safe surface for chopping ingredients.  \n8. Fry",
+              "annotations": [],
+              "logprobs": []
+            }
+          ],
+          "status": "incomplete"
+        }
+      ],
+      "instructions": null,
+      "usage": {
+        "input_tokens": 39,
+        "input_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0
+        },
+        "output_tokens": 128,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 167
+      },
+      "parallel_tool_calls": true,
+      "agent_reference": null,
+      "content_filters": [
+        {
+          "blocked": false,
+          "source_type": "prompt",
+          "content_filter_results": {
+            "sexual": {
+              "filtered": false,
+              "severity": "safe"
+            },
+            "hate": {
+              "filtered": false,
+              "severity": "safe"
+            },
+            "violence": {
+              "filtered": false,
+              "severity": "safe"
+            },
+            "self_harm": {
+              "filtered": false,
+              "severity": "safe"
+            },
+            "defender_for_ai": {
+              "detected": false,
+              "filtered": false,
+              "details": {
+                "evaluation": "unavailable",
+                "evaluationReason": "missing_or_unknown_provider_evaluation_status"
+              }
+            }
+          },
+          "content_filter_raw": [],
+          "content_filter_offsets": {
+            "start_offset": 0,
+            "end_offset": 1315,
+            "check_offset": 0
+          }
+        },
+        {
+          "blocked": false,
+          "source_type": "completion",
+          "content_filter_results": {
+            "sexual": {
+              "filtered": false,
+              "severity": "safe"
+            },
+            "hate": {
+              "filtered": false,
+              "severity": "safe"
+            },
+            "violence": {
+              "filtered": false,
+              "severity": "safe"
+            },
+            "self_harm": {
+              "filtered": false,
+              "severity": "safe"
+            },
+            "defender_for_ai": {
+              "detected": false,
+              "filtered": false,
+              "details": {
+                "evaluation": "unavailable",
+                "evaluationReason": "missing_or_unknown_provider_evaluation_status"
+              }
+            }
+          },
+          "content_filter_raw": [],
+          "content_filter_offsets": {
+            "start_offset": 0,
+            "end_offset": 503,
+            "check_offset": 0
+          }
+        }
+      ]
+    }
+  }
+}

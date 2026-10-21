@@ -1,0 +1,762 @@
+{
+  "utc": "2026-10-21T01:19:52.705390+00:00",
+  "case": "SUPPORT-CASE-REDACTED",
+  "verdict": "Exact project v1 route tested; flat-4 symptom not reproduced. Customer case is not proven resolved.",
+  "runs": [
+    {
+      "run": "v1-v2-measured",
+      "gateway": "apim-lab-v2-example",
+      "projectApi": "project",
+      "chatApi": "project",
+      "results": {
+        "quota-project-responses": {
+          "expectedRejection": 403,
+          "statuses": [
+            200,
+            200,
+            403
+          ],
+          "completedActualTokens": 334,
+          "rejectionObserved": true
+        },
+        "quota-project-chat": {
+          "expectedRejection": 403,
+          "statuses": [
+            200,
+            200,
+            403
+          ],
+          "completedActualTokens": 334,
+          "rejectionObserved": true
+        },
+        "tpm-project-responses": {
+          "expectedRejection": 429,
+          "statuses": [
+            200,
+            200,
+            429
+          ],
+          "completedActualTokens": 334,
+          "rejectionObserved": true
+        },
+        "tpm-project-chat": {
+          "expectedRejection": 429,
+          "statuses": [
+            200,
+            200,
+            429
+          ],
+          "completedActualTokens": 334,
+          "rejectionObserved": true
+        },
+        "request-mitigation": {
+          "statuses": [
+            200,
+            200,
+            200,
+            200,
+            429
+          ],
+          "rejectionObserved": true,
+          "chatUnaffected": true,
+          "isTokenAccountingFix": false
+        }
+      },
+      "groups": [
+        {
+          "phase": "unauthenticated",
+          "api": "project",
+          "operation": "chat",
+          "statuses": [
+            401
+          ],
+          "actualTokens": [
+            null
+          ],
+          "consumed": [
+            null
+          ],
+          "remainingQuota": [
+            null
+          ]
+        },
+        {
+          "phase": "baseline-estimate-true",
+          "api": "project",
+          "operation": "responses",
+          "statuses": [
+            200,
+            200,
+            200
+          ],
+          "actualTokens": [
+            167,
+            167,
+            167
+          ],
+          "consumed": [
+            "167",
+            "167",
+            "167"
+          ],
+          "remainingQuota": [
+            "9833",
+            "9666",
+            "9833"
+          ]
+        },
+        {
+          "phase": "baseline-estimate-true",
+          "api": "project",
+          "operation": "chat",
+          "statuses": [
+            200,
+            200,
+            200
+          ],
+          "actualTokens": [
+            167,
+            167,
+            167
+          ],
+          "consumed": [
+            "167",
+            "167",
+            "167"
+          ],
+          "remainingQuota": [
+            "9833",
+            "9666",
+            "9499"
+          ]
+        },
+        {
+          "phase": "baseline-estimate-true",
+          "api": "account",
+          "operation": "responses",
+          "statuses": [
+            200,
+            200,
+            200
+          ],
+          "actualTokens": [
+            167,
+            167,
+            167
+          ],
+          "consumed": [
+            "167",
+            "167",
+            "167"
+          ],
+          "remainingQuota": [
+            "9833",
+            "9666",
+            "9499"
+          ]
+        },
+        {
+          "phase": "baseline-estimate-false",
+          "api": "project",
+          "operation": "responses",
+          "statuses": [
+            200,
+            200,
+            200
+          ],
+          "actualTokens": [
+            167,
+            167,
+            167
+          ],
+          "consumed": [
+            "167",
+            "167",
+            "167"
+          ],
+          "remainingQuota": [
+            "9833",
+            "9666",
+            "9499"
+          ]
+        },
+        {
+          "phase": "baseline-estimate-false",
+          "api": "project",
+          "operation": "chat",
+          "statuses": [
+            200,
+            200,
+            200
+          ],
+          "actualTokens": [
+            167,
+            167,
+            167
+          ],
+          "consumed": [
+            "167",
+            "167",
+            "167"
+          ],
+          "remainingQuota": [
+            "9833",
+            "9833",
+            "9666"
+          ]
+        },
+        {
+          "phase": "baseline-estimate-false",
+          "api": "account",
+          "operation": "responses",
+          "statuses": [
+            200,
+            200,
+            200
+          ],
+          "actualTokens": [
+            167,
+            167,
+            167
+          ],
+          "consumed": [
+            "167",
+            "167",
+            "167"
+          ],
+          "remainingQuota": [
+            "9833",
+            "9666",
+            "9499"
+          ]
+        },
+        {
+          "phase": "quota",
+          "api": "project",
+          "operation": "responses",
+          "statuses": [
+            200,
+            200,
+            403
+          ],
+          "actualTokens": [
+            167,
+            167,
+            null
+          ],
+          "consumed": [
+            "167",
+            "167",
+            null
+          ],
+          "remainingQuota": [
+            "53",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "phase": "quota",
+          "api": "project",
+          "operation": "chat",
+          "statuses": [
+            200,
+            200,
+            403
+          ],
+          "actualTokens": [
+            167,
+            167,
+            null
+          ],
+          "consumed": [
+            "167",
+            "167",
+            null
+          ],
+          "remainingQuota": [
+            "53",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "phase": "tpm",
+          "api": "project",
+          "operation": "responses",
+          "statuses": [
+            200,
+            200,
+            429
+          ],
+          "actualTokens": [
+            167,
+            167,
+            null
+          ],
+          "consumed": [
+            "167",
+            "167",
+            null
+          ],
+          "remainingQuota": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "phase": "tpm",
+          "api": "project",
+          "operation": "chat",
+          "statuses": [
+            200,
+            200,
+            429
+          ],
+          "actualTokens": [
+            167,
+            167,
+            null
+          ],
+          "consumed": [
+            "167",
+            "167",
+            null
+          ],
+          "remainingQuota": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "phase": "request-mitigation",
+          "api": "project",
+          "operation": "responses",
+          "statuses": [
+            200,
+            200,
+            200,
+            200,
+            429
+          ],
+          "actualTokens": [
+            167,
+            167,
+            167,
+            167,
+            null
+          ],
+          "consumed": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "remainingQuota": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "phase": "chat-control",
+          "api": "project",
+          "operation": "chat",
+          "statuses": [
+            200
+          ],
+          "actualTokens": [
+            167
+          ],
+          "consumed": [
+            "167"
+          ],
+          "remainingQuota": [
+            "9833"
+          ]
+        }
+      ]
+    },
+    {
+      "run": "v1-classic-measured",
+      "gateway": "apim-lab-classic-example",
+      "projectApi": "project",
+      "chatApi": "project",
+      "results": {
+        "quota-project-responses": {
+          "expectedRejection": 403,
+          "statuses": [
+            200,
+            200,
+            403
+          ],
+          "completedActualTokens": 334,
+          "rejectionObserved": true
+        },
+        "quota-project-chat": {
+          "expectedRejection": 403,
+          "statuses": [
+            200,
+            200,
+            403
+          ],
+          "completedActualTokens": 334,
+          "rejectionObserved": true
+        },
+        "tpm-project-responses": {
+          "expectedRejection": 429,
+          "statuses": [
+            200,
+            200,
+            429
+          ],
+          "completedActualTokens": 334,
+          "rejectionObserved": true
+        },
+        "tpm-project-chat": {
+          "expectedRejection": 429,
+          "statuses": [
+            200,
+            200,
+            429
+          ],
+          "completedActualTokens": 334,
+          "rejectionObserved": true
+        },
+        "request-mitigation": {
+          "statuses": [
+            200,
+            200,
+            200,
+            429
+          ],
+          "rejectionObserved": true,
+          "chatUnaffected": true,
+          "isTokenAccountingFix": false
+        }
+      },
+      "groups": [
+        {
+          "phase": "unauthenticated",
+          "api": "project",
+          "operation": "chat",
+          "statuses": [
+            401
+          ],
+          "actualTokens": [
+            null
+          ],
+          "consumed": [
+            null
+          ],
+          "remainingQuota": [
+            null
+          ]
+        },
+        {
+          "phase": "baseline-estimate-true",
+          "api": "project",
+          "operation": "responses",
+          "statuses": [
+            200,
+            200,
+            200
+          ],
+          "actualTokens": [
+            167,
+            167,
+            167
+          ],
+          "consumed": [
+            "167",
+            "167",
+            "167"
+          ],
+          "remainingQuota": [
+            "9833",
+            "9666",
+            "9499"
+          ]
+        },
+        {
+          "phase": "baseline-estimate-true",
+          "api": "project",
+          "operation": "chat",
+          "statuses": [
+            200,
+            200,
+            200
+          ],
+          "actualTokens": [
+            167,
+            167,
+            167
+          ],
+          "consumed": [
+            "167",
+            "167",
+            "167"
+          ],
+          "remainingQuota": [
+            "9833",
+            "9666",
+            "9499"
+          ]
+        },
+        {
+          "phase": "baseline-estimate-true",
+          "api": "account",
+          "operation": "responses",
+          "statuses": [
+            200,
+            200,
+            200
+          ],
+          "actualTokens": [
+            167,
+            167,
+            167
+          ],
+          "consumed": [
+            "167",
+            "167",
+            "167"
+          ],
+          "remainingQuota": [
+            "9833",
+            "9666",
+            "9499"
+          ]
+        },
+        {
+          "phase": "baseline-estimate-false",
+          "api": "project",
+          "operation": "responses",
+          "statuses": [
+            200,
+            200,
+            200
+          ],
+          "actualTokens": [
+            167,
+            167,
+            167
+          ],
+          "consumed": [
+            "167",
+            "167",
+            "167"
+          ],
+          "remainingQuota": [
+            "9833",
+            "9666",
+            "9499"
+          ]
+        },
+        {
+          "phase": "baseline-estimate-false",
+          "api": "project",
+          "operation": "chat",
+          "statuses": [
+            200,
+            200,
+            200
+          ],
+          "actualTokens": [
+            167,
+            167,
+            167
+          ],
+          "consumed": [
+            "167",
+            "167",
+            "167"
+          ],
+          "remainingQuota": [
+            "9833",
+            "9666",
+            "9499"
+          ]
+        },
+        {
+          "phase": "baseline-estimate-false",
+          "api": "account",
+          "operation": "responses",
+          "statuses": [
+            200,
+            200,
+            200
+          ],
+          "actualTokens": [
+            167,
+            167,
+            167
+          ],
+          "consumed": [
+            "167",
+            "167",
+            "167"
+          ],
+          "remainingQuota": [
+            "9833",
+            "9666",
+            "9499"
+          ]
+        },
+        {
+          "phase": "quota",
+          "api": "project",
+          "operation": "responses",
+          "statuses": [
+            200,
+            200,
+            403
+          ],
+          "actualTokens": [
+            167,
+            167,
+            null
+          ],
+          "consumed": [
+            "167",
+            "167",
+            null
+          ],
+          "remainingQuota": [
+            "53",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "phase": "quota",
+          "api": "project",
+          "operation": "chat",
+          "statuses": [
+            200,
+            200,
+            403
+          ],
+          "actualTokens": [
+            167,
+            167,
+            null
+          ],
+          "consumed": [
+            "167",
+            "167",
+            null
+          ],
+          "remainingQuota": [
+            "53",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "phase": "tpm",
+          "api": "project",
+          "operation": "responses",
+          "statuses": [
+            200,
+            200,
+            429
+          ],
+          "actualTokens": [
+            167,
+            167,
+            null
+          ],
+          "consumed": [
+            "167",
+            "167",
+            null
+          ],
+          "remainingQuota": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "phase": "tpm",
+          "api": "project",
+          "operation": "chat",
+          "statuses": [
+            200,
+            200,
+            429
+          ],
+          "actualTokens": [
+            167,
+            167,
+            null
+          ],
+          "consumed": [
+            "167",
+            "167",
+            null
+          ],
+          "remainingQuota": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "phase": "request-mitigation",
+          "api": "project",
+          "operation": "responses",
+          "statuses": [
+            200,
+            200,
+            200,
+            429
+          ],
+          "actualTokens": [
+            167,
+            167,
+            167,
+            null
+          ],
+          "consumed": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "remainingQuota": [
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "phase": "chat-control",
+          "api": "project",
+          "operation": "chat",
+          "statuses": [
+            200
+          ],
+          "actualTokens": [
+            167
+          ],
+          "consumed": [
+            "167"
+          ],
+          "remainingQuota": [
+            "9833"
+          ]
+        }
+      ]
+    }
+  ],
+  "persistedCallRecords": 205,
+  "allocatedSafetyCeiling": 240
+}

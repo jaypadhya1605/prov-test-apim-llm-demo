@@ -1,0 +1,48 @@
+{
+  "id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-apim-token-lab/providers/Microsoft.CognitiveServices/accounts/ai-token-lab-example/deployments/lab-model",
+  "type": "Microsoft.CognitiveServices/accounts/deployments",
+  "name": "lab-model",
+  "sku": {
+    "name": "GlobalStandard",
+    "capacity": 1
+  },
+  "properties": {
+    "model": {
+      "format": "OpenAI",
+      "name": "gpt-5-mini",
+      "version": "2025-08-07"
+    },
+    "versionUpgradeOption": "NoAutoUpgrade",
+    "currentCapacity": 1,
+    "capabilities": {
+      "area": "US",
+      "chatCompletion": "true",
+      "responses": "true",
+      "agentsV2": "true",
+      "assistants": "true"
+    },
+    "raiPolicyName": "Microsoft.Default",
+    "provisioningState": "Succeeded",
+    "rateLimits": [
+      {
+        "key": "request",
+        "renewalPeriod": 60,
+        "count": 1
+      },
+      {
+        "key": "token",
+        "renewalPeriod": 60,
+        "count": 1000
+      }
+    ]
+  },
+  "systemData": {
+    "createdBy": "lab-owner@example.com",
+    "createdByType": "User",
+    "createdAt": "2026-10-21T00:08:35.3029534Z",
+    "lastModifiedBy": "lab-owner@example.com",
+    "lastModifiedByType": "User",
+    "lastModifiedAt": "2026-10-21T00:55:50.7951497Z"
+  },
+  "etag": "\"2076d9cf-8ad5-5161-8bd1-81d34df05cbb\""
+}

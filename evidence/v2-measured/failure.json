@@ -1,0 +1,4 @@
+{
+  "utc": "2026-10-21T00:39:12.584818+00:00",
+  "error": "ARM PUT /subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-apim-token-lab/providers/Microsoft.ApiManagement/service/apim-lab-v2-example/apis/lab-project-preview/operations/responses/policies/policy: 400 {'error': {'code': 'ValidationError', 'message': 'One or more fields contain incorrect values:', 'details': [{'code': 'ValidationError', 'target': 'llm-token-limit', 'message': \"Error in element 'llm-token-limit' on line 1, column 368: remaining-quota-tokens-header-name can only be set when token-quota is set.\"}]}}"
+}

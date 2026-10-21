@@ -1,0 +1,96 @@
+{
+  "utc": "2026-10-21T01:02:37.929965+00:00",
+  "elapsedSeconds": 0.663,
+  "api": "project",
+  "operation": "chat",
+  "phase": "safe",
+  "direct": false,
+  "requestId": "00ee13de-9a55-56cd-8274-41bdc3789962",
+  "url": "https://apim-lab-v2-example.azure-api.net/lab-project/chat/completions",
+  "requestBody": {
+    "model": "lab-model",
+    "stream": false,
+    "messages": [
+      {
+        "role": "user",
+        "content": "For a synthetic gateway test, write a numbered list of thirty ordinary household objects, each followed by a short sentence about its everyday use. Do not discuss private information."
+      }
+    ],
+    "max_completion_tokens": 128,
+    "reasoning_effort": "minimal"
+  },
+  "response": {
+    "status": 429,
+    "headers": {
+      "content-length": "211",
+      "connection": "close",
+      "content-type": "application/json",
+      "date": "Wed, 21 Oct 2026 01:02:36 GMT",
+      "access-control-expose-headers": "Operation-Location,Location,Apim-Request-Id,x-agent-session-id,x-agent-invocation-id",
+      "retry-after": "30",
+      "vary": "Origin",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "azureai-fe-is-streaming": "False",
+      "azureai-fe-offer-type": "paygo",
+      "retry-after-ms": "49488",
+      "skip-error-remapping": "true",
+      "x-ms-fe-error": "true",
+      "x-ms-is-spilled-over": "false",
+      "x-ms-rai-invoked": "true",
+      "x-ratelimit-abusepenalty-active": "False",
+      "x-ratelimit-key": "lab-model",
+      "x-ratelimit-limit-requests": "1",
+      "x-ratelimit-limit-tokens": "1000",
+      "x-ratelimit-remaining-requests": "-1",
+      "x-ratelimit-remaining-tokens": "961",
+      "x-ratelimit-renewalperiod-requests": "60",
+      "x-ratelimit-renewalperiod-tokens": "60",
+      "x-ratelimit-reset-requests": "109",
+      "x-ratelimit-reset-tokens": "2",
+      "x-request-id": "a7ff5ce6-fef3-5dfa-ad30-c1caf1286c4d",
+      "apim-request-id": "edc04c0d-d768-562c-9934-40f001dc826d",
+      "x-http2-stream-id": "935",
+      "x-ms-client-request-id": "00ee13de-9a55-56cd-8274-41bdc3789962",
+      "x-content-type-options": "nosniff",
+      "x-ms-region": "East US 2",
+      "x-lab-phase": "safe",
+      "x-lab-tpm": "10000",
+      "x-lab-quota": "10000",
+      "x-lab-consumed": "40",
+      "apim-trace-id": "d66c07503a1cde37b62b40070bc9835a",
+      "ocp-apim-apiid": "lab-project",
+      "ocp-apim-operationid": "chat",
+      "ocp-apim-subscriptionid": "repro"
+    },
+    "body": {
+      "error": {
+        "message": "Your requests to gpt-5-mini for lab-model in eastus2 have exceeded request rate limit.",
+        "type": "too_many_requests",
+        "param": null,
+        "code": "rate_limit_exceeded"
+      }
+    }
+  },
+  "actualTotalTokens": null,
+  "backendStatuses": [
+    429
+  ],
+  "traceSources": [
+    "api-inspector",
+    "authentication-managed-identity",
+    "choose",
+    "cors",
+    "forward-request",
+    "graphql-configuration-setup",
+    "lab-backend-body",
+    "llm-token-limit",
+    "request-forwarder",
+    "request-payload-handler",
+    "response-payload-handler",
+    "set-header",
+    "token-limit-process-response-handler",
+    "trace",
+    "transfer-response",
+    "validate-azure-ad-token"
+  ]
+}

@@ -1,0 +1,4 @@
+{
+  "utc": "2026-10-21T00:16:00.102210+00:00",
+  "error": "Model request failed: {'status': 404, 'headers': {'content-length': '78', 'connection': 'close', 'content-type': 'application/json', 'date': 'Wed, 21 Oct 2026 00:15:58 GMT', 'apim-request-id': 'bc6b8665-4b50-513a-80eb-3c472dab498e', 'strict-transport-security': 'max-age=31536000; includeSubDomains; preload', 'x-content-type-options': 'nosniff'}, 'body': {'error': {'code': 'ResourceNotFound', 'message': 'The project does not exist.'}}}"
+}

@@ -1,0 +1,360 @@
+{
+  "id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-apim-token-lab/providers/Microsoft.Resources/deployments/apim-token-repro",
+  "location": null,
+  "name": "apim-token-repro",
+  "properties": {
+    "correlationId": "c727fe86-bf63-529b-af80-42cff1b60976",
+    "debugSetting": null,
+    "dependencies": [
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-apim-token-lab/providers/Microsoft.Resources/deployments/foundry",
+            "resourceGroup": "rg-apim-token-lab",
+            "resourceName": "foundry",
+            "resourceType": "Microsoft.Resources/deployments"
+          },
+          {
+            "id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-apim-token-lab/providers/Microsoft.Resources/deployments/apim-lab-classic-example",
+            "resourceGroup": "rg-apim-token-lab",
+            "resourceName": "apim-lab-classic-example",
+            "resourceType": "Microsoft.Resources/deployments"
+          },
+          {
+            "apiVersion": "2025-04-01",
+            "id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-apim-token-lab/providers/Microsoft.Resources/deployments/apim-lab-classic-example",
+            "resourceGroup": "rg-apim-token-lab",
+            "resourceName": "apim-lab-classic-example",
+            "resourceType": "Microsoft.Resources/deployments"
+          }
+        ],
+        "id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-apim-token-lab/providers/Microsoft.CognitiveServices/accounts/ai-token-lab-example/providers/Microsoft.Authorization/roleAssignments/04a328af-1ca9-50c3-ae50-31fa3b11e77e",
+        "resourceGroup": "rg-apim-token-lab",
+        "resourceName": "04a328af-1ca9-50c3-ae50-31fa3b11e77e",
+        "resourceType": "Microsoft.Authorization/roleAssignments"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-apim-token-lab/providers/Microsoft.Resources/deployments/foundry",
+            "resourceGroup": "rg-apim-token-lab",
+            "resourceName": "foundry",
+            "resourceType": "Microsoft.Resources/deployments"
+          },
+          {
+            "id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-apim-token-lab/providers/Microsoft.Resources/deployments/apim-lab-v2-example",
+            "resourceGroup": "rg-apim-token-lab",
+            "resourceName": "apim-lab-v2-example",
+            "resourceType": "Microsoft.Resources/deployments"
+          },
+          {
+            "apiVersion": "2025-04-01",
+            "id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-apim-token-lab/providers/Microsoft.Resources/deployments/apim-lab-v2-example",
+            "resourceGroup": "rg-apim-token-lab",
+            "resourceName": "apim-lab-v2-example",
+            "resourceType": "Microsoft.Resources/deployments"
+          }
+        ],
+        "id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-apim-token-lab/providers/Microsoft.CognitiveServices/accounts/ai-token-lab-example/providers/Microsoft.Authorization/roleAssignments/92872c78-b2b9-5a0a-bd9a-f857b0d55e66",
+        "resourceGroup": "rg-apim-token-lab",
+        "resourceName": "92872c78-b2b9-5a0a-bd9a-f857b0d55e66",
+        "resourceType": "Microsoft.Authorization/roleAssignments"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-apim-token-lab/providers/Microsoft.Resources/deployments/foundry",
+            "resourceGroup": "rg-apim-token-lab",
+            "resourceName": "foundry",
+            "resourceType": "Microsoft.Resources/deployments"
+          },
+          {
+            "id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-apim-token-lab/providers/Microsoft.Resources/deployments/apim-lab-classic-example",
+            "resourceGroup": "rg-apim-token-lab",
+            "resourceName": "apim-lab-classic-example",
+            "resourceType": "Microsoft.Resources/deployments"
+          },
+          {
+            "apiVersion": "2025-04-01",
+            "id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-apim-token-lab/providers/Microsoft.Resources/deployments/apim-lab-classic-example",
+            "resourceGroup": "rg-apim-token-lab",
+            "resourceName": "apim-lab-classic-example",
+            "resourceType": "Microsoft.Resources/deployments"
+          }
+        ],
+        "id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-apim-token-lab/providers/Microsoft.CognitiveServices/accounts/ai-token-lab-example/projects/project-token-lab/providers/Microsoft.Authorization/roleAssignments/ca6c1019-4b39-5fd9-9d90-446d012f2b30",
+        "resourceGroup": "rg-apim-token-lab",
+        "resourceName": "ca6c1019-4b39-5fd9-9d90-446d012f2b30",
+        "resourceType": "Microsoft.Authorization/roleAssignments"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-apim-token-lab/providers/Microsoft.Resources/deployments/foundry",
+            "resourceGroup": "rg-apim-token-lab",
+            "resourceName": "foundry",
+            "resourceType": "Microsoft.Resources/deployments"
+          },
+          {
+            "id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-apim-token-lab/providers/Microsoft.Resources/deployments/apim-lab-v2-example",
+            "resourceGroup": "rg-apim-token-lab",
+            "resourceName": "apim-lab-v2-example",
+            "resourceType": "Microsoft.Resources/deployments"
+          },
+          {
+            "apiVersion": "2025-04-01",
+            "id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-apim-token-lab/providers/Microsoft.Resources/deployments/apim-lab-v2-example",
+            "resourceGroup": "rg-apim-token-lab",
+            "resourceName": "apim-lab-v2-example",
+            "resourceType": "Microsoft.Resources/deployments"
+          }
+        ],
+        "id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-apim-token-lab/providers/Microsoft.CognitiveServices/accounts/ai-token-lab-example/projects/project-token-lab/providers/Microsoft.Authorization/roleAssignments/834c0b54-0b28-5524-a76c-9582c955241c",
+        "resourceGroup": "rg-apim-token-lab",
+        "resourceName": "834c0b54-0b28-5524-a76c-9582c955241c",
+        "resourceType": "Microsoft.Authorization/roleAssignments"
+      }
+    ],
+    "diagnostics": null,
+    "duration": "PT37.008363S",
+    "error": null,
+    "extensions": [],
+    "mode": "Incremental",
+    "onErrorDeployment": null,
+    "outputResources": [
+      {
+        "apiVersion": null,
+        "extension": null,
+        "id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-apim-token-lab/providers/Microsoft.ApiManagement/service/apim-lab-classic-example",
+        "identifiers": null,
+        "resourceGroup": "rg-apim-token-lab",
+        "resourceType": "Microsoft.ApiManagement/service"
+      },
+      {
+        "apiVersion": null,
+        "extension": null,
+        "id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-apim-token-lab/providers/Microsoft.ApiManagement/service/apim-lab-classic-example/policies/policy",
+        "identifiers": null,
+        "resourceGroup": "rg-apim-token-lab",
+        "resourceType": "Microsoft.ApiManagement/service/policies"
+      },
+      {
+        "apiVersion": null,
+        "extension": null,
+        "id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-apim-token-lab/providers/Microsoft.ApiManagement/service/apim-lab-classic-example/subscriptions/repro",
+        "identifiers": null,
+        "resourceGroup": "rg-apim-token-lab",
+        "resourceType": "Microsoft.ApiManagement/service/subscriptions"
+      },
+      {
+        "apiVersion": null,
+        "extension": null,
+        "id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-apim-token-lab/providers/Microsoft.ApiManagement/service/apim-lab-v2-example",
+        "identifiers": null,
+        "resourceGroup": "rg-apim-token-lab",
+        "resourceType": "Microsoft.ApiManagement/service"
+      },
+      {
+        "apiVersion": null,
+        "extension": null,
+        "id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-apim-token-lab/providers/Microsoft.ApiManagement/service/apim-lab-v2-example/policies/policy",
+        "identifiers": null,
+        "resourceGroup": "rg-apim-token-lab",
+        "resourceType": "Microsoft.ApiManagement/service/policies"
+      },
+      {
+        "apiVersion": null,
+        "extension": null,
+        "id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-apim-token-lab/providers/Microsoft.ApiManagement/service/apim-lab-v2-example/subscriptions/repro",
+        "identifiers": null,
+        "resourceGroup": "rg-apim-token-lab",
+        "resourceType": "Microsoft.ApiManagement/service/subscriptions"
+      },
+      {
+        "apiVersion": null,
+        "extension": null,
+        "id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-apim-token-lab/providers/Microsoft.CognitiveServices/accounts/ai-token-lab-example",
+        "identifiers": null,
+        "resourceGroup": "rg-apim-token-lab",
+        "resourceType": "Microsoft.CognitiveServices/accounts"
+      },
+      {
+        "apiVersion": null,
+        "extension": null,
+        "id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-apim-token-lab/providers/Microsoft.CognitiveServices/accounts/ai-token-lab-example/deployments/lab-model",
+        "identifiers": null,
+        "resourceGroup": "rg-apim-token-lab",
+        "resourceType": "Microsoft.CognitiveServices/accounts/deployments"
+      },
+      {
+        "apiVersion": null,
+        "extension": null,
+        "id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-apim-token-lab/providers/Microsoft.CognitiveServices/accounts/ai-token-lab-example/projects/project-token-lab",
+        "identifiers": null,
+        "resourceGroup": "rg-apim-token-lab",
+        "resourceType": "Microsoft.CognitiveServices/accounts/projects"
+      },
+      {
+        "apiVersion": null,
+        "extension": null,
+        "id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-apim-token-lab/providers/Microsoft.CognitiveServices/accounts/ai-token-lab-example/projects/project-token-lab/providers/Microsoft.Authorization/roleAssignments/ca6c1019-4b39-5fd9-9d90-446d012f2b30",
+        "identifiers": null,
+        "resourceGroup": "rg-apim-token-lab",
+        "resourceType": "Microsoft.Authorization/roleAssignments"
+      },
+      {
+        "apiVersion": null,
+        "extension": null,
+        "id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-apim-token-lab/providers/Microsoft.CognitiveServices/accounts/ai-token-lab-example/projects/project-token-lab/providers/Microsoft.Authorization/roleAssignments/e3dabbb0-16e3-5498-bb8a-f3d31f2afd91",
+        "identifiers": null,
+        "resourceGroup": "rg-apim-token-lab",
+        "resourceType": "Microsoft.Authorization/roleAssignments"
+      },
+      {
+        "apiVersion": null,
+        "extension": null,
+        "id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-apim-token-lab/providers/Microsoft.CognitiveServices/accounts/ai-token-lab-example/projects/project-token-lab/providers/Microsoft.Authorization/roleAssignments/834c0b54-0b28-5524-a76c-9582c955241c",
+        "identifiers": null,
+        "resourceGroup": "rg-apim-token-lab",
+        "resourceType": "Microsoft.Authorization/roleAssignments"
+      },
+      {
+        "apiVersion": null,
+        "extension": null,
+        "id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-apim-token-lab/providers/Microsoft.CognitiveServices/accounts/ai-token-lab-example/providers/Microsoft.Authorization/roleAssignments/92872c78-b2b9-5a0a-bd9a-f857b0d55e66",
+        "identifiers": null,
+        "resourceGroup": "rg-apim-token-lab",
+        "resourceType": "Microsoft.Authorization/roleAssignments"
+      },
+      {
+        "apiVersion": null,
+        "extension": null,
+        "id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-apim-token-lab/providers/Microsoft.CognitiveServices/accounts/ai-token-lab-example/providers/Microsoft.Authorization/roleAssignments/04a328af-1ca9-50c3-ae50-31fa3b11e77e",
+        "identifiers": null,
+        "resourceGroup": "rg-apim-token-lab",
+        "resourceType": "Microsoft.Authorization/roleAssignments"
+      },
+      {
+        "apiVersion": null,
+        "extension": null,
+        "id": "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/rg-apim-token-lab/providers/Microsoft.CognitiveServices/accounts/ai-token-lab-example/providers/Microsoft.Authorization/roleAssignments/1240fbce-7aeb-5cf7-8901-91cf17d21959",
+        "identifiers": null,
+        "resourceGroup": "rg-apim-token-lab",
+        "resourceType": "Microsoft.Authorization/roleAssignments"
+      }
+    ],
+    "outputs": {
+      "gateways": {
+        "type": "Array",
+        "value": [
+          {
+            "name": "apim-lab-classic-example",
+            "sku": "Developer",
+            "url": "https://apim-lab-classic-example.azure-api.net"
+          },
+          {
+            "name": "apim-lab-v2-example",
+            "sku": "BasicV2",
+            "url": "https://apim-lab-v2-example.azure-api.net"
+          }
+        ]
+      },
+      "openaiEndpoint": {
+        "type": "String",
+        "value": "https://ai-token-lab-example.openai.azure.com/openai/v1"
+      },
+      "projectEndpoint": {
+        "type": "String",
+        "value": "https://ai-token-lab-example.services.ai.azure.com/api/projects/project-token-lab"
+      }
+    },
+    "parameters": {
+      "callerIp": {
+        "type": "String",
+        "value": ""
+      },
+      "deploymentName": {
+        "type": "String",
+        "value": "lab-model"
+      },
+      "foundryName": {
+        "type": "String",
+        "value": "ai-token-lab-example"
+      },
+      "location": {
+        "type": "String",
+        "value": "eastus2"
+      },
+      "operatorObjectId": {
+        "type": "String",
+        "value": "00000000-0000-0000-0000-000000000003"
+      },
+      "projectName": {
+        "type": "String",
+        "value": "project-token-lab"
+      },
+      "publisherEmail": {
+        "type": "String",
+        "value": "lab-owner@example.com"
+      }
+    },
+    "parametersLink": null,
+    "providers": [
+      {
+        "id": null,
+        "namespace": "Microsoft.Resources",
+        "providerAuthorizationConsentState": null,
+        "registrationPolicy": null,
+        "registrationState": null,
+        "resourceTypes": [
+          {
+            "aliases": null,
+            "apiProfiles": null,
+            "apiVersions": null,
+            "capabilities": null,
+            "defaultApiVersion": null,
+            "locationMappings": null,
+            "locations": [
+              null
+            ],
+            "properties": null,
+            "resourceType": "deployments",
+            "zoneMappings": null
+          }
+        ]
+      },
+      {
+        "id": null,
+        "namespace": "Microsoft.Authorization",
+        "providerAuthorizationConsentState": null,
+        "registrationPolicy": null,
+        "registrationState": null,
+        "resourceTypes": [
+          {
+            "aliases": null,
+            "apiProfiles": null,
+            "apiVersions": null,
+            "capabilities": null,
+            "defaultApiVersion": null,
+            "locationMappings": null,
+            "locations": [
+              null
+            ],
+            "properties": null,
+            "resourceType": "roleAssignments",
+            "zoneMappings": null
+          }
+        ]
+      }
+    ],
+    "provisioningState": "Succeeded",
+    "templateHash": "8208778888400064939",
+    "templateLink": null,
+    "timestamp": "2026-10-21T00:41:57.125902+00:00",
+    "validatedResources": null,
+    "validationLevel": null
+  },
+  "resourceGroup": "rg-apim-token-lab",
+  "tags": null,
+  "type": "Microsoft.Resources/deployments"
+}

@@ -1,0 +1,222 @@
+{
+  "utc": "2026-10-21T01:13:08.072869+00:00",
+  "elapsedSeconds": 3.213,
+  "api": "account",
+  "operation": "responses",
+  "phase": "direct",
+  "direct": true,
+  "requestId": "f1195256-8e60-5048-ae3c-30038fc7ea84",
+  "url": "https://ai-token-lab-example.openai.azure.com/openai/v1/responses",
+  "requestBody": {
+    "model": "lab-model",
+    "stream": false,
+    "input": "For a synthetic gateway test, write a numbered list of thirty ordinary household objects, each followed by a short sentence about its everyday use. Do not discuss private information.",
+    "max_output_tokens": 128,
+    "store": false,
+    "reasoning": {
+      "effort": "minimal"
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "content-length": "5354",
+      "connection": "close",
+      "content-type": "application/json",
+      "date": "Wed, 21 Oct 2026 01:13:07 GMT",
+      "server": "istio-envoy",
+      "vary": "Origin",
+      "x-ms-aoai-configured-data-retention-days": "30",
+      "skip-error-remapping": "true",
+      "x-ms-is-spilled-over": "false",
+      "x-ratelimit-key": "lab-model",
+      "x-ratelimit-remaining-requests": "99",
+      "x-ratelimit-reset-requests": "0",
+      "x-ratelimit-limit-requests": "100",
+      "x-ratelimit-renewalperiod-requests": "60",
+      "x-ratelimit-abusepenalty-active": "False",
+      "x-ratelimit-remaining-tokens": "99955",
+      "x-ratelimit-reset-tokens": "0",
+      "x-ratelimit-limit-tokens": "100000",
+      "x-ratelimit-renewalperiod-tokens": "60",
+      "azureai-fe-is-streaming": "False",
+      "azureai-fe-offer-type": "paygo",
+      "x-ms-served-model": "gpt-5-mini-2025-08-07",
+      "x-request-id": "166b4733-1687-55a2-aa92-af77a49abd74",
+      "apim-request-id": "92305363-b5ea-5417-8a94-1677dee11759",
+      "x-http2-stream-id": "887",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "x-ms-client-request-id": "f1195256-8e60-5048-ae3c-30038fc7ea84",
+      "x-content-type-options": "nosniff",
+      "x-ms-region": "East US 2"
+    },
+    "body": {
+      "id": "resp_example-ef09f1f9de2b83dd7632b4d0",
+      "object": "response",
+      "created_at": 1792545187,
+      "status": "incomplete",
+      "background": false,
+      "completed_at": null,
+      "content_filters": [
+        {
+          "blocked": false,
+          "source_type": "prompt",
+          "content_filter_raw": [],
+          "content_filter_results": {
+            "defender_for_ai": {
+              "detected": false,
+              "filtered": false,
+              "details": {}
+            },
+            "hate": {
+              "filtered": false,
+              "severity": "safe"
+            },
+            "sexual": {
+              "filtered": false,
+              "severity": "safe"
+            },
+            "violence": {
+              "filtered": false,
+              "severity": "safe"
+            },
+            "self_harm": {
+              "filtered": false,
+              "severity": "safe"
+            }
+          },
+          "content_filter_offsets": {
+            "start_offset": 0,
+            "end_offset": 1315,
+            "check_offset": 0
+          }
+        },
+        {
+          "blocked": false,
+          "source_type": "completion",
+          "content_filter_raw": [],
+          "content_filter_results": {
+            "defender_for_ai": {
+              "detected": false,
+              "filtered": false,
+              "details": {}
+            },
+            "hate": {
+              "filtered": false,
+              "severity": "safe"
+            },
+            "sexual": {
+              "filtered": false,
+              "severity": "safe"
+            },
+            "violence": {
+              "filtered": false,
+              "severity": "safe"
+            },
+            "self_harm": {
+              "filtered": false,
+              "severity": "safe"
+            }
+          },
+          "content_filter_offsets": {
+            "start_offset": 0,
+            "end_offset": 471,
+            "check_offset": 0
+          }
+        }
+      ],
+      "error": null,
+      "frequency_penalty": 0.0,
+      "incomplete_details": {
+        "reason": "max_output_tokens"
+      },
+      "instructions": null,
+      "max_output_tokens": 128,
+      "max_tool_calls": null,
+      "model": "lab-model",
+      "moderation": null,
+      "output": [
+        {
+          "id": "rs_example-94ecf24906cc4ed24e932169",
+          "type": "reasoning",
+          "content": [],
+          "encrypted_content": "gAAAAABq2BGlikoG30_L37hPfLIb_95D4RS6NXSBU4WL5j2ig6GOnuhCWP-YcGmPgFOT8HSrHqeJL87j-XRBywAA8zbUI-RmywGbOsxaSIq3epiQHTCeFWtATfBX5jTDRGCCnXYFbjb15-O0ofYzvWQ6fbnv_cS_uMvGP76voTaf4xUuNHnRZgiK6t7i6_8uWnFUPdPN0ExLUKcFu_0rdNnVoxz-A077KFWNNo34dhje1XXhd84lRIT4uyJC39Epcazl7QTXLQkCAgJRFzPKOLPe61LpwywxQXnsRyMysR8D756Un-3DURqdT0nVquMv9al70orzFlAdRw9IcquoNfx3xKu8Plce6IHgudwbuvrT7F1UoRQ5Yo1Pjn0tKCrl3T1v8Gl2wn3sljs-7XobUs9pq2XuyTa4VrhnXV6RLcoYxX3oKz6SvnpVLRytlvQEiX-WQs7hDyNBn9diyyieUDhf1o7DjBaHxS0ySZuvH_LcAOwFxAaat8-d1m3TSMIUk-oDNDISlXY3PdFFtvHd78OTMGKfGUVhroO6GiiQgW4cZAoDAIRbvmmlW3BW45TM-wXRN4lmy15_ULcOjdGaxfWXALjFnzZgY2EGFTjcTPk_K0IsMvZwAckQUe-TtGaOudXax6WyUshQ1lN7gNrGMMClQ-tAySS-CIsxd1zutk1VJ6MTRXYiT5UDeZId9bINFTNp9LLEhr6jPJ2BgnDg0mTp5iHg8tgKEGu6sZw6N9lJm4sxpDHA1YKqLpCm-2bJNhPgEvJcuv1mwk_6Q98v9yfnneJMYe-VbOIFmwnLhK6pVL8j2D-9ZgJCLjM4dkNKAMEuQEfj7Y4wOkke-bbJMZBni--MNEo_pzbKC_v7ZokzrOqcwIwruaB8UC1kWl5f1l1Ei5eTdZzCx_LzZTBXGz0yBTTrBcfUcV7kQN27dh6DkMVhpCOpM40hRI-czzwA3qYWMk9LGBI_Hwg6ZLyhj6UOrtvWwSiSYP0ubi1uD3CiepUkTFRnJ0aKYGX4q-HiM7UrRaz62G0JNltAp2zsYVO3DNA1aEsGdCIgXbfAB1BZoYVMpzr0YWUWQlguiNnPHE4YACcQjRqniyRQSAvx48A7_b9knWEuqf-YI75rIgJcfHQIgKTisIsC2XS05uNCPlfqZd1ixuB-NqCEnAJiXWZF3A6djtjUtQ==",
+          "summary": []
+        },
+        {
+          "id": "msg_example-07ec2a188833bb206e03abcb",
+          "type": "message",
+          "status": "incomplete",
+          "content": [
+            {
+              "type": "output_text",
+              "annotations": [],
+              "logprobs": [],
+              "text": "1. Toothbrush \u2014 Used to clean teeth and remove plaque every morning and night.  \n2. Toothpaste \u2014 Applied to the toothbrush to help clean teeth and freshen breath.  \n3. Hairbrush \u2014 Used to detangle and smooth hair.  \n4. Comb \u2014 Used to part hair and remove small tangles.  \n5. Bath towel \u2014 Used to dry the body after bathing or showering.  \n6. Hand towel \u2014 Used to dry hands after washing.  \n7. Soap bar \u2014 Used to wash hands and body.  \n8."
+            }
+          ],
+          "role": "assistant"
+        }
+      ],
+      "parallel_tool_calls": true,
+      "presence_penalty": 0.0,
+      "previous_response_id": null,
+      "prompt_cache_key": null,
+      "prompt_cache_retention": "in_memory",
+      "reasoning": {
+        "context": "current_turn",
+        "effort": "minimal",
+        "mode": "standard",
+        "summary": null
+      },
+      "safety_identifier": null,
+      "service_tier": "default",
+      "store": false,
+      "temperature": 1.0,
+      "text": {
+        "format": {
+          "type": "text"
+        },
+        "verbosity": "medium"
+      },
+      "tool_choice": "auto",
+      "tool_usage": {
+        "image_gen": {
+          "input_tokens": 0,
+          "input_tokens_details": {
+            "image_tokens": 0,
+            "text_tokens": 0
+          },
+          "output_tokens": 0,
+          "output_tokens_details": {
+            "image_tokens": 0,
+            "text_tokens": 0
+          },
+          "total_tokens": 0
+        },
+        "web_search": {
+          "num_requests": 0
+        }
+      },
+      "tools": [],
+      "top_logprobs": 0,
+      "top_p": 1.0,
+      "truncation": "disabled",
+      "usage": {
+        "input_tokens": 39,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 128,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 167
+      },
+      "user": null,
+      "metadata": {}
+    }
+  },
+  "actualTotalTokens": 167
+}

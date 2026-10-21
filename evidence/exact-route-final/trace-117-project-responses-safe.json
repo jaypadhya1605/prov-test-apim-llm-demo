@@ -1,0 +1,581 @@
+{
+  "serviceName": "apim-lab-v2-example",
+  "traceId": "aad66a20-4c94-5f04-9ed2-3f51664c107e",
+  "traceEntries": {
+    "inbound": [
+      {
+        "source": "api-inspector",
+        "timestamp": "2026-10-21T01:02:31.5217753Z",
+        "elapsed": "00:00:00.0003513",
+        "data": {
+          "request": {
+            "scheme": {
+              "received": "https",
+              "original": "https"
+            },
+            "method": "POST",
+            "url": "https://apim-lab-v2-example.azure-api.net/lab-project/responses",
+            "headers": [
+              {
+                "name": "Accept-Encoding",
+                "value": "identity"
+              },
+              {
+                "name": "Authorization",
+                "value": "[REDACTED]"
+              },
+              {
+                "name": "Content-Length",
+                "value": "313"
+              },
+              {
+                "name": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "name": "Host",
+                "value": "apim-lab-v2-example.azure-api.net"
+              },
+              {
+                "name": "Max-Forwards",
+                "value": "10"
+              },
+              {
+                "name": "User-Agent",
+                "value": "Python-urllib/3.14"
+              },
+              {
+                "name": "X-Ms-Client-Request-Id",
+                "value": "c1836887-6ddb-5b41-b3e6-93485853f708"
+              },
+              {
+                "name": "Ocp-Apim-Subscription-Key",
+                "value": "[REDACTED]"
+              },
+              {
+                "name": "X-ARR-LOG-ID",
+                "value": "c1836887-6ddb-5b41-b3e6-93485853f708"
+              },
+              {
+                "name": "CLIENT-IP",
+                "value": "192.0.2.11:27999"
+              },
+              {
+                "name": "DISGUISED-HOST",
+                "value": "apim-lab-v2-example.azure-api.net"
+              },
+              {
+                "name": "X-SITE-DEPLOYMENT-ID",
+                "value": "[REDACTED]"
+              },
+              {
+                "name": "WAS-DEFAULT-HOSTNAME",
+                "value": "[REDACTED]"
+              },
+              {
+                "name": "X-Forwarded-Proto",
+                "value": "https"
+              },
+              {
+                "name": "X-AppService-Proto",
+                "value": "https"
+              },
+              {
+                "name": "X-ARR-SSL",
+                "value": "[REDACTED]"
+              },
+              {
+                "name": "X-Forwarded-TlsVersion",
+                "value": "1.3"
+              },
+              {
+                "name": "X-Forwarded-For",
+                "value": "192.0.2.11:27999"
+              },
+              {
+                "name": "X-Original-URL",
+                "value": "/lab-project/responses"
+              },
+              {
+                "name": "X-WAWS-Unencoded-URL",
+                "value": "/lab-project/responses"
+              },
+              {
+                "name": "X-Azure-JA4-Fingerprint",
+                "value": "t13d1713h1_ab0a1bf427ad_89ab6efea773"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "source": "api-inspector",
+        "timestamp": "2026-10-21T01:02:31.5217834Z",
+        "elapsed": "00:00:00.0003591",
+        "data": {
+          "configuration": {
+            "api": {
+              "from": "/lab-project",
+              "to": {
+                "scheme": "https",
+                "host": "ai-token-lab-example.services.ai.azure.com",
+                "port": 443,
+                "path": "/api/projects/project-token-lab/openai/v1",
+                "queryString": "",
+                "query": {},
+                "isDefaultPort": true
+              },
+              "version": null,
+              "revision": "1"
+            },
+            "operation": {
+              "method": "POST",
+              "uriTemplate": "/responses"
+            },
+            "user": "-",
+            "product": "-"
+          }
+        }
+      },
+      {
+        "source": "graphql-configuration-setup",
+        "timestamp": "2026-10-21T01:02:31.5218002Z",
+        "elapsed": "00:00:00.0003759",
+        "data": "Skipping GraphQL creation for non-GraphQL API request"
+      },
+      {
+        "source": "cors",
+        "timestamp": "2026-10-21T01:02:31.5218216Z",
+        "elapsed": "00:00:00.0003972",
+        "data": "Origin header was missing or empty and the request was classified as not cross-domain. CORS policy was not applied."
+      },
+      {
+        "source": "validate-azure-ad-token",
+        "timestamp": "2026-10-21T01:02:31.5222558Z",
+        "elapsed": "00:00:00.0008314",
+        "data": {
+          "message": "Azure AD JWT validation succeeded"
+        }
+      },
+      {
+        "source": "authentication-managed-identity",
+        "timestamp": "2026-10-21T01:02:31.5223921Z",
+        "elapsed": "00:00:00.0009677",
+        "data": {
+          "message": "Obtaining managed identity token using clientId:28cbcf94-3245-53ef-88dd-c06763c3b53e AAD Authority:https://login.windows.net/00000000-0000-0000-0000-000000000002 for https://ai.azure.com audience succeeded.",
+          "errorResponse": null
+        }
+      },
+      {
+        "source": "authentication-managed-identity",
+        "timestamp": "2026-10-21T01:02:31.5223933Z",
+        "elapsed": "00:00:00.0009690",
+        "data": {
+          "message": "Managed identity token is added to Authorization header."
+        }
+      },
+      {
+        "source": "choose",
+        "timestamp": "2026-10-21T01:02:31.5224022Z",
+        "elapsed": "00:00:00.0009778",
+        "data": {
+          "message": "Expression was successfully evaluated.",
+          "expression": "context.Request.Headers.GetValueOrDefault(\"x-lab-probe\", \"\") == \"true\"",
+          "value": false
+        }
+      },
+      {
+        "source": "llm-token-limit",
+        "timestamp": "2026-10-21T01:02:31.5227672Z",
+        "elapsed": "00:00:00.0013429",
+        "data": {
+          "message": "Expression was successfully evaluated.",
+          "expression": "\"native-large-input-protection:safe:\" + context.Api.Id + \":\" + context.Operation.Id + \":\" + context.Subscription.Id",
+          "value": "native-large-input-protection:safe:lab-project:responses:repro"
+        }
+      },
+      {
+        "source": "llm-token-limit",
+        "timestamp": "2026-10-21T01:02:31.5228995Z",
+        "elapsed": "00:00:00.0014753",
+        "data": {
+          "message": "Expression was successfully evaluated.",
+          "expression": "\"native-large-input-protection:safe:\" + context.Api.Id + \":\" + context.Operation.Id + \":\" + context.Subscription.Id",
+          "value": "native-large-input-protection:safe:lab-project:responses:repro"
+        }
+      }
+    ],
+    "backend": [
+      {
+        "source": "request-payload-handler",
+        "timestamp": "2026-10-21T01:02:31.5230039Z",
+        "elapsed": "00:00:00.0015796",
+        "data": "Reading request payload because next handler requires access to it."
+      },
+      {
+        "source": "request-payload-handler",
+        "timestamp": "2026-10-21T01:02:31.523086Z",
+        "elapsed": "00:00:00.0016617",
+        "data": "Reading request payload succeeded. 313 bytes read."
+      },
+      {
+        "source": "request-forwarder",
+        "timestamp": "2026-10-21T01:02:31.5233524Z",
+        "elapsed": "00:00:00.0019282",
+        "data": {
+          "message": "Request is being forwarded to the backend service. Timeout set to 300 seconds",
+          "request": {
+            "method": "POST",
+            "protocol": "https",
+            "url": "https://ai-token-lab-example.services.ai.azure.com/api/projects/project-token-lab/openai/v1/responses",
+            "proxyUrl": null,
+            "headers": [
+              {
+                "name": "Host",
+                "value": "ai-token-lab-example.services.ai.azure.com"
+              },
+              {
+                "name": "Accept-Encoding",
+                "value": "identity"
+              },
+              {
+                "name": "Authorization",
+                "value": "[REDACTED]"
+              },
+              {
+                "name": "Content-Length",
+                "value": "313"
+              },
+              {
+                "name": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "name": "Host",
+                "value": "apim-lab-v2-example.azure-api.net"
+              },
+              {
+                "name": "Max-Forwards",
+                "value": "10"
+              },
+              {
+                "name": "User-Agent",
+                "value": "Python-urllib/3.14"
+              },
+              {
+                "name": "X-Ms-Client-Request-Id",
+                "value": "c1836887-6ddb-5b41-b3e6-93485853f708"
+              },
+              {
+                "name": "Ocp-Apim-Subscription-Key",
+                "value": "[REDACTED]"
+              },
+              {
+                "name": "X-ARR-LOG-ID",
+                "value": "c1836887-6ddb-5b41-b3e6-93485853f708"
+              },
+              {
+                "name": "CLIENT-IP",
+                "value": "192.0.2.11:27999"
+              },
+              {
+                "name": "DISGUISED-HOST",
+                "value": "apim-lab-v2-example.azure-api.net"
+              },
+              {
+                "name": "X-SITE-DEPLOYMENT-ID",
+                "value": "[REDACTED]"
+              },
+              {
+                "name": "WAS-DEFAULT-HOSTNAME",
+                "value": "[REDACTED]"
+              },
+              {
+                "name": "X-Forwarded-Proto",
+                "value": "https"
+              },
+              {
+                "name": "X-AppService-Proto",
+                "value": "https"
+              },
+              {
+                "name": "X-ARR-SSL",
+                "value": "[REDACTED]"
+              },
+              {
+                "name": "X-Forwarded-TlsVersion",
+                "value": "1.3"
+              },
+              {
+                "name": "X-Forwarded-For",
+                "value": "192.0.2.11:27999,192.0.2.11"
+              },
+              {
+                "name": "X-Original-URL",
+                "value": "/lab-project/responses"
+              },
+              {
+                "name": "X-WAWS-Unencoded-URL",
+                "value": "/lab-project/responses"
+              },
+              {
+                "name": "X-Azure-JA4-Fingerprint",
+                "value": "t13d1713h1_ab0a1bf427ad_89ab6efea773"
+              }
+            ],
+            "clientCertificates": []
+          }
+        }
+      },
+      {
+        "source": "forward-request",
+        "timestamp": "2026-10-21T01:02:34.7332669Z",
+        "elapsed": "00:00:03.2118124",
+        "data": {
+          "response": {
+            "status": {
+              "code": 200,
+              "reason": "OK"
+            },
+            "headers": [
+              {
+                "name": "Content-Length",
+                "value": "5003"
+              },
+              {
+                "name": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "name": "Date",
+                "value": "Wed, 21 Oct 2026 01:02:31 GMT"
+              },
+              {
+                "name": "Server",
+                "value": "istio-envoy"
+              },
+              {
+                "name": "Access-Control-Expose-Headers",
+                "value": "Operation-Location,Location,Apim-Request-Id,x-agent-session-id,x-agent-invocation-id"
+              },
+              {
+                "name": "Vary",
+                "value": "Origin,Accept-Encoding"
+              },
+              {
+                "name": "request-context",
+                "value": "appId="
+              },
+              {
+                "name": "x-ms-response-type",
+                "value": "standard"
+              },
+              {
+                "name": "x-request-id",
+                "value": "5ee44c4f-fa75-5ce4-890a-12f2a9b1fcf3"
+              },
+              {
+                "name": "x-ms-aoai-configured-data-retention-days",
+                "value": "30"
+              },
+              {
+                "name": "skip-error-remapping",
+                "value": "true"
+              },
+              {
+                "name": "openai-client-partition-id",
+                "value": "ddf8938bf975b9409d5f3c02a1b460e1420c575f-72d9-4c5e-b450-1a6e18c82997"
+              },
+              {
+                "name": "azureml-internal-forward-count",
+                "value": "1"
+              },
+              {
+                "name": "x-ms-is-spilled-over",
+                "value": "false"
+              },
+              {
+                "name": "x-ratelimit-key",
+                "value": "lab-model"
+              },
+              {
+                "name": "x-ratelimit-remaining-requests",
+                "value": "-1"
+              },
+              {
+                "name": "x-ratelimit-reset-requests",
+                "value": "114"
+              },
+              {
+                "name": "x-ratelimit-limit-requests",
+                "value": "1"
+              },
+              {
+                "name": "x-ratelimit-renewalperiod-requests",
+                "value": "60"
+              },
+              {
+                "name": "x-ratelimit-abusepenalty-active",
+                "value": "False"
+              },
+              {
+                "name": "x-ratelimit-remaining-tokens",
+                "value": "955"
+              },
+              {
+                "name": "x-ratelimit-reset-tokens",
+                "value": "2"
+              },
+              {
+                "name": "x-ratelimit-limit-tokens",
+                "value": "1000"
+              },
+              {
+                "name": "x-ratelimit-renewalperiod-tokens",
+                "value": "60"
+              },
+              {
+                "name": "azureai-fe-is-streaming",
+                "value": "False"
+              },
+              {
+                "name": "azureai-fe-offer-type",
+                "value": "paygo"
+              },
+              {
+                "name": "x-ms-served-model",
+                "value": "gpt-5-mini-2025-08-07"
+              },
+              {
+                "name": "openai-version",
+                "value": "2020-10-01"
+              },
+              {
+                "name": "openai-organization",
+                "value": "bbdc9d156d453699d861b3b3afbfd981"
+              },
+              {
+                "name": "openai-project",
+                "value": "d2b722b2-1410-508b-b0ce-46e743a21ecb"
+              },
+              {
+                "name": "openai-processing-ms",
+                "value": "2838"
+              },
+              {
+                "name": "azureml-served-by-cluster",
+                "value": "hyena-eastus2-02,hyena-eastus2-01"
+              },
+              {
+                "name": "api-supported-versions",
+                "value": "1.0,2025-05-15-preview,2025-11-15-preview"
+              },
+              {
+                "name": "x-http2-stream-id",
+                "value": "287"
+              },
+              {
+                "name": "apim-request-id",
+                "value": "ffcc3f48-1d0e-5301-8d5b-87dea389d033"
+              },
+              {
+                "name": "Strict-Transport-Security",
+                "value": "max-age=31536000; includeSubDomains; preload"
+              },
+              {
+                "name": "X-Content-Type-Options",
+                "value": "nosniff"
+              },
+              {
+                "name": "x-ms-region",
+                "value": "East US 2"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "outbound": [
+      {
+        "source": "language-model-response-handler",
+        "timestamp": "2026-10-21T01:02:34.733331Z",
+        "elapsed": "00:00:03.2118741",
+        "data": {
+          "message": "LanguageModelResponseHandler interpreting as json response."
+        }
+      },
+      {
+        "source": "response-payload-handler",
+        "timestamp": "2026-10-21T01:02:34.7333366Z",
+        "elapsed": "00:00:03.2118797",
+        "data": "Reading response payload because next handler requires access to it."
+      },
+      {
+        "source": "response-payload-handler",
+        "timestamp": "2026-10-21T01:02:34.733438Z",
+        "elapsed": "00:00:03.2119813",
+        "data": "Reading response payload succeeded. 5003 bytes read."
+      },
+      {
+        "source": "cache-model-process-response-handler",
+        "timestamp": "2026-10-21T01:02:34.7337663Z",
+        "elapsed": "00:00:03.2123100",
+        "data": {
+          "message": "CacheModelProcessResponseHandler cached the pair (https://ai-token-lab-example.services.ai.azure.com/api/projects/project-token-lab|lab-model,lab-model) for URI https://ai-token-lab-example.services.ai.azure.com/api/projects/project-token-lab/openai/v1/responses"
+        }
+      },
+      {
+        "source": "token-limit-process-response-handler",
+        "timestamp": "2026-10-21T01:02:34.7338258Z",
+        "elapsed": "00:00:03.2123690",
+        "data": {
+          "message": "LanguageModelTokenLimit rate-limit counter 9851242498428389476 is incremented by 167 (prompt: 39, completion: 128)"
+        }
+      },
+      {
+        "source": "token-limit-process-response-handler",
+        "timestamp": "2026-10-21T01:02:34.7339717Z",
+        "elapsed": "00:00:03.2125150",
+        "data": {
+          "message": "LanguageModelTokenLimit quota counter -5663590952646100882 is incremented by 167 (prompt: 39, completion: 128)"
+        }
+      },
+      {
+        "source": "trace",
+        "timestamp": "2026-10-21T01:02:34.734053Z",
+        "elapsed": "00:00:03.2125961",
+        "data": {
+          "message": "Expression was successfully evaluated.",
+          "expression": "context.Response.Body.As<string>(preserveContent: true)",
+          "value": "{\n  \"metadata\": {},\n  \"top_logprobs\": 0,\n  \"temperature\": 1,\n  \"top_p\": 1,\n  \"service_tier\": \"default\",\n  \"prompt_cache_retention\": \"in_memory\",\n  \"model\": \"lab-model\",\n  \"reasoning\": {\n    \"effort\": \"minimal\",\n    \"context\": \"current_turn\",\n    \"mode\": \"standard\"\n  },\n  \"background\": false,\n  \"max_output_tokens\": 128,\n  \"text\": {\n    \"format\": {\n      \"type\": \"text\"\n    },\n    \"verbosity\": \"medium\"\n  },\n  \"tools\": [],\n  \"tool_choice\": \"auto\",\n  \"truncation\": \"disabled\",\n  \"id\": \"resp_example-73bca2622cd96af995bdefa1\",\n  \"object\": \"response\",\n  \"status\": \"incomplete\",\n  \"created_at\": 1792544552,\n  \"error\": null,\n  \"incomplete_details\": {\n    \"reason\": \"max_output_tokens\"\n  },\n  \"output\": [\n    {\n      \"type\": \"reasoning\",\n      \"id\": \"rs_example-104b811553763619d821b325\",\n      \"response_id\": \"resp_example-73bca2622cd96af995bdefa1\",\n      \"encrypted_content\": \"gAAAAABq2A8qxvwi454AskOiH53-mh1yN83Aef-VMJewbYkkL44tFOOWB1is-XO3hW_QQ6M63SYvkoR5DszqqN35oFCW3lOOHMGMslW_jTJhhWv1fxvdTKge-2E500mfTvt2cxa92u-cNIyliWyRxnL7X1DGysZTPliluhnuSTEzvPNO14iwTyZOmocUk-mn4yxeXMpFWjsI1O3taibXMjnC4oE6rHsEz3WEHqnZ2pkkfgIQrFeoEdi6vZHLqhxM_nwPu7pcX8N3k4jn1o_ANxOTMZ0_ob0A1tTJehn9ttUGKnKGvHk827TyovTPwJ893gDAM2O5uo6Kh_5G2grqog6dIjMA3KGMd0puoq6ZCAiU6KKenE4MFqrkGMB9DO53hDh1S2vOE-la-qzTSyrWld6BzJPbR7K-mx34sVUxOpVBqWtjPdDxWfRFs2YOuAtjLzGIfL-gqoql6SeZ3fulvp3-hKcoCMJG3rias0bjki5bKk7rSA_gfdJmiudawkQlzLOfCu_y7DNGmbD66ELQ5AH4aITmE0N79IFJhFbEkfbwtyh2ByjjASfwrJhbHVp79b0v9ZvzlWyd1szlcO66qukquFWdlfPQapyjyssPrXYxVYJuT_ora65oJmJF4f4h-EUmD5i6Fy830nQwNx-3Am65rMhLCd8j2gw8f_b8d5pHrdk-xfWwJxWNa4-8PzZ0xNPeisTiVMCXvHztpj_TTD1tRgO-dAO5lwstTinOTH4KhdXNFKCixUqqZqnSwWp0PfrJCN66BR1NApUVv04wh8ue-VE-yB8aIpexzd95WwDNriXlbLnvdnz7r6ef-ZKfN3XLk4lUIuIanUNFUrkjcPvCEg0zpqARaS2Z1ZEA9wt-xB2VYV5aw-R2GHW5kfZBISJQf2bbdEhgaw-V-mp0PKpOtPiv_Jlx1xX5bTq1DOMc0Qaei5O5384NfqZEJmM2p1cG8LGuL5f2FFJztIP6ln8a997RdBunNOJgw6HKG_R0_M4NwaYz-z3naCcCpQ9Gzn9Xk8x2RcrSQk4V-SbiQAfAtuv0WjZ0zNH_NHv55CL8BAb9EQE4JacUyvSvbMweqMLwXMd9vUQHR3AoX9JkCFW2MUMxb4CaotNO8HRdKvlyDi3YoiaCiuJz0Ol1ZXPKVR1ISgU65v5g5AGGRwVdvFzR_YnfaOElg7v7Yq9Di7TBDtbpgXOPdNODuvgfo0GWg6_gUCAS7F5G6p2Id7IykEneMDfZhhQjkA==\",\n      \"summary\": [],\n      \"content\": []\n    },\n    {\n      \"type\": \"message\",\n      \"id\": \"msg_example-3667f15a94014432a9b54a80\",\n      \"response_id\": \"resp_example-73bca2622cd96af995bdefa1\",\n      \"role\": \"assistant\",\n      \"content\": [\n        {\n          \"type\": \"output_text\",\n          \"text\": \"1. Toothbrush \u2014 Used daily to clean teeth and maintain oral hygiene.  \\n2. Toothpaste \u2014 Applied to a toothbrush to remove plaque and freshen breath.  \\n3. Soap bar \u2014 Used for washing hands and body to remove dirt and germs.  \\n4. Hand towel \u2014 Used for drying hands and face after washing.  \\n5. Shampoo bottle \u2014 Used to clean hair and scalp during showers.  \\n6. Conditioner bottle \u2014 Applied after shampoo to soften and detangle hair.  \\n7. Shower curtain \u2014 Prevents water from splashing outside the\",\n          \"annotations\": [],\n          \"logprobs\": []\n        }\n      ],\n      \"status\": \"incomplete\"\n    }\n  ],\n  \"instructions\": null,\n  \"usage\": {\n    \"input_tokens\": 39,\n    \"input_tokens_details\": {\n      \"cached_tokens\": 0,\n      \"cache_write_tokens\": 0\n    },\n    \"output_tokens\": 128,\n    \"output_tokens_details\": {\n      \"reasoning_tokens\": 0\n    },\n    \"total_tokens\": 167\n  },\n  \"parallel_tool_calls\": true,\n  \"agent_reference\": null,\n  \"content_filters\": [\n    {\n      \"blocked\": false,\n      \"source_type\": \"prompt\",\n      \"content_filter_results\": {\n        \"sexual\": {\n          \"filtered\": false,\n          \"severity\": \"safe\"\n        },\n        \"hate\": {\n          \"filtered\": false,\n          \"severity\": \"safe\"\n        },\n        \"violence\": {\n          \"filtered\": false,\n          \"severity\": \"safe\"\n        },\n        \"self_harm\": {\n          \"filtered\": false,\n          \"severity\": \"safe\"\n        },\n        \"defender_for_ai\": {\n          \"detected\": false,\n          \"filtered\": false,\n          \"details\": {}\n        }\n      },\n      \"content_filter_raw\": [],\n      \"content_filter_offsets\": {\n        \"start_offset\": 0,\n        \"end_offset\": 1315,\n        \"check_offset\": 0\n      }\n    },\n    {\n      \"blocked\": false,\n      \"source_type\": \"completion\",\n      \"content_filter_results\": {\n        \"sexual\": {\n          \"filtered\": false,\n          \"severity\": \"safe\"\n        },\n        \"hate\": {\n          \"filtered\": false,\n          \"severity\": \"safe\"\n        },\n        \"violence\": {\n          \"filtered\": false,\n          \"severity\": \"safe\"\n        },\n        \"self_harm\": {\n          \"filtered\": false,\n          \"severity\": \"safe\"\n        },\n        \"defender_for_ai\": {\n          \"detected\": false,\n          \"filtered\": false,\n          \"details\": {}\n        }\n      },\n      \"content_filter_raw\": [],\n      \"content_filter_offsets\": {\n        \"start_offset\": 0,\n        \"end_offset\": 536,\n        \"check_offset\": 0\n      }\n    }\n  ]\n}"
+        }
+      },
+      {
+        "source": "lab-backend-body",
+        "timestamp": "2026-10-21T01:02:34.734055Z",
+        "elapsed": "00:00:03.2125980",
+        "data": "{\n  \"metadata\": {},\n  \"top_logprobs\": 0,\n  \"temperature\": 1,\n  \"top_p\": 1,\n  \"service_tier\": \"default\",\n  \"prompt_cache_retention\": \"in_memory\",\n  \"model\": \"lab-model\",\n  \"reasoning\": {\n    \"effort\": \"minimal\",\n    \"context\": \"current_turn\",\n    \"mode\": \"standard\"\n  },\n  \"background\": false,\n  \"max_output_tokens\": 128,\n  \"text\": {\n    \"format\": {\n      \"type\": \"text\"\n    },\n    \"verbosity\": \"medium\"\n  },\n  \"tools\": [],\n  \"tool_choice\": \"auto\",\n  \"truncation\": \"disabled\",\n  \"id\": \"resp_example-73bca2622cd96af995bdefa1\",\n  \"object\": \"response\",\n  \"status\": \"incomplete\",\n  \"created_at\": 1792544552,\n  \"error\": null,\n  \"incomplete_details\": {\n    \"reason\": \"max_output_tokens\"\n  },\n  \"output\": [\n    {\n      \"type\": \"reasoning\",\n      \"id\": \"rs_example-104b811553763619d821b325\",\n      \"response_id\": \"resp_example-73bca2622cd96af995bdefa1\",\n      \"encrypted_content\": \"gAAAAABq2A8qxvwi454AskOiH53-mh1yN83Aef-VMJewbYkkL44tFOOWB1is-XO3hW_QQ6M63SYvkoR5DszqqN35oFCW3lOOHMGMslW_jTJhhWv1fxvdTKge-2E500mfTvt2cxa92u-cNIyliWyRxnL7X1DGysZTPliluhnuSTEzvPNO14iwTyZOmocUk-mn4yxeXMpFWjsI1O3taibXMjnC4oE6rHsEz3WEHqnZ2pkkfgIQrFeoEdi6vZHLqhxM_nwPu7pcX8N3k4jn1o_ANxOTMZ0_ob0A1tTJehn9ttUGKnKGvHk827TyovTPwJ893gDAM2O5uo6Kh_5G2grqog6dIjMA3KGMd0puoq6ZCAiU6KKenE4MFqrkGMB9DO53hDh1S2vOE-la-qzTSyrWld6BzJPbR7K-mx34sVUxOpVBqWtjPdDxWfRFs2YOuAtjLzGIfL-gqoql6SeZ3fulvp3-hKcoCMJG3rias0bjki5bKk7rSA_gfdJmiudawkQlzLOfCu_y7DNGmbD66ELQ5AH4aITmE0N79IFJhFbEkfbwtyh2ByjjASfwrJhbHVp79b0v9ZvzlWyd1szlcO66qukquFWdlfPQapyjyssPrXYxVYJuT_ora65oJmJF4f4h-EUmD5i6Fy830nQwNx-3Am65rMhLCd8j2gw8f_b8d5pHrdk-xfWwJxWNa4-8PzZ0xNPeisTiVMCXvHztpj_TTD1tRgO-dAO5lwstTinOTH4KhdXNFKCixUqqZqnSwWp0PfrJCN66BR1NApUVv04wh8ue-VE-yB8aIpexzd95WwDNriXlbLnvdnz7r6ef-ZKfN3XLk4lUIuIanUNFUrkjcPvCEg0zpqARaS2Z1ZEA9wt-xB2VYV5aw-R2GHW5kfZBISJQf2bbdEhgaw-V-mp0PKpOtPiv_Jlx1xX5bTq1DOMc0Qaei5O5384NfqZEJmM2p1cG8LGuL5f2FFJztIP6ln8a997RdBunNOJgw6HKG_R0_M4NwaYz-z3naCcCpQ9Gzn9Xk8x2RcrSQk4V-SbiQAfAtuv0WjZ0zNH_NHv55CL8BAb9EQE4JacUyvSvbMweqMLwXMd9vUQHR3AoX9JkCFW2MUMxb4CaotNO8HRdKvlyDi3YoiaCiuJz0Ol1ZXPKVR1ISgU65v5g5AGGRwVdvFzR_YnfaOElg7v7Yq9Di7TBDtbpgXOPdNODuvgfo0GWg6_gUCAS7F5G6p2Id7IykEneMDfZhhQjkA==\",\n      \"summary\": [],\n      \"content\": []\n    },\n    {\n      \"type\": \"message\",\n      \"id\": \"msg_example-3667f15a94014432a9b54a80\",\n      \"response_id\": \"resp_example-73bca2622cd96af995bdefa1\",\n      \"role\": \"assistant\",\n      \"content\": [\n        {\n          \"type\": \"output_text\",\n          \"text\": \"1. Toothbrush \u2014 Used daily to clean teeth and maintain oral hygiene.  \\n2. Toothpaste \u2014 Applied to a toothbrush to remove plaque and freshen breath.  \\n3. Soap bar \u2014 Used for washing hands and body to remove dirt and germs.  \\n4. Hand towel \u2014 Used for drying hands and face after washing.  \\n5. Shampoo bottle \u2014 Used to clean hair and scalp during showers.  \\n6. Conditioner bottle \u2014 Applied after shampoo to soften and detangle hair.  \\n7. Shower curtain \u2014 Prevents water from splashing outside the\",\n          \"annotations\": [],\n          \"logprobs\": []\n        }\n      ],\n      \"status\": \"incomplete\"\n    }\n  ],\n  \"instructions\": null,\n  \"usage\": {\n    \"input_tokens\": 39,\n    \"input_tokens_details\": {\n      \"cached_tokens\": 0,\n      \"cache_write_tokens\": 0\n    },\n    \"output_tokens\": 128,\n    \"output_tokens_details\": {\n      \"reasoning_tokens\": 0\n    },\n    \"total_tokens\": 167\n  },\n  \"parallel_tool_calls\": true,\n  \"agent_reference\": null,\n  \"content_filters\": [\n    {\n      \"blocked\": false,\n      \"source_type\": \"prompt\",\n      \"content_filter_results\": {\n        \"sexual\": {\n          \"filtered\": false,\n          \"severity\": \"safe\"\n        },\n        \"hate\": {\n          \"filtered\": false,\n          \"severity\": \"safe\"\n        },\n        \"violence\": {\n          \"filtered\": false,\n          \"severity\": \"safe\"\n        },\n        \"self_harm\": {\n          \"filtered\": false,\n          \"severity\": \"safe\"\n        },\n        \"defender_for_ai\": {\n          \"detected\": false,\n          \"filtered\": false,\n          \"details\": {}\n        }\n      },\n      \"content_filter_raw\": [],\n      \"content_filter_offsets\": {\n        \"start_offset\": 0,\n        \"end_offset\": 1315,\n        \"check_offset\": 0\n      }\n    },\n    {\n      \"blocked\": false,\n      \"source_type\": \"completion\",\n      \"content_filter_results\": {\n        \"sexual\": {\n          \"filtered\": false,\n          \"severity\": \"safe\"\n        },\n        \"hate\": {\n          \"filtered\": false,\n          \"severity\": \"safe\"\n        },\n        \"violence\": {\n          \"filtered\": false,\n          \"severity\": \"safe\"\n        },\n        \"self_harm\": {\n          \"filtered\": false,\n          \"severity\": \"safe\"\n        },\n        \"defender_for_ai\": {\n          \"detected\": false,\n          \"filtered\": false,\n          \"details\": {}\n        }\n      },\n      \"content_filter_raw\": [],\n      \"content_filter_offsets\": {\n        \"start_offset\": 0,\n        \"end_offset\": 536,\n        \"check_offset\": 0\n      }\n    }\n  ]\n}"
+      },
+      {
+        "source": "set-header",
+        "timestamp": "2026-10-21T01:02:34.734075Z",
+        "elapsed": "00:00:03.2126180",
+        "data": {
+          "message": "Specified value was assigned to the header (see below).",
+          "header": {
+            "name": "x-lab-phase",
+            "value": "safe"
+          }
+        }
+      },
+      {
+        "source": "transfer-response",
+        "timestamp": "2026-10-21T01:02:34.7345282Z",
+        "elapsed": "00:00:03.2130718",
+        "data": {
+          "message": "Response has been sent to the caller in full"
+        }
+      }
+    ]
+  }
+}

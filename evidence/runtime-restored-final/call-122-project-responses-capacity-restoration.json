@@ -1,0 +1,76 @@
+{
+  "utc": "2026-10-21T01:08:21.682692+00:00",
+  "elapsedSeconds": 1.346,
+  "api": "project",
+  "operation": "responses",
+  "phase": "capacity-restoration",
+  "direct": true,
+  "requestId": "02e462ef-5647-585b-9581-66d774b039f6",
+  "url": "https://ai-token-lab-example.services.ai.azure.com/api/projects/project-token-lab/openai/v1/responses",
+  "requestBody": {
+    "model": "lab-model",
+    "stream": false,
+    "input": "Reply OK.",
+    "max_output_tokens": 16,
+    "store": false,
+    "reasoning": {
+      "effort": "minimal"
+    }
+  },
+  "response": {
+    "status": 429,
+    "headers": {
+      "content-length": "387",
+      "connection": "close",
+      "content-type": "application/json",
+      "date": "Wed, 21 Oct 2026 01:08:20 GMT",
+      "server": "istio-envoy",
+      "access-control-expose-headers": "Operation-Location,Location,Apim-Request-Id,x-agent-session-id,x-agent-invocation-id",
+      "vary": "Origin,Accept-Encoding",
+      "request-context": "appId=",
+      "x-ms-response-type": "standard",
+      "x-request-id": "06b42ac0-4451-5ab0-8e66-4e1f803a4ef7",
+      "x-ms-fe-error": "true",
+      "x-ms-aoai-configured-data-retention-days": "30",
+      "azureml-internal-forward-count": "0",
+      "x-ms-is-spilled-over": "false",
+      "x-ratelimit-key": "lab-model",
+      "x-ratelimit-remaining-requests": "0",
+      "x-ratelimit-reset-requests": "82",
+      "x-ratelimit-limit-requests": "1",
+      "x-ratelimit-renewalperiod-requests": "60",
+      "x-ratelimit-abusepenalty-active": "False",
+      "x-ratelimit-remaining-tokens": "998",
+      "x-ratelimit-reset-tokens": "0",
+      "x-ratelimit-limit-tokens": "1000",
+      "x-ratelimit-renewalperiod-tokens": "60",
+      "retry-after-ms": "22460",
+      "azureai-fe-is-streaming": "False",
+      "azureai-fe-offer-type": "paygo",
+      "skip-error-remapping": "true",
+      "openai-version": "2020-10-01",
+      "openai-organization": "bbdc9d156d453699d861b3b3afbfd981",
+      "openai-project": "d2b722b2-1410-508b-b0ce-46e743a21ecb",
+      "openai-processing-ms": "145",
+      "azureml-served-by-cluster": "hyena-eastus2-02,hyena-eastus2-02",
+      "api-supported-versions": "1.0,2025-05-15-preview,2025-11-15-preview",
+      "x-http2-stream-id": "201",
+      "apim-request-id": "7cae36fe-8897-5654-9025-667019b60852",
+      "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+      "x-content-type-options": "nosniff",
+      "x-ms-region": "East US 2"
+    },
+    "body": {
+      "error": {
+        "code": "rate_limit_exceeded",
+        "message": "Model deployment rate limit exceeded. Your requests to gpt-5-mini for lab-model in eastus2 have exceeded request rate limit.. To request more quota, see https://learn.microsoft.com/en-us/azure/ai-services/openai/quotas-limits",
+        "type": "error",
+        "additionalInfo": {
+          "request_id": "26842298cf94b786eb3c71cc4e3c7ec0",
+          "rate_limit_source": "rapi"
+        }
+      }
+    }
+  },
+  "actualTotalTokens": null
+}
